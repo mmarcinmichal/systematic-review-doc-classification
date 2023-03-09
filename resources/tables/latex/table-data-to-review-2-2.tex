@@ -1,0 +1,76 @@
+% latex table-data-to-review-2-2.tex
+% dvipng -D 300 -bg Transparent -T tight -o table-data-to-review-2-2.png table-data-to-review-2-2.dvi
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{framed,multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{floatpag}
+
+\floatpagestyle{empty}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+  
+\begin{document}
+
+\begin{landscape}
+\begin{table}[]
+  \centering
+  %\caption{The count of articles obtained for narrowed query from 2020 to 2023. Finally, 43 articles were included in the analysis.}
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{cclcccccc}
+     \hline
+    L.p   & Database & \multicolumn{1}{c}{\specialcell{Query (Search phrase)}} & \multicolumn{3}{c}{\specialcell{Number of returned query results}} & \multicolumn{3}{c}{\specialcell{Final number of selected articles to analysis}} \\
+     \hline
+    \multirow{7}[0]{*}{1} & \multicolumn{1}{c}{\multirow{7}[0]{*}{\specialcell{Association for Computing  \\ Machinery (ACM)}}} & 20news bydate & \multicolumn{3}{c}{\multirow{7}[0]{*}{100}} & \multicolumn{3}{c}{\multirow{41}[0]{*}{43}} \\
+          &       & 20 news bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20news-bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    \multirow{7}[0]{*}{2} & \multicolumn{1}{c}{\multirow{7}[0]{*}{\specialcell{IEEE Xplore \\ Digital Library}}} & 20news bydate & \multicolumn{3}{c}{\multirow{7}[0]{*}{271}} & \multicolumn{3}{c}{} \\
+          &       & 20 news bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20news-bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    \multirow{7}[0]{*}{3} & \multicolumn{1}{c}{\multirow{7}[0]{*}{ScienceDirect}} & 20news bydate & \multicolumn{3}{c}{\multirow{7}[0]{*}{196}} & \multicolumn{3}{c}{} \\
+          &       & 20 news bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20news-bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    \multirow{7}[0]{*}{4} & \multicolumn{1}{c}{\multirow{7}[0]{*}{Scopus}} & 20news bydate & \multicolumn{3}{c}{\multirow{7}[0]{*}{92}} & \multicolumn{3}{c}{} \\
+          &       & 20 news bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20news-bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    \multirow{7}[0]{*}{5} & \multicolumn{1}{c}{\multirow{7}[0]{*}{SpringerLink}} & 20news bydate & \multicolumn{3}{c}{\multirow{7}[0]{*}{103}} & \multicolumn{3}{c}{} \\
+          &       & 20 news bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20news-bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups bydate & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       & 20 newsgroups & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    \multirow{5}[0]{*}{6} & \multirow{5}[0]{*}{Papers With Code} & \multirow{5}[0]{*}{20 newsgroups} & \multicolumn{3}{c}{\multirow{5}[0]{*}{20}} & \multicolumn{3}{c}{} \\
+          &       &       & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       &       & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       &       & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+          &       &       & \multicolumn{3}{c}{}  & \multicolumn{3}{c}{} \\
+    7     & Other review articles & 20 newsgroups  & \multicolumn{3}{c}{8} & \multicolumn{3}{c}{} \\
+     \hline
+    \end{tabular}%
+}
+  \label{tab:addlabel}%
+\end{table}%
+\end{landscape}
+
+\end{document}

@@ -1,0 +1,11 @@
+methodsCountVec,Freq
+neural network,51
+support vector machines,45
+naive bayes,26
+k-nearest neighbours,16
+decision tree,13
+logistic regression,12
+linear classifier,4
+centroid,3
+elastic net,1
+softmax,1

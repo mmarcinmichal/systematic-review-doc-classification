@@ -1,0 +1,60 @@
+dataSetsVec,Freq
+Reuters-21578,65
+Ohsumed,25
+Movie review data (MRD) for regression task,16
+AGNews,12
+WebKB,11
+IMDb,8
+BBC,6
+Cade,3
+Tancorp,3
+BBC Sports,2
+CIFAR,2
+Classic,2
+Elec,2
+Fisher,2
+Recipe,2
+Reuters,2
+Sector,2
+TMC2007,2
+TREC,2
+A clinical dataset with authentic EHRs from a hospital,1
+Amazon,1
+Biomed,1
+Cnae-9,1
+Dexter,1
+Energy Hub,1
+EUR-Lex-EUROVOC (Eur-Lex),1
+Farm Ads,1
+Google snippets,1
+K1a,1
+K1b,1
+Mayor’s public hotline (MPH),1
+Medical,1
+Modified 20 newsgroups,1
+News articles provided by Antonio Gulli,1
+NIPS proceedings papers,1
+Nlpcc2014,1
+Nova,1
+NSF research award abstracts 1990-2003 data set,1
+Ohscal,1
+Open Directory Project,1
+PKU WEB Page Dataset,1
+RCV1,1
+re0,1
+re1,1
+SemEval,1
+Snippets,1
+Spambase,1
+SUBJ,1
+The DMOZ dataset based on the ODP (Open Directory Project) web directory data,1
+The Fudan University text classification corpus,1
+The Sogou Lab Data,1
+Topic detection,1
+Tracking (TDT2),1
+Twitter,1
+WAP,1
+Wiki10+,1
+WIPO,1
+Yahoo! Answers Topic (Yahoo),1
+Yelp reviews,1

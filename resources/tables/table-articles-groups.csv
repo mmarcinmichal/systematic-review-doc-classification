@@ -1,0 +1,9 @@
+CategoryOfArticles,Reference,NoOfArticles
+Learning methods in the manipulation of input training data,~\citep{Shen2020, Kim2019, Pavlinek2017, Cai2012},4
+Pre-processing methods,~\citep{Nagumothu2021},1
+Feature weighting methods,~\citep{Attieh2023, Jia2022, Tang2022, Shehzad2022, Wang2021a, Tang2020, Chen2016, Luo2011},8
+Feature selection methods,~\citep{AlSalemi2018, Brockmeier2018, Hassaine2017, Rehman2017, Tang2016, Li2016, AlSalemi2016, Wang2016, Tang2016a, Li2015, Zong2015, Feng2015, Rehman2015, Yan2008, Tesar2006},15
+Feature projection methods,~\citep{Guo2021, Li2020, Chen2020, Unnam2020, Bialas2020, Yang2020, Kesiraju2020, Jiang2020, Gupta2019, Gao2018, Chen2017, Hu2017, Kesiraju2016, Zheng2016, Li2016a, Rodrigues2014, Cai2012, Li2011, Salakhutdinov2009, Yan2008},20
+Classification methods,~\citep{Wang2023, Dai2022, Prabhakar2022, Yang2022, Guidotti2022, Khandve2022, Zhou2021, Xie2021, Ragesh2021, Zhang2021, Yan2021a, Wang2021b, Lin2021, Zhu2021, Xie2021a, Guo2020, Zhou2020, Chiu2020, Wei2020, Chen2020c, Aler2020, Liu2020, Wang2020, Ding2020, Unnikrishnan2019, Berge2019, Tiwari2019, Yao2019, Pappagari2018, AlSalemi2018, Sharma2017a, Benites2017, Feng2017, Sharma2016, Jin2016, AlSalemi2016, Johnson2016, Feng2015, Kusner2015, Pang2015, Gomez2014, Lo2012, Sainath2010, Jin2010, Li2010, Xia2009, Larochelle2008, Qian2007, Genkin2007, Gliozzo2005, Zhang2005, Li2004, Rennie2003},53
+Evaluation methods,~\citep{Arras2017},1
+Benchmark works,~\citep{Wagh2021, Suneera2020, Bramesh2019, Mazyad2017, Sun2009},5

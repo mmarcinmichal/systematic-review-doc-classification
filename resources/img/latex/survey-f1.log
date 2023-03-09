@@ -1,0 +1,77 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.11.21)  27 APR 2020 11:13
+entering extended mode
+**survey.tex
+("C:\Users\mmironczuk\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\.tex"
+LaTeX2e <2018-12-01>
+File ignored)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*sd
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> s
+     d
+? d
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, 
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? d
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, 
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? d
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, 
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? 
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+
+*sd
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+
+*sd
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+
+*sd
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+
+*
+
+Overfull \hbox (20.0pt too wide) detected at line 0
+[]
+ []
+
+(Please type a command or say `\end')
+*
+! Emergency stop.
+<*> 
+    
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 492895
+ 288 string characters out of 3121399
+ 57474 words of memory out of 3000000
+ 4023 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,4p,91b,14s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

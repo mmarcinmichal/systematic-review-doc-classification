@@ -1,0 +1,28 @@
+indicatorsCountVec,Freq
+Accuracy,53
+Macro F1 score,40
+Micro F1 score,29
+Time,22
+Error,11
+Macro-averaged Precision,8
+Macro-averaged Recall,8
+Unknow F score type,8
+Micro-averaged Precision,4
+Micro-averaged Recall,4
+Unknow Precision type,4
+Unknow Recall type,3
+Break even point (BEP),2
+Receiver Operating Characteristic (ROC),2
+Explanatory Power Index,1
+Generation time,1
+Geometric mean,1
+Kappa statistics,1
+Learning time,1
+Macro-averaged precision,1
+Macro-averaged recall,1
+Mathews Correlation Coefficient,1
+Memmory,1
+Memory,1
+No of neurons/clusters,1
+Number of parameters,1
+Precision-Recall curve (or PR-Curve),1
