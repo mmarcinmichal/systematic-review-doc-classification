@@ -1,6 +1,0 @@
-bydate
-20news 
-20newsgroups
-20 news 
-20 newsgroups
-
