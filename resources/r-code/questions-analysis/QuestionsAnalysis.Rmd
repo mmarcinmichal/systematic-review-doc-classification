@@ -3,9 +3,17 @@ title: 'The outcomes and publication standards of research descriptions in docum
 author: "Marcin Mirończuk (<marcin.mironczuk@opi.org.pl>) and Adam Müller (<adam.muller@opi.org.pl>)"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
+  bookdown::github_document2:
+    number_sections: true
+    toc: true
+    toc_depth: 5
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
   bookdown::html_document2:
     number_sections: true
     toc: true
+    toc_depth: 5
     toc_float:
       collapsed: false
       smooth_scroll: false

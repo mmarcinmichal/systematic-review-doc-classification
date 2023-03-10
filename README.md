@@ -14,7 +14,9 @@ The project is structured as follow:
 * *resources\img* catalogue contains all saved images created during analysis performed thanks to R markdown (https://rmarkdown.rstudio.com/) which provides a unified format for writing reproducible, dynamic reports with R.
 * *resources\r-code* catalogue includes files, such as:
   * *QuestionsAnalysis.Rmd* - it is an R markdown file which combining code, its results, and commentary.
-  * *QuestionsAnalysis.html* - it is a final technical report created thanks to *QuestionsAnalysis.Rmd*, i.e. it is an output of the *QuestionsAnalysis.Rmd*
+  * *QuestionsAnalysis.html* - it is a final pre-compiled technical report created thanks to *QuestionsAnalysis.Rmd*, i.e. it is an output of the *QuestionsAnalysis.Rmd*
+  * *QuestionsAnalysis.pdf* - it is a final pre-compiled technical report created thanks to *QuestionsAnalysis.Rmd*, i.e. it is an output of the *QuestionsAnalysis.Rmd*
+  * *QuestionsAnalysis.md* - it is a final technical pre-compiled report created thanks to *QuestionsAnalysis.Rmd*, i.e. it is an output of the *QuestionsAnalysis.Rmd*
 * *resources\search-results\4-qq-assesments* folder includes files, such as:
   * *v0 - article-assesment-schema.xlsx* and *v1 - article-assesment-schema.xlsx* - the questionnaire schema, we use schema version v1 to assesment each article in our review
   * *[ID] - [Work title].xlsx* - the filled questionaires for each reviewed work (62 questionaires)

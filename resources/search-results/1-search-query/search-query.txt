@@ -1,0 +1,109 @@
+1. Wyszukiwanie do lat 2020 
+- Sersh results limits to
+-- 20 news bydate
+-- 20 newsgroups bydate
+-- 20news-bydate
+- Zapytanie zrealizowane do 2020-04-28
+
+2. Naspnie zagęściliśmy czasowy zakres
+- 2020-2023
+i rozszerzyliśmy zapytanie o:
+- "20news bydate" OR "20 news bydate" OR "20 newsgroups bydate" OR "20news-bydate" OR "20newsgroups bydate" OR "20newsgroups" OR "20 newsgroups"
+W celu wyłowienia najnowszych prac
+- Zapytanie zrealizowane między 2023-01-01 a 2023-02-20
+
+3. Te same kryteria selekcji:
+- niektóre artykuły nieosiągalne, 
+- niektóre wogole nie na temat klasyfikacji tj. nieewaluja bydatw w tym kontekscie, 
+- albn nie raportuja wynikow na test secie
+- ewentualna deduplikacja artykułów z lat 2020
+
+4. Baza danych
+
+- ACM 
+-- 100 artykułów dla rozszerzonego zapytania z lat od 2020 do 2023
+-- wytypowano do wstępnego przeglądu 17 artykułów
+
+- IEEE
+-- 271 artykułów dla rozszerzonego zapytania z lat od 2020 do 2023
+-- wytypowano do wstępnego przeglądu 17 artykułów
+
+- ScienceDirect
+-- 196 artykułów dla rozszerzonego zapytania z lat od 2020 do 2023
+-- wytypowano do wstępnego przeglądu 29 artykułów
+
+- Scopus
+-- 92 artykułów dla rozszerzonego zapytania z lat od 2020 do 2023
+-- wytypowano do wstępnego przeglądu 10 artykułów
+
+- Springer 
+-- 103 artykułów dla rozszerzonego zapytania z lat od 2020 do 2023
+-- wytypowano do wstępnego przeglądu 12 artykułów
+
+- paperswithcode
+-- 20 artykułów (https://paperswithcode.com/dataset/20-newsgroups)
+-- wytypowano do do wstępnego przeglądu 5 artykułów
+
+- extracted from other review
+-- we taken the most 4 timeline review and analysed XX articles
+
+--- A Survey on Text Classification: From Traditional to Deep Learning - 8 artykułów, do dalszej analizy wytypowano
+---- Recurrent convolutional neural networks for text classification - zły zbiór nie bydata
+---- Supervised and semi-supervised text categorization using LSTM for region embeddings - ok
+---- Text Classification Improved by Integrating Bidirectional LSTM with Two-dimensional Max Pooling - zły zbiór nie bydata
+---- Joint Embedding of Words and Labels for Text Classification - nie ma 20newsgroup
+---- Graph convolutional networks for text classification - Ok, wybrana juz wcześniej
+---- Few-shot text classification with distributional signatures - Praca o few-shoot nieporównywalne wyniki z innymio, brak testów na test secie
+---- Simplifying Graph Convolutional Networks - brak infoermacji o zbiorze danych
+
+--- Deep Learning–based Text Classification: A Comprehensive Review
+---- Graph convolutional networks for text classification - Ok, wybrana juz wcześniej
+---- Simplifying Graph Convolutional Networks - brak infoermacji o zbiorze danych
+---- Joint embedding of words and labels for text classification - nie ma 20newsgroup
+
+--- A Survey on Text Classification Algorithms: From Text to Predictions
+---- BertGCN: Transductive Text Classification by Combining GCN and BERT - Ok, ale mam już ją wytypowaną do analizy
+---- How to Fine-Tune BERT for Text Classification? - Nie ma 20 newgroup
+---- Simple Spectral Graph Convolution - Ok
+---- Simplifying Graph Convolutional Networks - Brak informacjio 20 newgroup
+---- Graph Convolutional Networks for Text Classification - Ok, ale mam już ją wytypowaną do analizy
+---- RMDL: Random Multimodel Deep Learning for Classification - Nie ten dataset 20NewsGroup dataset includes 19, 997 
+---- Graph Star Net for Generalized Multi-Task Learning - Może od biedy być
+---- Improving Document Classification with Multi-Sense Embeddings - Do dalszej analizy
+---- Supervised and Semi-Supervised Text Categorization Using LSTM for Region Embeddings - ok wybrana już do analizy na podstawie innego review
+---- An Explainable Probabilistic Classifier for Categorical Data Inspired to Quantum Physics
+
+--- Deep learning, graph‑based text representation and classification: a survey, perspectives and challenges
+---- Graph convolutional networks for text classification - Ok, ale mam już ją wytypowaną do analizy
+---- Tensor graph convolutional networks for text classification - Ok
+---- Inductive topic variational graph auto-encoder for text classification - Ok
+---- Learning dynamic hierarchical topic graph with graph convolutional network for document classification - Ok
+---- Be more with less: hypergraph attention networks for inductive text classification. In: EMNLP - Ok
+
+-- finalnie wybrano
+
+- Złączone bazy danych zawierająca zdeduplikowane artykuły które zostały finalnie wybrane do opisu i analizy
+-- finalnie wybrano 
+
+
+5. Zapytania do bazy Scopus
+- TITLE-ABS-KEY ( "20news bydate"  OR  "20 news bydate"  OR  "20 newsgroups bydate"  OR  "20news-bydate"  OR  "20newsgroups bydate"  OR  "20newsgroups"  OR  "20 newsgroups" )  AND  ( LIMIT-TO ( PUBYEAR ,  2023 )  OR  LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 ) )  
+- TITLE-ABS-KEY ( ( text  AND  categorization )  OR  ( text  AND classification )  20  newsgroups )  AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )  
+- TITLE-ABS-KEY ( ( text  AND  categorization )  OR  ( text  AND classification )  AND  20  newsgroups  AND  ( benchmarks  OR  benchmark ) )  AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )
+- TITLE-ABS-KEY ( comparison  AND of  AND state-of-the-art  AND text  AND classification  AND algorithms )  
+- TITLE-ABS-KEY ( state-of-the-art  AND text  AND classification  AND algorithms  20  newsgroups )  
+
+- TITLE-ABS-KEY ( unsupervised  AND text  AND classification  AND 20  newsgroups )   
+- ALL ( unsupervised  AND text  AND classification  20  newsgroups )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )  
+- ALL ( clustering  AND text  AND classification  20  newsgroups )  
+- TITLE-ABS-KEY ( document  AND clustering  20  newsgroups )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )  
+- TITLE-ABS-KEY ( unsupervised  AND classification  20  newsgroups )  
+- TITLE-ABS-KEY ( document  AND clustering  20  newsgroups )  AND  ( LIMIT-TO ( DOCTYPE ,  "ar" ) )  
+- TITLE-ABS-KEY(document grouping 20 newsgroups ) AND ( LIMIT-TO ( DOCTYPE,"ar" ) ) 
+
+- TITLE-ABS-KEY(clustering 20 newsgroups ) AND ( LIMIT-TO ( DOCTYPE,"ar" ) ) 
+- TITLE-ABS-KEY(classification 20 newsgroups ) AND ( LIMIT-TO ( DOCTYPE,"ar" ) ) 
+
+- classification algorithms 20 newsgroups
+- benchmark algorithms 20 newsgroups
+- document clustering 20 newsgroups

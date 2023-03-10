@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.9)  9 MAR 2023 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.9)  10 MAR 2023 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,7 +526,8 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count304
 \l__pdf_internal_box=\box63
-) (QuestionsAnalysis.aux)
+)
+No file QuestionsAnalysis.aux.
 \openout1 = `QuestionsAnalysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
@@ -680,39 +681,53 @@ Overfull \hbox (29.08493pt too wide) in paragraph at lines 122--122
  [][] 
  []
 
-(QuestionsAnalysis.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-)
+No file QuestionsAnalysis.toc.
 \tf@toc=\write4
 \openout4 = `QuestionsAnalysis.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 35.
-
 (C:\Users\mmarc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 147.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 147.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 147.
+
 [1
 
 {C:/Users/mmarc/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}]
-<../../tables/latex/table-data-to-review-2-1.pdf, id=45, 614.295pt x 794.97pt>
+
+LaTeX Warning: Reference `fig:sumUntil2020' on page 2 undefined on input line 1
+70.
+
+<../../tables/latex/table-data-to-review-2-1.pdf, id=26, 614.295pt x 794.97pt>
 File: ../../tables/latex/table-data-to-review-2-1.pdf Graphic file (type pdf)
 <use ../../tables/latex/table-data-to-review-2-1.pdf>
 Package pdftex.def Info: ../../tables/latex/table-data-to-review-2-1.pdf  used 
 on input line 174.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<../../tables/latex/table-data-to-review-2-2.pdf, id=49, 614.295pt x 794.97pt>
+
+LaTeX Warning: Reference `fig:sumUntil2020' on page 2 undefined on input line 1
+81.
+
+
+LaTeX Warning: Reference `fig:sumUntil2020' on page 2 undefined on input line 1
+81.
+
+
+LaTeX Warning: Reference `fig:sumFrom2020' on page 2 undefined on input line 18
+3.
+
+<../../tables/latex/table-data-to-review-2-2.pdf, id=27, 614.295pt x 794.97pt>
 File: ../../tables/latex/table-data-to-review-2-2.pdf Graphic file (type pdf)
 <use ../../tables/latex/table-data-to-review-2-2.pdf>
 Package pdftex.def Info: ../../tables/latex/table-data-to-review-2-2.pdf  used 
 on input line 187.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-
 [2] [3 <../../tables/latex/table-data-to-review-2-1.pdf>] [4 <../../tables/late
 x/table-data-to-review-2-2.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -764,34 +779,29 @@ Underfull \vbox (badness 10000) detected at line 562
  []
 
 [10] [11] [12]
-<../../img/fig-fmic-1.pdf, id=121, 469.755pt x 324.21124pt>
+<../../img/fig-fmic-1.pdf, id=103, 469.755pt x 324.21124pt>
 File: ../../img/fig-fmic-1.pdf Graphic file (type pdf)
 <use ../../img/fig-fmic-1.pdf>
 Package pdftex.def Info: ../../img/fig-fmic-1.pdf  used on input line 704.
 (pdftex.def)             Requested size: 469.75386pt x 324.21045pt.
  [13 <../../img/fig-fmic-1.pdf>]
-<../../img/fig-nodatasets-distribut.pdf, id=136, 469.755pt x 324.21124pt>
+<../../img/fig-nodatasets-distribut.pdf, id=118, 469.755pt x 324.21124pt>
 File: ../../img/fig-nodatasets-distribut.pdf Graphic file (type pdf)
 <use ../../img/fig-nodatasets-distribut.pdf>
 Package pdftex.def Info: ../../img/fig-nodatasets-distribut.pdf  used on input 
 line 759.
 (pdftex.def)             Requested size: 469.75386pt x 324.21045pt.
- [14 <../../img/fig-nodatasets-distribut.pdf>]
 
-! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/bibliochecking8-1' no
-t found.
+Overfull \vbox (2.02505pt too high) detected at line 798
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.807 ...sis_files/figure-latex/bibliochecking8-1}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[14 <../../img/fig-nodatasets-distribut.pdf>]
+<../../img/fig-art-grby-jour.pdf, id=129, 469.755pt x 324.21124pt>
+File: ../../img/fig-art-grby-jour.pdf Graphic file (type pdf)
+<use ../../img/fig-art-grby-jour.pdf>
+Package pdftex.def Info: ../../img/fig-art-grby-jour.pdf  used on input line 80
+7.
+(pdftex.def)             Requested size: 469.75386pt x 324.21045pt.
 
 Overfull \hbox (396.16676pt too wide) in paragraph at lines 839--986
  [][] 
@@ -800,7 +810,7 @@ Overfull \hbox (396.16676pt too wide) in paragraph at lines 839--986
 
 LaTeX Warning: Float too large for page by 271.2583pt on input line 986.
 
-[15] [16] [17] [18] [19] [20]
+[15 <../../img/fig-art-grby-jour.pdf>] [16] [17] [18] [19] [20]
 Overfull \hbox (994.99072pt too wide) in paragraph at lines 1345--1345
 []\T1/lmtt/m/n/10 ##                                                           
                                                                                
@@ -956,7 +966,7 @@ Do the lowercase conversion of term/phrase and replace of terms by other terms
 are used?[] 
  []
 
-
+[21]
 Overfull \hbox (91.99335pt too wide) in paragraph at lines 1345--1345
 []\T1/lmtt/m/n/10 ##                                                           
                                         Q7.2.3[] 
@@ -968,7 +978,7 @@ Overfull \hbox (91.99335pt too wide) in paragraph at lines 1345--1345
 dure such as for "Character Recognition" case.[] 
  []
 
-[21] [22] [23] [24] [25]
+[22] [23] [24] [25]
 Overfull \hbox (3059.9798pt too wide) in paragraph at lines 1660--1681
 [][] 
  []
@@ -1040,6 +1050,10 @@ Underfull \vbox (badness 10000) detected at line 2017
  []
 
 [31]
+Underfull \vbox (badness 4556) detected at line 2056
+ []
+
+[32]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/qaGenOve3-1' not foun
 d.
@@ -1055,7 +1069,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[32] [33]
+[33]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/qaMethRep-1' not foun
 d.
@@ -1102,15 +1116,7 @@ Overfull \hbox (276.79031pt too wide) in paragraph at lines 2303--2324
 [][] 
  []
 
-[35]
-Underfull \vbox (badness 10000) detected at line 2484
- []
-
-
-Underfull \vbox (badness 10000) detected at line 2484
- []
-
-[36]
+[35] [36]
 Underfull \vbox (badness 10000) detected at line 2484
  []
 
@@ -1119,7 +1125,11 @@ Underfull \vbox (badness 10000) detected at line 2484
  []
 
 [37]
-Underfull \vbox (badness 4556) detected at line 2519
+Underfull \vbox (badness 10000) detected at line 2484
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2484
  []
 
 [38]
@@ -1138,7 +1148,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
+[39]
 Overfull \hbox (15.54797pt too wide) in paragraph at lines 2569--2692
  [][] 
  []
@@ -1146,7 +1156,6 @@ Overfull \hbox (15.54797pt too wide) in paragraph at lines 2569--2692
 
 LaTeX Warning: Float too large for page by 122.45837pt on input line 2692.
 
-[39] [40]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/aqEvalProdRep-1' not 
 found.
@@ -1167,15 +1176,7 @@ Overfull \hbox (521.31892pt too wide) in paragraph at lines 2758--2777
 [][] 
  []
 
-[41]
-Underfull \vbox (badness 10000) detected at line 2889
- []
-
-
-Underfull \vbox (badness 10000) detected at line 2889
- []
-
-[42]
+[40] [41] [42]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/aqEvalInd-1' not foun
 d.
@@ -1191,7 +1192,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[43] [44] [45]
+[43] [44] [45] [46]
 Overfull \hbox (669.49167pt too wide) in paragraph at lines 3165--3165
 []\T1/lmtt/m/n/10 ##                                                           
                                                                                
@@ -1207,7 +1208,7 @@ earning, Feature extraction/Feature projection, Restricted Boltzmann Machines[]
  
  []
 
-[46] [47]
+[47]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAcc1-1' not fo
 und.
@@ -1254,6 +1255,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[49]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAcc7-1' not fo
 und.
@@ -1269,7 +1271,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[49] [50]
+[50]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/bootWeibullFa-1' not 
 found.
@@ -1316,7 +1318,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[52]
+[52] [53]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAcc4-1' not fo
 und.
@@ -1332,7 +1334,6 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[53]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAccD4-1' not f
 ound.
@@ -1372,7 +1373,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[56]
+[56] [57]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAcc13-1' not f
 ound.
@@ -1388,7 +1389,6 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[57]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaAcc13-2' not f
 ound.
@@ -1546,6 +1546,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[66]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMacFD4-1' not 
 found.
@@ -1561,7 +1562,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[66]
+
 Overfull \hbox (797.81488pt too wide) in paragraph at lines 4882--4961
  [][] 
  []
@@ -1613,12 +1614,12 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[70]
+[70] [71]
 Overfull \hbox (46.06793pt too wide) in paragraph at lines 5231--5242
  [][] 
  []
 
-[71] [72] [73]
+[72] [73]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF1-1' not fo
 und.
@@ -1650,6 +1651,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[75]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF5-1' not fo
 und.
@@ -1680,7 +1682,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[75]
+[76]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF3-1' not fo
 und.
@@ -1696,12 +1698,12 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[76]
+
 Overfull \hbox (687.95552pt too wide) in paragraph at lines 5701--5758
  [][] 
  []
 
-[77]
+[77] [78]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF8-1' not fo
 und.
@@ -1717,7 +1719,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[78] [79]
+[79]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF13-1' not f
 ound.
@@ -1733,6 +1735,7 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[80]
 
 ! LaTeX Error: File `QuestionsAnalysis_files/figure-latex/extrAnaMiF13-2' not f
 ound.
@@ -1748,24 +1751,48 @@ I could not locate the file with any of these extensions:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[80]
+
 Overfull \hbox (41.62344pt too wide) in paragraph at lines 6026--6037
  [][] 
  []
 
-[81] [82] [83] [84] [85] [86] [87] [88] (QuestionsAnalysis.aux)
+[81] [82] [83]
+
+LaTeX Warning: Reference `fig:bibliochecking5' on page 84 undefined on input li
+ne 6222.
+
+
+LaTeX Warning: Reference `fig:bibliochecking5' on page 84 undefined on input li
+ne 6222.
+
+
+LaTeX Warning: Reference `fig:bibliochecking7' on page 84 undefined on input li
+ne 6224.
+
+
+LaTeX Warning: Reference `fig:bibliochecking8' on page 84 undefined on input li
+ne 6226.
+
+
+LaTeX Warning: Reference `tab:bibliochecking9' on page 84 undefined on input li
+ne 6226.
+
+[84] [85] [86] [87] [88] (QuestionsAnalysis.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 16054 strings out of 476339
- 316023 string characters out of 5786198
- 1928340 words of memory out of 5000000
- 35765 multiletter control sequences out of 15000+600000
+ 16028 strings out of 476339
+ 314146 string characters out of 5786198
+ 1927340 words of memory out of 5000000
+ 35743 multiletter control sequences out of 15000+600000
  572441 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,8n,81p,2121b,727s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,8n,81p,2094b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/mmarc/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
 c}{C:/Users/mmarc/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
 y.enc}{C:/Users/mmarc/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
@@ -1787,9 +1814,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Users/mmarc/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtko10.pfb><C:/Users/mma
 rc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users
 /mmarc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb>
-Output written on QuestionsAnalysis.pdf (88 pages, 631845 bytes).
+Output written on QuestionsAnalysis.pdf (88 pages, 633012 bytes).
 PDF statistics:
- 730 PDF objects out of 1000 (max. 8388607)
+ 718 PDF objects out of 1000 (max. 8388607)
  218 named destinations out of 1000 (max. 500000)
- 30813 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 30818 words of extra memory for PDF output out of 35830 (max. 10000000)
 
