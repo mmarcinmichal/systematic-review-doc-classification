@@ -7,7 +7,7 @@ The repository contains supplementary materials for the article titled "The outc
 2. A code allows creating a technical report based on the raw data is publicly available.
 
 The project is structured as follow:
-* *resources\Systematic-Review-tm-suplements.pdf - the file contains extracted Details, Findings and Challenges from each analyze work.
+* *resources\Systematic-Review-tm-suplements.pdf* - the file contains extracted Details, Findings and Challenges from each analyze work.
 * *resources\biblio catalogue* contains bibliography files, i.e.:
   * *biblio-helper-article.bib* - the articles other than reviewed articles that were used in the article
   * *biblio-reviewed-article.bib* - the reviewed artilces
