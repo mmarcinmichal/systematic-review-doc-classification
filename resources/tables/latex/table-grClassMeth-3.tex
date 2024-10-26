@@ -3,11 +3,286 @@
 %\begin{table}[htbp]
 % \centering
  % \caption{Known and used classification methods.}
-    \begin{longtable}{p{.15\textwidth}p{.85\textwidth}}
+    \begin{longtable}{p{.15\textwidth}p{.8\textwidth}}
     \caption{Known and used classification methods.} \\
     \hline    
     \specialcell{\textbf{Aspect of work}} & \multicolumn{1}{c}{\textbf{Reference/Description}} \\
 	\hline
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Wang2023}}} \\
+    \specialcell{Details} &
+	The authors propose a novel Text Classification by Fusing Contextual Information via Graph Neural Networks (TextFCG) that fuses contextual information and handles documents with new words and relations.   
+    \\ 
+    \specialcell{Findings} & 
+	Text-FCG outperforms other methods for short- and medium-length text, while sparse graphs or topic models are more effective for long texts. Compared to other graph-based models, Text-FCG shows significant improvements, underscoring the importance of diverse contextual information in learning text representations.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors failed to highlight any challenges or open problems. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Khandve2022}}} \\
+    \specialcell{Details} &
+	The authors explore hierarchical transfer learning approaches for long document classification. In a hierarchical setup, they employ pre-trained Universal Sentence Encoder (USE) and Bidirectional Encoder Representations from Transformers (BERT) to capture better representations efficiently.  
+    \\ 
+    \specialcell{Findings} & 	
+The USE with CNN/LSTM performs better than its stand-alone baseline. In contrast, the BERT with CNN/LSTM performs on par with its stand-alone counterpart.	
+    \\ 
+    \specialcell{Challenges} & 
+	The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Guidotti2022}}} \\
+    \specialcell{Details} &
+	The authors regard the text as a superposition of words, derive a document's wave function and compute the document's transition probability to a target class according to Born's rule.	   
+    \\ 
+    \specialcell{Findings} & 
+	The proposed classifier is self-explainable and can be embedded in neural network architectures. Also, the results suggest that physical principles can be successfully exploited in machine learning and may open a new class of classification algorithms.  
+    \\ 
+    \specialcell{Challenges} & 
+	 The paper suggests several potential improvements and extensions of the work: (1) the effectiveness of the method in the view of machine learning remains an open question, (2) the construction of a wave function explicitly should be considered, and (3) the construction of deep networks that apply the transformation should be developed.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Yang2022}}} \\
+    \specialcell{Details} &
+	The paper introduces a new type of neural network called Simple Jumping Knowledge Networks (SJK-Nets), a two-step process. First, a simple no-learning method completes the neighbourhood aggregation process. Then, a ''jumping architecture`` combines each node's different neighbourhood ranges to represent the network structure better.   
+    \\ 
+    \specialcell{Findings} & 
+	The authors highlight that - SJK-Nets’ neighbourhood aggregation is a no-learning process, so SJK-Nets are successfully extended to node clustering tasks. 
+    \\ 
+    \specialcell{Challenges} & 
+	The paper suggests three possible future research directions: (1) exploring other layer aggregators, (2) extending the method to more downstream tasks, and (3) applying it to other fields beyond graph-based tasks such as natural language processing and computer vision.	 
+	\\
+		
+	& \multicolumn{1}{c}{\textbf{~\citet{Dai2022}}} \\
+    \specialcell{Details} &
+	The authors propose a Graph Fusion Network (GFN) to enhance text classification performance. It builds homogeneous text graphs with word nodes in the graph construction stage and transforms external knowledge into structural information. The graph reasoning stage involves graph learning, convolution, and fusion, where a multi-head fusion module integrates different opinions. GFN can make inferences on new documents without rebuilding the whole text graph.  
+    \\ 
+    \specialcell{Findings} & 
+	Experimental results demonstrate the method's superiority. Notably, the diverse graph views are mutually beneficial. The well-crafted multi-head fusion module effectively enhances the system's performance.
+    \\ 
+    \specialcell{Challenges} & 
+	The paper suggests (1) a thorough investigation into deep learning models' interpretability, (2) exploring alternative methods to construct text graphs, and (3) conducting a comparative analysis between BERT-style and GNN-based models. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Prabhakar2022}}} \\
+    \specialcell{Details} &
+	The authors describe two new techniques for improving deep learning models. The first is called the Evolutionary Contiguous Convolutional Neural Network (ECCNN), where the data instances of the input point are considered along with the contiguous data points in the dataset. The second technique is Swarm DNN, a swarm-based Deep Neural Network that utilizes Particle Swarm Optimization (PSO) for text classification.	  
+    \\ 
+    \specialcell{Findings} & 
+	The two proposed models achieved satisfying results. 
+    \\ 
+    \specialcell{Challenges} & 
+	Future works aim to work with many other nature-inspired and ensemble deep-learning models for efficient text classification.  
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Zhu2021}}} \\
+    \specialcell{Details} &
+	The authors propose to use a modified Markov Diffusion Kernel to derive a variant of Graph Convolution Networks (GCNs) called Simple Spectral Graph Convolution (S2GC).	     
+    \\ 
+    \specialcell{Findings} & 
+	The S2GC method utilizes low- and high-pass filters to capture the global and local contexts of each node. This technique outperforms competitors by effectively aggregating over more prominent neighbourhoods while avoiding over-smoothing.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Lin2021}}} \\
+    \specialcell{Details} &
+	The authors propose BertGCN, a model combining large-scale pretraining and transductive learning for text classification. The model propagates label influence through graph convolution to learn representations for training and unlabeled test data.	   
+    \\ 
+    \specialcell{Findings} & 
+	BertGCN achieves state-of-the-art performance on various text classification datasets, as demonstrated in experiments. The framework can be built on any document encoder and graph model.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors suggest that using document statistics to construct the graph may not be as optimal as models that can automatically create edges between nodes. Therefore, addressing this issue could be a possible feature direction.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Yan2021a}}} \\
+    \specialcell{Details} &
+	The article proposes a model that combines quantum probability and Graph Neural Networks (GNNs) to capture the global structure of interactions between documents for document representation and classification.  
+    \\ 
+    \specialcell{Findings} & 
+	The comprehensive analyses illustrate the proposed model's resilience to limited training data and its capability to learn semantically distinct document representations.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Wang2021b}}} \\
+    \specialcell{Details} &
+	The authors outperform Bi-filtering Graph Convolutional Network (BGCN) thanks to simply cascading two sub-filtering modules. The new solution is called Simple Bi-filtering Graph Convolution (SBGC) framework and is inspired by the direct implementation of Infinite Impulse Response (IIR) graph filters.		   
+    \\ 
+    \specialcell{Findings} & 
+	Experiments show that SBGC outperforms other methods in performance and computational efficiency and that BGCN and SBGC are robust to feature noise and exhibit high label efficiency.
+    \\ 
+    \specialcell{Challenges} & 
+	The paper suggests two possible future research directions: (1) developing filters with the flexibility of IIR filters for different scenarios and (2) reconsidering the design principles of graph convolution networks based on graph signal processing.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Ragesh2021}}} \\
+    \specialcell{Details} &
+	The authors introduce HeteGCN, a novel heterogeneous graph convolutional network model that leverages the predictive text embedding (PTE) and TextGCN approaches.  
+    \\ 
+    \specialcell{Findings} & 
+	Reducing model parameters can improve training speed and performance in scenarios with limited labelled data.
+    \\ 
+    \specialcell{Challenges} & 
+	The paper proposes three future research directions: (1) investigating the advantages of the HeteGCN-BERT augmented model, (2) expanding the model to address recommendation problems, and (3) integrating knowledge graphs into the model. 
+	\\
+		
+	& \multicolumn{1}{c}{\textbf{~\citet{Xie2021}}} \\
+    \specialcell{Details} &
+	The paper introduces the Graph Topic Neural Network (GTNN), a novel model capable of learning latent topic semantics and generating an interpretable document representation by accounting for relationships among documents, words, and the graph structure.  
+    \\ 
+    \specialcell{Findings} & 
+	The model can embed richer structural semantics in the learned representation for downstream tasks. Furthermore, it addresses the well-known interpretability problem of the learned document representations in previous GCN-based methods.
+    \\ 
+    \specialcell{Challenges} & 
+	The work indicates that we should extend the model to large-scale datasets and online learning. Moreover, we should also incorporate linguistic resources such as Wordnet into the graph. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Xie2021a}}} \\
+    \specialcell{Details} &
+	The authors describe a proposed model called Topic Variational Graph Auto-Encoder (T-VGAE) that combines a topic model with a variational graph-auto-encoder to capture hidden semantic information between documents and words.  
+    \\ 
+    \specialcell{Findings} & 
+	The proposed method is more interpretable than similar methods and can deal with unseen documents. 
+    \\ 
+    \specialcell{Challenges} & 
+	The work points out that exploring better-suited prior distribution in the generative process would be interesting. Extending the model to other tasks, such as information recommendation and link prediction, is also possible. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Zhou2021}}} \\
+    \specialcell{Details} &
+	The authors suggest two modules to address the limitations of standard Convolutional Neural Networks (CNNs): one utilizes discriminative filters (filters with a maximum divergence). At the same time, the other enables the complete extraction of all essential features.  
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model increases the discriminative power of the model by maximizing the distance between different filters and a novel global pooling mechanism for feature extraction.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors' future work will focus on adequately incorporating conceptual labels into some NLP tasks.	 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Zhang2021}}} \\
+    \specialcell{Details} &
+	The authors discuss an alternative approach to encoding labels into numerical values by incorporating label knowledge directly into the model without changing its architecture.   
+    \\ 
+    \specialcell{Findings} & 
+	The experimental results demonstrate that the proposed method can understand the relationship between sequences and labels.
+    \\ 
+    \specialcell{Challenges} & 
+	Future work in this area includes two key directions: (1) developing an appropriate keyword set for representing label knowledge without introducing noise and (2) identifying improved methods for calculating relatedness beyond simply using the mean value.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Liu2020}}} \\
+    \specialcell{Details} &
+	TensorGCN  (tensor graph convolutional networks) is a new framework that uses a text graph tensor to capture semantic, syntactic, and sequential contextual information. Intra-graph and inter-graph propagation learning are used to aggregate information from neighbouring nodes and harmonize heterogeneous information between graphs.  
+    \\ 
+    \specialcell{Findings} & 
+	The proposed TensorGCN presents an effective way to harmonize and integrate heterogeneous information from different graphs. The inter-graph propagation strategy is crucial for graph tensor learning.	
+    \\ 
+    \specialcell{Challenges} & 
+	The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Wei2020}}} \\
+    \specialcell{Details} &
+	The proposed model utilizes a recurrent structure to retain word order and capture contextual information, and incorporates message passing from the graph neural networks (GNNs) to update word hidden representations. Additionally, a max-pooling layer is used to capture critical components in text for classification, similar to GNN's readout operation.  
+    \\ 
+    \specialcell{Findings} & 
+	The experimental results show that the model significantly improves against the RNN-based and GNN-based models. The model is suitable for constructing the semantic representation of the entire text. The performance of Text GCN highly depends on the quality of text graph, which limits its scope of application.	   
+    \\ 
+    \specialcell{Challenges} & 
+	The paper suggests that (1) long-distance contextual information may be lost, (2) additional layers could improve the model's performance, and (3) employing a recurrent structure would enhance the capture of long document contextual information. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Chiu2020}}} \\
+    \specialcell{Details} &
+	The authors' model uses an attention mechanism to dynamically decide how much information to use from a sequence - or graph-level component. 
+    \\ 
+    \specialcell{Findings} & 
+	The proposed graph-level extensions enhance performance on most benchmarks. Furthermore, the adapted attention-based architecture outperforms the generic and fixed-value concatenation alternatives. These extensions for text classification enable the system to learn diverse inter-sentential patterns. 
+    \\ 
+    \specialcell{Challenges} & 
+	The authors fail to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Wang2020}}} \\
+    \specialcell{Details} &
+	The authors propose a new trainable hierarchical topic graph (HTG) incorporating a probabilistic deep topic model into graph construction. The HTG consists of word-level, hierarchical topic-level, and document-level nodes, which exhibit a range of semantic variations from fine-grained to coarse. 
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model, called dynamic HTG (DHTG), uses Graph Convolutional Networks (GCN) for variational inference to evolve the HTG for end-to-end document classification dynamically. The model can also learn an interpretable document graph with meaningful node embeddings and semantic edges.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors fail to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Ding2020}}} \\
+    \specialcell{Details} &
+	The authors utilize document-level hypergraphs to model text documents and introduce a new group of GNN models called HyperGAT for generating distinctive text representations. 
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model is (1) unable to capture high-order interaction between words and (2) inefficiently handling large datasets and new documents.
+    \\ 
+    \specialcell{Challenges} & 
+	The authors fail to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Zhou2020}}} \\
+    \specialcell{Details} &
+	The authors propose a Discriminative Convolutional Neural Network with Context-aware Attention to solve the challenges of vanilla Convolutional Neural Networks (CNN). The proposed solution encourages discrimination across different filters via maximizing their earth mover distances and estimates the salience of feature candidates by considering the relation between context features. 
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model can capture representative semantics and effectively compute feature salience for a specific task.	   
+    \\ 
+    \specialcell{Challenges} & 
+	The paper suggests two key points, (1) adopting an adaptive method to extract valuable features of flexible sizes using a context-aware mechanism, and (2) applying the model to related tasks like relation classification and event extraction.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Guo2020}}} \\
+    \specialcell{Details} &
+	The work aims to create a valuable and effective word and document matrix representation architecture based on a linear operation to learn representations for document-level classification. 
+    \\ 
+    \specialcell{Findings} & 
+	A convolutional-based classifier is more suitable for the document matrix. The convolution operation can better capture the proposed document matrix's two-dimensional features by analysing theoretical and experimental perspectives.	  
+    \\ 
+    \specialcell{Challenges} & 
+	The authors fail to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Chen2020c}}} \\
+    \specialcell{Details} &
+	The authors are interested in deep learning for classification with prior, where the labels are expressed in a hierarchy. In particular, they attempt to leverage knowledge transfer and parameter sharing among classes.	   
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model shows promising results compared to support vector machines and other deep learning methods. Also, the model inherits the advantages of deep learning and can handle overfitting and reduce the redundancy between node parameters.	
+    \\ 
+    \specialcell{Challenges} & 
+	The work points out that transfer learning should be considered. Another topic deserving of exploring is how to learn the structural prior.   
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Aler2020}}} \\
+    \specialcell{Details} &
+	The main aim of this article is to carry out an extensive investigation on essential aspects of using Hellinger Distance (HD) in Random Forests (RF), including handling multi-class problems, hyper-parameter optimization, metrics comparison, probability estimation, and metrics combination.  
+    \\ 
+    \specialcell{Findings} & 
+	The results demonstrate HD's robustness in RF, but it has some limitations for balanced multi-class datasets. Combining metrics can enhance performance. Nevertheless, Gini appears to be more suitable than HD when applied to text datasets.
+    \\ 
+    \specialcell{Challenges} & 
+	HD is inferior to Gini for text classification, making it crucial to investigate the underlying reasons. Additionally, considering other distribution distances like Kullback-Leibler divergence as substitutes to HD is worth exploring. 
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Yao2019}}} \\
+    \specialcell{Details} &
+	The authors build a single text graph for a corpus based on word co-occurrence and document word relations, then learn a Text Graph Convolutional Network (Text GCN) for the corpus. 
+    \\ 
+    \specialcell{Findings} & 
+	The proposed Text GCN method excels in text classification, surpassing state-of-the-art approaches and acquiring predictive word and document embeddings. It also demonstrates robustness to less training data, further highlighting its effectiveness. 
+    \\ 
+    \specialcell{Challenges} & 
+	The work points out that we should improve the classification performance using attention mechanisms and develop an unsupervised text GCN framework for representation learning on largescale unlabeled text data.	
+	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Tiwari2019}}} \\
     \specialcell{Details} &
@@ -17,7 +292,7 @@
 	QIBC can outperform the baselines in several categories. Some results, however, remain unsatisfactory in some categories. 
     \\ 
     \specialcell{Challenges} & 
-	An in-depth error classification analysis should be performed. Multi-label classification problems should be addressed.
+	The work points out that, (1) an in-depth error classification analysis should be performed, and (2) multi-label classification problems should be addressed.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Berge2019}}} \\ 
@@ -28,7 +303,7 @@
 	The proposed method captures categories using simple propositional formulae that are readable to humans. The explanatory power of Tsetlin Machine-produced clauses seems to equal that of decision trees.
     \\
     \specialcell{Challenges} & 
-	A utilization of word embeddings should be considered. A combination of different data views should be applied. Datasets with more complicated structures should be considered.
+	The work points out that, (1) a utilization of word embeddings should be considered, (2) a combination of different data views should be applied, and (3) datasets with more complicated structures should be considered.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Unnikrishnan2019}}} \\
@@ -50,7 +325,7 @@
 	The objective function, which integrates the verification and identification tasks, improves the results of the identification tasks. This approach does not use text pre-processing to achieve better document classification performance.
     \\ 
     \specialcell{Challenges} & 
-    The sequence dynamics modeling with Long Short-Term Memory (LSTM) should be incorporated into the proposed model.
+    The work points out that, the sequence dynamics modeling with Long Short-Term Memory (LSTM) should be incorporated into the proposed model.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{AlSalemi2018}}} \\
@@ -84,7 +359,7 @@
 	The proposed hierarchical classifier works better than flat sparse-based classifiers. Principal Component Analysis (PCA) may be used to create an overcomplete dictionary.
     \\ 
     \specialcell{Challenges} & 
-	More research with other datasets should be conducted. The semantic information should be considered.
+	The work points out that, (1) more research with other datasets should be conducted, and (2) the semantic information should be considered.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Benites2017}}} \\
@@ -98,6 +373,17 @@
 	The authors noted that the details of implementation could be an issue.
 	\\
 	
+	& \multicolumn{1}{c}{\textbf{~\citet{Johnson2016}}} \\
+    \specialcell{Details} &
+	The work aims to create a valuable classification method of documents under the one-hot CNN (convolutional neural network) framework. The authors explore a more sophisticated region embedding method using Long Short-Term Memory (LSTM). 
+    \\ 
+    \specialcell{Findings} & 
+	The study shows that embeddings of text regions, which can convey complex concepts, are more valuable than embeddings of single words in isolation.		  
+    \\ 
+    \specialcell{Challenges} & 
+	A promising future direction might be to seek, under this framework, new region-embedding methods with complementary benefits.	
+	\\
+	
 	& \multicolumn{1}{c}{\textbf{~\citet{Sharma2016}}} \\
     \specialcell{Details} &
     The work explores the idea of sparse coding for text classification and seeding the dictionary using principal components. The article also explores the use of Support Vector Machines (SVMs) with frequency-based kernels.    
@@ -106,7 +392,7 @@
     PCA may be utilized to create an overcomplete dictionary. SVMs with Hellinger’s kernel, and without PCA, produces the best results. A voting classification procedure improves the outcomes.  
     \\ 
     \specialcell{Challenges} & 
-    The semantic information should be taken into account. Better strategies for combining the classifiers must be explored.
+    The work points out that, (1) the semantic information should be taken into account, and (2) better strategies for combining the classifiers must be explored.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Jin2016}}} \\
@@ -117,7 +403,7 @@
 	The model is conceptually simple; the only parameters being embedding vectors, trained using a variation of the Skip-gram method. The proposed model outperforms state-of-the-art methods for both balanced and imbalanced data.   
     \\ 
     \specialcell{Challenges} & 
-	Leveraging unlabeled data for semi-supervised learning should be considered. Other neural document models should be exploited to achieve higher accuracy.
+	The work points out that, (1) leveraging unlabeled data for semi-supervised learning should be considered, and (2) other neural document models should be exploited to achieve higher accuracy.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{AlSalemi2016}}} \\
@@ -140,7 +426,7 @@
 	CenKNN overcomes the drawbacks of k-nearest neighbors classifiers. CenKNN works better than Centroid. The proposed method is appropriate for highly imbalanced corpora with a low number of classes. SVM is a better choice for large balanced corpora.  
     \\ 
     \specialcell{Challenges} & 
-	CenKNN should be improved to handle sub-clusters and/or a larger number of classes. Multi-label classification problems should be addressed.
+	The work points out that, (1) CenKNN should be improved to handle sub-clusters and/or a larger number of classes, and (2) multi-label classification problems should be addressed.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Kusner2015}}} \\
@@ -151,7 +437,7 @@
     The metric method leads to low error rates across all investigated data sets. WMD is also the among the slowest metrics to compute (a solution for speeding up the computations is presented in the article).
     \\ 
     \specialcell{Challenges} & 
-    The interpretability of the method should be explored. The document structure should be considered using a distance function. 
+    The work points out that, (1) the interpretability of the method should be explored, and (2) the document structure should be considered using a distance function. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Feng2015}}} \\ 
@@ -174,7 +460,7 @@
 	The proposed method creates a model that generalizes the classification problem well. Its performance depends on the number of principal components. The method performs better than the rest of the classifiers when a dataset has select properties.
     \\
     \specialcell{Challenges} & 
-	Other text classification tasks should be explored. The output prediction of the model should be combined with other classifiers to refine the final prediction.
+	The work points out that, (1) other text classification tasks should be explored, and (2) the output prediction of the model should be combined with other classifiers to refine the final prediction.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Lo2012}}} \\ 
@@ -185,7 +471,7 @@
 	The method produces impressive performance without demanding significant effort in preprocessing. 
     \\
     \specialcell{Challenges} & 
-    The authors study how to obtain fuzzy association between terms based on granules of articles to achieve a more flexible and powerful approach.
+    The authors state that it is required to study how to obtain fuzzy association between terms based on granules of articles to achieve a more flexible and robust approach.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Sainath2010}}} \\ 
@@ -196,7 +482,7 @@
 	All training documents not only increase the size of the dictionary significantly, but also enforce a stronger need for sparseness on the coefficients. Sparse coding methods offer slight, but promising results over a Naive Bayes classifier.  	
 	\\ 
 	\specialcell{Challenges} & 
-	Feature selection techniques should be incorporated. Comparison with other learning methods should be performed. 
+	The work points out that, (1) feature selection techniques should be incorporated, and (2) comparison with other learning methods should be performed. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Li2010}}} \\
@@ -207,7 +493,7 @@
     In ECOC, sub-class partition information of positive and negative classes is available, but ignored, even though it has a value for binary classification. No single algorithm can win on every dataset and situation.
     \\
     \specialcell{Challenges} & 
-    More experiments on more datasets should be performed. Non-text applications should be considered. Local search algorithms should be explored to improve the proposed strategy.
+    The work points out that, (1) more experiments on more datasets should be performed, (2) non-text applications should be considered, and (3) local search algorithms should be explored to improve the proposed strategy.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Jin2010}}} \\
@@ -218,7 +504,7 @@
 	The authors observed that the proposed method produces a larger average hypothesis margin than other prototype learning algorithms.
     \\ 
     \specialcell{Challenges} & 
-	The method can also be applied as a learning criterion to other classifier structures based on gradient descent, such as neural networks and quadratic discriminant functions.
+	The work points out that, the method can also be applied as a learning criterion to other classifier structures based on gradient descent, such as neural networks and quadratic discriminant functions.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Xia2009}}} \\ 
@@ -229,7 +515,7 @@
 	The method has lower time complexity, and does not need to know the semantic contribution of a term makes to a document in which it occurs.
     \\ 
     \specialcell{Challenges} & 
-	Different feature weights should be considered. 
+	The work points out that, different feature weights should be considered. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Larochelle2008}}} \\ 
@@ -240,7 +526,7 @@
     RBMs can and should be used as standalone non-linear classifiers. RBMs are effective at capturing the conditional statistical relationship between multiple tasks, or between the components in a complex target space.
     \\ 
     \specialcell{Challenges} & 
-    More challenging settings, such as multi-task or structured output problems should be considered. Mean-field approximations should be applied. For large, but sparse input vectors, less computationally expensive learning should be introduced.  
+    The work points out that, (1) more challenging settings, such as multi-task or structured output problems should be considered, (2) mean-field approximations should be applied, and (3) for large, but sparse input vectors, less computationally expensive learning should be introduced.  
     \\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Genkin2007}}} \\
@@ -251,7 +537,7 @@
 	The classification results depend on feature selection and configuration of the classification method. The authors found a strong correlation between the number of positive training examples and the number of features chosen.
     \\
     \specialcell{Challenges} & 
-    Other LASSO-based feature selection algorithms should be explored. Scaling algorithms that estimate \textit{regularization paths} to huge applications remain challenging.
+    The work points out that, (1) other LASSO-based feature selection algorithms should be explored, and (2) scaling algorithms that estimate \textit{regularization paths} to huge applications remain challenging.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Qian2007}}} \\
@@ -273,7 +559,7 @@
 	Competitive performance can be achieved only by using the category names as initial seeds.
     \\ 
     \specialcell{Challenges} & 
-	The optimal procedures for collecting seed features should be investigated. The contribution of additional seed performance should be explored. Optimal combinations of intensional and extensional supervision should be investigated.
+	The work points out that, (1) the optimal procedures for collecting seed features should be investigated, (2) the contribution of additional seed performance should be explored, and (3) optimal combinations of intensional and extensional supervision should be investigated.
 	\\
 		
 	& \multicolumn{1}{c}{\textbf{~\citet{Zhang2005}}} \\ 
@@ -284,7 +570,7 @@
 	Negative Geodesic Distance (NGD) on the multinomial manifold is a conditionally positive definite (CPD) kernel, and leads to improvements in accuracy over kernels assuming Euclidean geometry. Linear kernel and TF-IDF with $l_2$ regularization achieve second result.
     \\ 
     \specialcell{Challenges} & 
-    The NGD kernel should be extended to other manifolds (particularly for multimedia tasks). Other kernel methods should be considered.  
+    The work points out that, (1) the NGD kernel should be extended to other manifolds (particularly for multimedia tasks), and (2) other kernel methods should be considered.  
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Li2004}}} \\
@@ -295,7 +581,7 @@
 	The proposed methods are less sensitive to the parameter k, and can adequately classify documents belonging to smaller classes with larger values of k. The proposed strategy is adequate for cases in which estimating the parameter k via cross-validation is impossible, and the class distribution of the training set is skewed.
     \\ 
     \specialcell{Challenges} & 
-    Multi-label classification problems should be addressed. The question of how to evaluate a dataset for text categorization should be addressed. A guideline on how to build a useful training collection for text categorization should be developed.
+    The work points out that, (1) multi-label classification problems should be addressed, (2) the question of how to evaluate a dataset for text categorization should be addressed, and (3) a guideline on how to build a useful training collection for text categorization should be developed.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Rennie2003}}} \\
@@ -306,7 +592,7 @@
 	For RLSC, leave-one-out cross validation (LOOCV) consistently selects a regularization parameter that is too large.
     \\
     \specialcell{Challenges} & 
-    Other text datasets should be considered.
+    The work points out that, other text datasets should be considered.
 	\\
 	
     \hline

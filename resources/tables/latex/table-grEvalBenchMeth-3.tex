@@ -3,11 +3,33 @@
 %\begin{table}[htbp]
 % \centering
  % \caption{Evaluation and benchmarking articles.}
-    \begin{longtable}{p{.15\textwidth}p{.85\textwidth}}
+    \begin{longtable}{p{.15\textwidth}p{.8\textwidth}}
     \caption{Evaluation and benchmarking articles.} \\
     \hline    
     \specialcell{\textbf{Aspect of work}} & \multicolumn{1}{c}{\textbf{Reference/Description}} \\
 	\hline
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Wagh2021}}} \\ 
+    \specialcell{Details} &
+    The authors' benchmark approaches range from simple Naive Bayes to complex BERT on six standard text classification datasets. They present an exhaustive comparison of different algorithms on various long document datasets.      
+    \\
+    \specialcell{Findings} & 
+    Classifying long documents is a relatively simple task. Even basic algorithms can perform well compared to BERT-based approaches on most datasets. BERT-based models consistently perform well on all datasets, but their computational cost may be a concern. For shallower models, the authors recommend using a raw BiLSTM + Max architecture, which performs well across all datasets. A Glove + Attention bag of words model may suffice for more uncomplicated use cases. However, more sophisticated models are necessary for more challenging tasks such as the IMDB sentiment dataset.
+    \\
+    \specialcell{Challenges} & 
+    The work indicates that future work should focus on adequately incorporating conceptual labels into some NLP tasks. 
+	\\  
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Suneera2020}}} \\ 
+    \specialcell{Details} &
+    The authors evaluated the performance of various machine learning (ML) and deep learning algorithms for text classification. They chose six machine learning algorithms and three vectorization techniques, and five deep learning algorithms for the evaluation.      
+    \\
+    \specialcell{Findings} & 
+    Results indicate that Logistic Regression outperforms other ML algorithms. A Bichannel Convolution Neural Network model gains exciting results compared to other deep learning models.
+    \\
+    \specialcell{Challenges} & 
+    The work points out that, Convolutional Neural Network (CNN) and Multilayer Perceptron (MLP) architectures may be notably improved by tuning their parameters and improving their basic architecture for various real-life applications.  
+	\\    
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Bramesh2019}}} \\ 
     \specialcell{Details} &
@@ -17,7 +39,7 @@
     The decision tree (C5.0) classifier performed well on all datasets examined.
     \\
     \specialcell{Challenges} & 
-    The article should be extended to include other feature selection methods, and to utilize the k-fold validation procedure. 
+    The work points out that, it should be extended to include other feature selection methods, and to utilize the k-fold validation procedure. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Arras2017}}} \\ 
@@ -28,7 +50,7 @@
 	The proposed measure of a model’s explanatory power depends only on the relevance of words. A CNN model produces better explanations than a BoW/SVM classifier, and incurs lower computational costs. The LRP decomposition method provides better explanations than gradient-based sensitivity analysis. A CNN can take advantage of the word similarity information encoded in the distributed word embeddings.	
 	\\
 	\specialcell{Challenges} & 
-	The suitability of the model should be checked on other neural-based applications, or other types of classification problems, such as sentiment analysis.   
+	The work points out that, the suitability of the model should be checked on other neural-based applications, or other types of classification problems, such as sentiment analysis.   
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Mazyad2017}}} \\
@@ -50,7 +72,7 @@
     SVMs learn the best decision surface in most test cases. For classification tasks involving high imbalance ratios, it is critical to find an appropriate threshold of SVMs. 
     \\
     \specialcell{Challenges} & 
-    Better thresholding strategies should be developed. The learning objective function of the SVMs to consider the data imbalance in learning the decision surface should be improved.
+    The work points out that, (1) better thresholding strategies should be developed, and (2) the learning objective function of the SVMs to consider the data imbalance in learning the decision surface should be improved.
     \\
 	
     \hline

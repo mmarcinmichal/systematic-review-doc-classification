@@ -3,12 +3,89 @@
 %\begin{table}[htbp]
 % \centering
  % \caption{Known and used feature projection methods.}
-    \begin{longtable}{p{.15\textwidth}p{.85\textwidth}}
+    \begin{longtable}{p{.15\textwidth}p{.8\textwidth}}
     \caption{Known and used feature projection methods.} \\
     \hline    
     \specialcell{\textbf{Aspect of work}} & \multicolumn{1}{c}{\textbf{Reference/Description}} \\
 	\hline
 	
+	& \multicolumn{1}{c}{\textbf{~\citet{Guo2021}}} \\ 
+    \specialcell{Details} &
+	The authors propose the concept of containers and further explore the properties of word containers and document containers through experiments and theoretical demonstrations.      
+    \\ 
+    \specialcell{Findings} & 
+	The document container has a fixed capacity, and the document vector obtained by a simple average of too many word embeddings cannot be fully loaded by the container. It will lose some semantic and syntactic information on vast text datasets.  
+    \\
+    \specialcell{Challenges} & 
+    The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Jiang2020}}} \\ 
+    \specialcell{Details} &
+	The authors introduce the task of conceptual labelling, which aims to generate the minimum number of concepts as labels to represent and explicitly explain the semantics of a Weighted Bag of Words (WBoW).	       
+    \\ 
+    \specialcell{Findings} & 
+	Experiments and results prove that the proposed method can generate proper labels for WBoWs.	  
+    \\
+    \specialcell{Challenges} & 
+   	The authors' future work focuses on properly incorporating conceptual labels into some NLP tasks.	  
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Unnam2020}}} \\ 
+    \specialcell{Details} &
+	The authors propose a framework to represent a document in a unique feature space. They do this by assigning each dimension a potential feature word with high discriminatory power. The model then computes the distances between the document and the feature words.      
+    \\ 
+    \specialcell{Findings} & 
+	The proposed model outperforms baseline methods in document classification and uses interpretable word features to represent the document. It offers an alternative framework for representing larger text units with word embeddings and provides opportunities for developing new approaches to improve document representation and its applications.	  
+    \\
+    \specialcell{Challenges} & 
+   	The study recommends (1) extending the proposed model to enhance its performance, (2) combining the selection criteria for a hybrid feature word selection approach, and (3) developing a word weighting scheme that uses frequency and radius to improve performance.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Yang2020}}} \\ 
+    \specialcell{Details} &
+	The authors provide a new Graph Attention Topic Network (GATON) method to overcome the overfitting issue of Probabilistic Latent Semantic Indexing (pLSI).      
+    \\ 
+    \specialcell{Findings} & 
+	The GATON model is designed to capture the topic structure of documents. This is achieved through the use of graph neural networks, which are equivalent to semi-amortized inference of stochastic block model (SBM) on network data. Similarly, pLSI is equivalent to SBM on a specific bi-partite graph.	  
+    \\
+    \specialcell{Challenges} & 
+   	The authors failed to highlight any challenges or open problems.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Bialas2020}}} \\ 
+    \specialcell{Details} &
+	 The authors propose a novel biologically plausible mechanism for generating low-dimensional spike-based text representation.      
+    \\ 
+    \specialcell{Findings} & 
+	It is recommended that inhibition be disabled during the (Spiking Neural Network) SNN evaluation phase. Pruning out as many as 90\% of connections with the lowest weights did not affect the representation quality while heavily reducing the SNN computational complexity, i.e. the number of differential equations describing the network.	  
+    \\
+    \specialcell{Challenges} & 
+   	The work points out that we should explore the opportunity to expand the SNN encoder towards Deep SNN architecture by adding more layers of spiking neurons, allowing us to learn more detailed features of the input data.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Chen2020}}} \\ 
+    \specialcell{Details} &
+	 The authors propose a novel Boltzmann bases feature extraction called Gaussian Fuzzy Restricted Boltzmann Machine (GFRBM) for real-valued inputs.      
+    \\ 
+    \specialcell{Findings} & 
+	The authors found that the proposed solution outperforms discriminative RBM models regarding reconstruction and classification accuracy. They behave more stably when encountering noisy data.  
+    \\
+    \specialcell{Challenges} & 
+    The work suggests that a more efficient learning algorithm and deep fuzzy models based on FRMB variants should be developed.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Kesiraju2020}}} \\ 
+    \specialcell{Details} &
+	 The authors present the Bayesian subspace multinomial model (Bayesian SMM). This generative log-linear model learns to represent documents in the form of Gaussian distributions, thereby encoding the uncertainty in its covariance.      
+    \\ 
+    \specialcell{Findings} & 
+	The perplexity measure valuation shows that the proposed Bayesian SMM fits the unseen test data better than the state-of-the-art neural variational document models. Also, the proposed systems are robust to over-fitting unseen test data.  
+    \\
+    \specialcell{Challenges} & 
+    The work points out that other scoring mechanisms that exploit the uncertainty in embeddings should be explored.
+	\\
+		
 	& \multicolumn{1}{c}{\textbf{~\citet{Li2020}}} \\ 
     \specialcell{Details} &
 	A proposed representation scheme known as Bag-of-Concepts (BoC) automatically acquires useful conceptual knowledge from an external knowledge base. A second representation model, known as Bag-of-Concept-Clusters (BoCCl), improves BoC representation further.     
@@ -17,7 +94,18 @@
 	Bag-of-words (BoW) is a solid baseline for document classification tasks. BoC and BoCCl can effectively capture the concept-level information of documents. They also offer high interpretability.
     \\
     \specialcell{Challenges} & 
-    Sentence-level-based representation should be considered. Conceptual knowledge should be incorporated into deep neural networks.
+    The work points out that, (1) sentence-level-based representation should be considered, and (2) conceptual knowledge should be incorporated into deep neural networks.
+	\\
+	
+	& \multicolumn{1}{c}{\textbf{~\citet{Gupta2019}}} \\ 
+    \specialcell{Details} &
+	The authors propose an extension of Sparse Composite Document Vector (SCDV) called SCDV-MS utilizes multi-sense word embeddings and learns a lower dimensional manifold. 
+    \\ 
+    \specialcell{Findings} & 
+	The SCDV-MS embeddings proposed in the study are more efficient than SCDV regarding time and space complexity for textual classification tasks. Disambiguating multi-sense words using adjacent words in the context can result in improved document representations. The representation noise at the word level can significantly affect downstream tasks. 
+    \\
+    \specialcell{Challenges} & 
+    The authors failed to highlight any challenges or open problems.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Gao2018}}} \\ 
@@ -28,7 +116,7 @@
     Word embedding representation is a powerful tool, as it served various systems as a reliable input.
     \\ 
     \specialcell{Challenges} & 
-    The contextual information, as the unique distributions to generate word embeddings should be analyzed carefully.
+    The work points out that, the contextual information, as the unique distributions to generate word embeddings should be analyzed carefully.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Chen2017}}} \\ 
@@ -39,7 +127,7 @@
     The proposed autoencoder, known as KATE, can learn better representation than traditional autoencoders, and outperforms deep generative models, probabilistic topic models, and even word representation models. 
     \\ 
     \specialcell{Challenges} & 
-    KATE should be evaluated on more domain-specific datasets. The scalability and effectiveness of the approach should be improved.
+    The work points out that, (1) KATE should be evaluated on more domain-specific datasets, (2) the scalability and effectiveness of the approach should be improved.
     \\
 		
     & \multicolumn{1}{c}{\textbf{~\citet{Hu2017}}} \\ 
@@ -50,7 +138,7 @@
 	The features extracted by the proposed method have strong discriminant power. The improved performance of the method comes at the cost of high computational demands. The effect of the inter-class repulsion regularization component obtained by the models is imperceptible — features of different groups cannot be effectively separated.
 	\\ 
 	\specialcell{Challenges} & 
-	A new inter-class repulsion regularization should be used to improve the performance of the method. 
+	The work points out that, a new inter-class repulsion regularization should be used to improve the performance of the method. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Kesiraju2016}}} \\
@@ -61,7 +149,7 @@
 	The classification accuracy of the SMM increases with the dimensionality of the latent variable, which is not the case with Sparse Topical Coding (STC) or Probabilistic Topic Models (PTM).
     \\
     \specialcell{Challenges} & 
-    An in-depth exploration of different optimization techniques should be performed. This should involve exploring discriminative SMMs, and fully Bayesian modelling of SMMs.
+    The work points out that, (1) an in-depth exploration of different optimization techniques should be performed, and (2)this should involve exploring discriminative SMMs, and fully Bayesian modelling of SMMs.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Li2016a}}} \\ 
@@ -72,7 +160,7 @@
 	MWE achieves highly competitive performance. MWE preserves the same time complexity as the Skip-Gram model. 
     \\ 
     \specialcell{Challenges} & 
-	MWE should be improved by incorporating more external corpora, and giving consideration to proximity and ambiguity among words.
+	The work points out that, MWE should be improved by incorporating more external corpora, and giving consideration to proximity and ambiguity among words.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Zheng2016}}} \\ 
@@ -83,7 +171,7 @@
 	BHSG utilizes negative sampling; thus, it is highly suitable for large scale data.
     \\ 
     \specialcell{Challenges} & 
-    BHSG should be extended to implement more topic-related tasks, such as keyword extraction and text summarization. 
+    The work points out that, BHSG should be extended to implement more topic-related tasks, such as keyword extraction and text summarization. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Rodrigues2014}}} \\ 
@@ -94,7 +182,7 @@
 	A single pass over the training data is required to achieve an impressive classification result. As more data is presented, the model can be improved.
     \\ 
     \specialcell{Challenges} & 
-    Feature selection should be performed. Other properties, such as similarity criteria, should be verified.
+    The work points out that, (1) feature selection should be performed, and (2) other properties, such as similarity criteria, should be verified.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Cai2012}}} \\ 
@@ -117,7 +205,7 @@
 	The CSA helps with dimension-sensitive learning algorithms, such as k-nearest neighbors, to eliminate the \textit{Curse of Dimensionality}~\citep{bouveyron2019,Aggarwal2016}. K-nearest neighbors in the new concept space performs comparably with SVMs. CSA performs equally well in the Chinese and English languages, and incurs a very low computational cost. 
     \\ 
     \specialcell{Challenges} & 
-    CSA should adopted to perform on large taxonomies of text categorization. The technique should be also parallelized.
+    The work points out that, (1) CSA should adopted to perform on large taxonomies of text categorization, and (2) the technique should be also parallelized.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Salakhutdinov2009}}} \\ 
@@ -128,7 +216,7 @@
     The model’s learning is easy and stable. It may be scaled up to classify billions of documents. This is in contrast to directed topic models, in which most of the existing inference algorithms are designed to be run in a batch mode. The proposed model can generalize much better than Latent Dirichlet Allocation (LDA).
     \\ 
     \specialcell{Challenges} & 
-    Label information should be added to the modelling. The document-specific metadata observed should be incorporated into the model’s learning. More layers should be added to create a Deep Belief Network~\citep{Hinton2006}.
+    The work points out that, (1) label information should be added to the modelling, (2) the document-specific metadata observed should be incorporated into the model’s learning, and (3) more layers should be added to create a Deep Belief Network~\citep{Hinton2006}.
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Yan2008}}} \\ 

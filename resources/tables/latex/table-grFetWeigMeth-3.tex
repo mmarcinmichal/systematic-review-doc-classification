@@ -3,12 +3,68 @@
 %\begin{table}[htbp]
 % \centering
  % \caption{Known and used schemes of feature weighting.}
-    \begin{longtable}{p{.15\textwidth}p{.85\textwidth}}
+    \begin{longtable}{p{.15\textwidth}p{.8\textwidth}}
     \caption{Known and used schemes of feature weighting.} \\
     \hline    
     \specialcell{\textbf{Aspect of work}} & \multicolumn{1}{c}{\textbf{Reference/Description}} \\
 	\hline
 	
+	& \multicolumn{1}{c}{\textbf{~\citet{Attieh2023}}} \\
+    \specialcell{Details} &
+	The authors present a new text classification framework called Category-based Feature Engineering (CFE). It includes a supervised weighting scheme based on a variant of the Term Frequency-Inverse Category Frequency (TF-ICF) model, integrated into three efficient classification methods.
+    \\ 
+    \specialcell{Findings} & 
+    The proposed approach improves text classification accuracy while requiring significantly less computation time than their deep model alternatives.
+    \\  
+    \specialcell{Challenges} & 
+    The paper suggests three areas for further research, (1) exploring the use of external corpora and semantic data augmentation to enhance target feature vectors, (2) utilizing human-tailored knowledge bases such as WordNet and DBPedia, and (3) conducting more comprehensive evaluation procedures.
+    \\
+    
+	& \multicolumn{1}{c}{\textbf{~\citet{Shehzad2022}}} \\
+    \specialcell{Details} &
+    The authors propose a novel approach for term weighting called the binned term count (BTC), which involves a non-linear mapping of term frequency.
+    \\ 
+    \specialcell{Findings} & 
+    BTC helps to mitigate the normalization effect on lengthy documents.
+    \\  
+    \specialcell{Challenges} & 
+    The study recommends using variable bin lengths that adjust to the average size of documents in a corpus. This approach may control and allocate document length variations more effectively.
+    \\
+    
+	& \multicolumn{1}{c}{\textbf{~\citet{Jia2022}}} \\
+    \specialcell{Details} &
+    A new term weighting scheme called Document Representation Based on Global Policy (DRGP) is introduced.
+    \\ 
+    \specialcell{Findings} & 
+    We should choose the representation methods according to corpora characteristics for better classification performance.
+    \\  
+    \specialcell{Challenges} & 
+    The study recommends continuing the research and introducing new optimization methods to reduce the calculation cost.	  	  
+    \\
+    
+	& \multicolumn{1}{c}{\textbf{~\citet{Tang2022}}} \\
+    \specialcell{Details} &
+    A new term weighting scheme called Root Term Frequency - Inverse Document Frequency - Distorted Cumulative Residual Entropy (RTF-IDF-DCRE) and its variants are introduced.
+    \\ 
+    \specialcell{Findings} & 
+    The paper demonstrates that RTF-IDF-DCRE performs better than TF-IDF and current supervised term weighting methods. Furthermore, the study presents new and thoroughly analyzed findings that differ from previous research.
+    \\  
+    \specialcell{Challenges} & 
+    The study recommends (1) consider semantic relationships between terms, and (2) represent texts directly in latent numerical feature spaces.	  
+    \\
+    
+	& \multicolumn{1}{c}{\textbf{~\citet{Wang2021a}}} \\
+    \specialcell{Details} &
+    A new term weighting entropy-based schemes to measure the effectiveness of terms in distinguishing between categories are introduced.
+    \\ 
+    \specialcell{Findings} & 
+    Term weighting scheme effectiveness varies with datasets, classifiers, and classification types. The authors propose their schemes as better reflecting term distinguishing power in text categorization than many previous schemes.
+    \\  
+    \specialcell{Challenges} & 
+    The study recommends (1) evaluating the method on larger datasets, (2) improving model parameter estimation, and (3) exploring the potential benefits of incorporating entropy-based term weighting methods to enhance the performance of embedding methods.   
+    \\
+    
+    
 	& \multicolumn{1}{c}{\textbf{~\citet{Tang2020}}} \\
     \specialcell{Details} &
     A new term weighting scheme called Frequency-inverse Exponential Frequency (TF-IEF), with a new global weighting factor, IEF, to characterize a global weighting factor is introduced.
@@ -28,7 +84,7 @@
     TF-IGM outperforms TF-IDF and the state-of-the-art STW schemes.
     \\  
     \specialcell{Challenges} & 
-    Comparative studies on the IGM model as a new measure of sample distribution should be conducted. The model should be applied to feature dimension reduction and sentiment analysis. 
+    The work points out that, (1) comparative studies on the IGM model as a new measure of sample distribution should be conducted, and (2) the model should be applied to feature dimension reduction and sentiment analysis. 
 	\\
 	
 	& \multicolumn{1}{c}{\textbf{~\citet{Luo2011}}} \\
@@ -39,7 +95,7 @@
     The approach outperforms TF-IDF with small amounts of training data, or when the content of the documents is focused on well-defined categories.    
 	\\  
 	\specialcell{Challenges} & 
-	Other ontologies, with wider coverage for expressing the sense of words and category labels, should be employed. Different ways of representing the semantics of categories and other similarity measures should be explored.   
+	The work points out that, (1) other ontologies, with wider coverage for expressing the sense of words and category labels, should be employed, and (2) different ways of representing the semantics of categories and other similarity measures should be explored.   
 	\\
 	
     \hline
