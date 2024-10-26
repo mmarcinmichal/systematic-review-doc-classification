@@ -2683,4 +2683,65 @@ url="https://doi.org/10.1007/978-0-387-30164-8_306"
    year = {2014},
 }
 
+@Article{Openai,
+  author   = {Alec Radford Openai and Karthik Narasimhan Openai and Tim Salimans Openai and Ilya Sutskever Openai},
+  title    = {Improving Language Understanding by Generative Pre-Training},
+  abstract = {Natural language understanding comprises a wide range of diverse tasks such as textual entailment, question answering, semantic similarity assessment, and document classification. Although large unlabeled text corpora are abundant, labeled data for learning these specific tasks is scarce, making it challenging for discriminatively trained models to perform adequately. We demonstrate that large gains on these tasks can be realized by generative pre-training of a language model on a diverse corpus of unlabeled text, followed by discriminative fine-tuning on each specific task. In contrast to previous approaches, we make use of task-aware input transformations during fine-tuning to achieve effective transfer while requiring minimal changes to the model architecture. We demonstrate the effectiveness of our approach on a wide range of benchmarks for natural language understanding. Our general task-agnostic model outperforms discriminatively trained models that use architectures specifically crafted for each task, significantly improving upon the state of the art in 9 out of the 12 tasks studied. For instance, we achieve absolute improvements of 8.9% on commonsense reasoning (Stories Cloze Test), 5.7% on question answering (RACE), and 1.5% on textual entailment (MultiNLI).},
+  url      = {https://gluebenchmark.com/leaderboard},
+}
+
+@article{Touvron2023,
+   abstract = {We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.},
+   author = {Hugo Touvron and Thibaut Lavril and Gautier Izacard and Xavier Martinet and Marie-Anne Lachaux and Timothée Lacroix and Baptiste Rozière and Naman Goyal and Eric Hambro and Faisal Azhar and Aurelien Rodriguez and Armand Joulin and Edouard Grave and Guillaume Lample},
+   month = {2},
+   title = {LLaMA: Open and Efficient Foundation Language Models},
+   url = {https://arxiv.org/abs/2302.13971v1},
+   year = {2023},
+}
+
+@article{Liu2019,
+   abstract = {Language model pretraining has led to significant performance gains but careful comparison between different approaches is challenging. Training is computationally expensive, often done on private datasets of different sizes, and, as we will show, hyperparameter choices have significant impact on the final results. We present a replication study of BERT pretraining (Devlin et al., 2019) that carefully measures the impact of many key hyperparameters and training data size. We find that BERT was significantly undertrained, and can match or exceed the performance of every model published after it. Our best model achieves state-of-the-art results on GLUE, RACE and SQuAD. These results highlight the importance of previously overlooked design choices, and raise questions about the source of recently reported improvements. We release our models and code.},
+   author = {Yinhan Liu and Myle Ott and Naman Goyal and Jingfei Du and Mandar Joshi and Danqi Chen and Omer Levy and Mike Lewis and Luke Zettlemoyer and Veselin Stoyanov and Paul G Allen},
+   month = {7},
+   title = {RoBERTa: A Robustly Optimized BERT Pretraining Approach},
+   url = {https://arxiv.org/abs/1907.11692v1},
+   year = {2019},
+}
+
+@inproceedings{Devlin2019,
+   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+   author = {Jacob Devlin and Ming Wei Chang and Kenton Lee and Kristina Toutanova},
+   isbn = {9781950737130},
+   booktitle = {NAACL HLT 2019 - 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies - Proceedings of the Conference},
+   pages = {4171-4186},
+   publisher = {Association for Computational Linguistics (ACL)},
+   title = {BERT: Pre-training of deep bidirectional transformers for language understanding},
+   volume = {1},
+   year = {2019},
+}
+
+@Article{Payandeh2023,
+  author    = {Amirreza Payandeh and Kourosh Teimouri Baghaei and Pooya Fayyazsanavi and Somayeh Bakhtiari Ramezani and Zhiqian Chen and Shahram Rahimi},
+  journal   = {{IEEE} Access},
+  title     = {Deep Representation Learning: Fundamentals, Technologies, Applications, and Open Challenges},
+  year      = {2023},
+  pages     = {137621--137659},
+  volume    = {11},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/access/PayandehBFRCR23.bib},
+  doi       = {10.1109/ACCESS.2023.3335196},
+}
+
+@Article{Raiaan2024,
+  author    = {Mohaimenul Azam Khan Raiaan and Md. Saddam Hossain Mukta and Kaniz Fatema and Nur Mohammad Fahad and Sadman Sakib and Most Marufatul Jannat Mim and Jubaer Ahmad and Mohammed Eunus Ali and Sami Azam},
+  journal   = {{IEEE} Access},
+  title     = {A Review on Large Language Models: Architectures, Applications, Taxonomies, Open Issues and Challenges},
+  year      = {2024},
+  pages     = {26839--26874},
+  volume    = {12},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/access/RaiaanMFFSMAAA24.bib},
+  doi       = {10.1109/ACCESS.2024.3365742},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
