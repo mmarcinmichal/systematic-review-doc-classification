@@ -1,0 +1,93 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
+# See https://github.com/r-lib/actions/tree/master/examples#readme for
+# additional example workflows available for the R community.
+
+name: R Script Validation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-r-scripts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.x'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc
+
+      - name: Install R packages
+        run: |
+          install.packages(c(
+            'rmarkdown',
+            'knitr',
+            'tidyverse',
+            'ggplot2'
+          ), dependencies=TRUE)
+        shell: Rscript {0}
+
+      # Create a validation directory for new results
+      - name: Create validation directory
+        run: |
+          cd resources/r-code
+          mkdir -p validation_results
+          cp questions-analysis/QuestionsAnalysis.Rmd validation_results/
+
+      # Render new results in the validation directory
+      - name: Render R Markdown
+        run: |
+          cd resources/r-code
+          Rscript -e "rmarkdown::render('validation_results/QuestionsAnalysis.Rmd', 
+                      output_dir = 'validation_results',
+                      output_file = 'QuestionsAnalysis_new.html')"
+          Rscript -e "rmarkdown::render('validation_results/QuestionsAnalysis.Rmd', 
+                      output_format = 'md_document',
+                      output_dir = 'validation_results',
+                      output_file = 'QuestionsAnalysis_new.md')"
+
+      # Compare original and new files
+      - name: Compare results
+        run: |
+          cd resources/r-code
+          echo "Comparing markdown files..."
+          if ! diff -u questions-analysis/QuestionsAnalysis.md validation_results/QuestionsAnalysis_new.md > validation_results/markdown_diff.txt; then
+            echo "Differences found in markdown output"
+            echo "Check validation_results/markdown_diff.txt for details"
+          else
+            echo "No differences found in markdown output"
+          fi
+
+          # Calculate and store file sizes
+          echo "Original HTML size: $(ls -lh questions-analysis/QuestionsAnalysis.html | awk '{print $5}')" > validation_results/size_comparison.txt
+          echo "New HTML size: $(ls -lh validation_results/QuestionsAnalysis_new.html | awk '{print $5}')" >> validation_results/size_comparison.txt
+
+      # Archive validation results
+      - name: Archive validation results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: validation-results
+          path: |
+            resources/r-code/validation_results/
+            resources/r-code/validation_results/markdown_diff.txt
+            resources/r-code/validation_results/size_comparison.txt
+
