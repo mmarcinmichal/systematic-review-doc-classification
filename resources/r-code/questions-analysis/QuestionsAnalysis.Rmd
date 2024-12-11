@@ -3,6 +3,10 @@ title: 'The outcomes and publication standards of research descriptions in docum
 author: "Marcin Mirończuk (<marcin.mironczuk@opi.org.pl>) and Adam Müller (<adam.muller@opi.org.pl>)"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
+  bookdown::pdf_document2:
+    number_sections: true
+    toc: true
+    toc_depth: 5
   bookdown::github_document2:
     number_sections: true
     toc: true
@@ -619,7 +623,7 @@ modelResultsDf[which(modelResultsDf$workId %in% worksIndxs$grWeightingWorkIds),]
 
 worksIndxs$grFsWorkIds <- c("6 - Weighted Document Frequency for feature selection in text classification.xlsx",
                             "10 - Self-Tuned Descriptive Document Clustering Using a Predictive Network.xlsx",
-                            "14 - A Bayesian Classification Approach Using Class-Specific  Features for Text Categorization.xlsx", 
+                            "14 - A Bayesian Classification Approach Using Class-Specific Features for Text Categorization.xlsx", 
                             "18 - Toward Optimal Feature Selection in Naive bayes for text categorization.xlsx", 
                             "19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction.xlsx", 
                             "218 - Relative discrimination criterion - A novel feature ranking method.xlsx", 
@@ -728,7 +732,7 @@ modelResultsDf[which(modelResultsDf$workId %in% worksIndxs$grEvalWorkIds),]$work
 
 worksIndxs$grBenchmarkWorkIds <- c("50 - On strategies for imbalanced text classification using SVM A comparative study.xlsx",  
                                    "65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets.xlsx", 
-                                   "77 -  A Comparative Study on Term Weighting Schemes for Text Classification.xlsx",
+                                   "77 - A Comparative Study on Term Weighting Schemes for Text Classification.xlsx",
                                    "2020-Performance Analysis of Machine Learning and.xlsx",
                                    "2021-Comparative Study of Long Document.xlsx"
                                    )

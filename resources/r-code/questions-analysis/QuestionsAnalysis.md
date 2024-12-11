@@ -4,100 +4,69 @@ the use of 20 Newsgroups bydate dataset
 ================
 Marcin Mirończuk (<marcin.mironczuk@opi.org.pl>) and Adam Müller
 (<adam.muller@opi.org.pl>)
-2023-03-10
+2024-12-11
 
-- <a href="#1-introduction" id="toc-1-introduction">1 Introduction</a>
-- <a href="#2-processing-data" id="toc-2-processing-data">2 Processing
-  data</a>
-  - <a href="#21-loading-main-setting" id="toc-21-loading-main-setting">2.1
-    Loading main setting</a>
-  - <a href="#22-checking-a-bibliography-and-generating-basic-statistics"
-    id="toc-22-checking-a-bibliography-and-generating-basic-statistics">2.2
-    Checking a bibliography and generating basic statistics</a>
-  - <a href="#23-checking-a-schema-of-questionnaires"
-    id="toc-23-checking-a-schema-of-questionnaires">2.3 Checking a schema of
-    questionnaires</a>
-  - <a
-    href="#24-preparing-data-for-qualitative-and-quantitative-analyses-of-text-classification-studies"
-    id="toc-24-preparing-data-for-qualitative-and-quantitative-analyses-of-text-classification-studies">2.4
-    Preparing data for Qualitative and Quantitative analyses of text
-    classification studies</a>
-    - <a href="#241-generating-raw-data-to-questionnaires-analysis"
-      id="toc-241-generating-raw-data-to-questionnaires-analysis">2.4.1
-      Generating raw data to questionnaires analysis</a>
-      - <a href="#2411-questionnaires-analysis---works-taxonomy"
-        id="toc-2411-questionnaires-analysis---works-taxonomy">2.4.1.1
-        Questionnaires analysis - works’ taxonomy</a>
-      - <a href="#2412-questionnaires-analysis---general-overviewimpression"
-        id="toc-2412-questionnaires-analysis---general-overviewimpression">2.4.1.2
-        Questionnaires analysis - general overview/impression</a>
-      - <a href="#2413-questionnaires-analysis---method-reproducibility"
-        id="toc-2413-questionnaires-analysis---method-reproducibility">2.4.1.3
-        Questionnaires analysis - method reproducibility</a>
-      - <a href="#2414-questionnaires-analysis---datasets-reproducibility"
-        id="toc-2414-questionnaires-analysis---datasets-reproducibility">2.4.1.4
-        Questionnaires analysis - datasets reproducibility</a>
-      - <a
-        href="#2415-questionnaires-analysis---evaluation-procedure-reproducibility"
-        id="toc-2415-questionnaires-analysis---evaluation-procedure-reproducibility">2.4.1.5
-        Questionnaires analysis - evaluation procedure reproducibility</a>
-    - <a href="#242-extracted-data-analysis"
-      id="toc-242-extracted-data-analysis">2.4.2 Extracted data analysis</a>
-      - <a href="#2421-extracted-data-analysis---accuracy"
-        id="toc-2421-extracted-data-analysis---accuracy">2.4.2.1 Extracted data
-        analysis - Accuracy</a>
-        - <a href="#24211-analysis-of-normal-distribution"
-          id="toc-24211-analysis-of-normal-distribution">2.4.2.1.1 Analysis of
-          Normal distribution.</a>
-        - <a href="#24212-analysis-of-weibull-distribution"
-          id="toc-24212-analysis-of-weibull-distribution">2.4.2.1.2 Analysis of
-          Weibull distribution.</a>
-        - <a href="#24213-comparing-normal-and-weibull-distribution"
-          id="toc-24213-comparing-normal-and-weibull-distribution">2.4.2.1.3
-          Comparing Normal and Weibull distribution.</a>
-        - <a href="#24214-ranking-of-the-models"
-          id="toc-24214-ranking-of-the-models">2.4.2.1.4 Ranking of the models</a>
-        - <a href="#24215-analysis-of-trends"
-          id="toc-24215-analysis-of-trends">2.4.2.1.5 Analysis of trends</a>
-        - <a href="#24216-analysis-of-models-groups"
-          id="toc-24216-analysis-of-models-groups">2.4.2.1.6 Analysis of models
-          groups</a>
-      - <a href="#2422-extracted-data-analysis---macro-f1-score"
-        id="toc-2422-extracted-data-analysis---macro-f1-score">2.4.2.2 Extracted
-        data analysis - Macro F1 score</a>
-        - <a href="#24221-analysis-of-normal-distribution"
-          id="toc-24221-analysis-of-normal-distribution">2.4.2.2.1 Analysis of
-          Normal distribution.</a>
-        - <a href="#24222-analysis-of-weibull-distribution"
-          id="toc-24222-analysis-of-weibull-distribution">2.4.2.2.2 Analysis of
-          Weibull distribution.</a>
-        - <a href="#24223-comparing-normal-and-weibull-distribution"
-          id="toc-24223-comparing-normal-and-weibull-distribution">2.4.2.2.3
-          Comparing Normal and Weibull distribution.</a>
-        - <a href="#24224-ranking-of-the-models"
-          id="toc-24224-ranking-of-the-models">2.4.2.2.4 Ranking of the models</a>
-        - <a href="#24225-analysis-of-trends"
-          id="toc-24225-analysis-of-trends">2.4.2.2.5 Analysis of trends</a>
-        - <a href="#24226-analysis-of-models-groups"
-          id="toc-24226-analysis-of-models-groups">2.4.2.2.6 Analysis of models
-          groups</a>
-      - <a href="#2423-extracted-data-analysis---micro-f1-score"
-        id="toc-2423-extracted-data-analysis---micro-f1-score">2.4.2.3 Extracted
-        data analysis - Micro F1 score</a>
-        - <a href="#24231-analysis-of-normal-distribution"
-          id="toc-24231-analysis-of-normal-distribution">2.4.2.3.1 Analysis of
-          Normal distribution.</a>
-        - <a href="#24232-ranking-of-the-models"
-          id="toc-24232-ranking-of-the-models">2.4.2.3.2 Ranking of the models</a>
-        - <a href="#24233-analysis-of-trends"
-          id="toc-24233-analysis-of-trends">2.4.2.3.3 Analysis of trends</a>
-        - <a href="#24234-analysis-of-models-groups"
-          id="toc-24234-analysis-of-models-groups">2.4.2.3.4 Analysis of models
-          groups</a>
-  - <a href="#25-summary-and-notice" id="toc-25-summary-and-notice">2.5
-    Summary and notice</a>
-- <a href="#3-conclusions" id="toc-3-conclusions">3 Conclusions</a>
-- <a href="#4-references" id="toc-4-references">4 References</a>
+- [1 Introduction](#1-introduction)
+- [2 Processing data](#2-processing-data)
+  - [2.1 Loading main setting](#21-loading-main-setting)
+  - [2.2 Checking a bibliography and generating basic
+    statistics](#22-checking-a-bibliography-and-generating-basic-statistics)
+  - [2.3 Checking a schema of
+    questionnaires](#23-checking-a-schema-of-questionnaires)
+  - [2.4 Preparing data for Qualitative and Quantitative analyses of
+    text classification
+    studies](#24-preparing-data-for-qualitative-and-quantitative-analyses-of-text-classification-studies)
+    - [2.4.1 Generating raw data to questionnaires
+      analysis](#241-generating-raw-data-to-questionnaires-analysis)
+      - [2.4.1.1 Questionnaires analysis - works’
+        taxonomy](#2411-questionnaires-analysis---works-taxonomy)
+      - [2.4.1.2 Questionnaires analysis - general
+        overview/impression](#2412-questionnaires-analysis---general-overviewimpression)
+      - [2.4.1.3 Questionnaires analysis - method
+        reproducibility](#2413-questionnaires-analysis---method-reproducibility)
+      - [2.4.1.4 Questionnaires analysis - datasets
+        reproducibility](#2414-questionnaires-analysis---datasets-reproducibility)
+      - [2.4.1.5 Questionnaires analysis - evaluation procedure
+        reproducibility](#2415-questionnaires-analysis---evaluation-procedure-reproducibility)
+    - [2.4.2 Extracted data analysis](#242-extracted-data-analysis)
+      - [2.4.2.1 Extracted data analysis -
+        Accuracy](#2421-extracted-data-analysis---accuracy)
+        - [2.4.2.1.1 Analysis of Normal
+          distribution.](#24211-analysis-of-normal-distribution)
+        - [2.4.2.1.2 Analysis of Weibull
+          distribution.](#24212-analysis-of-weibull-distribution)
+        - [2.4.2.1.3 Comparing Normal and Weibull
+          distribution.](#24213-comparing-normal-and-weibull-distribution)
+        - [2.4.2.1.4 Ranking of the
+          models](#24214-ranking-of-the-models)
+        - [2.4.2.1.5 Analysis of trends](#24215-analysis-of-trends)
+        - [2.4.2.1.6 Analysis of models
+          groups](#24216-analysis-of-models-groups)
+      - [2.4.2.2 Extracted data analysis - Macro F1
+        score](#2422-extracted-data-analysis---macro-f1-score)
+        - [2.4.2.2.1 Analysis of Normal
+          distribution.](#24221-analysis-of-normal-distribution)
+        - [2.4.2.2.2 Analysis of Weibull
+          distribution.](#24222-analysis-of-weibull-distribution)
+        - [2.4.2.2.3 Comparing Normal and Weibull
+          distribution.](#24223-comparing-normal-and-weibull-distribution)
+        - [2.4.2.2.4 Ranking of the
+          models](#24224-ranking-of-the-models)
+        - [2.4.2.2.5 Analysis of trends](#24225-analysis-of-trends)
+        - [2.4.2.2.6 Analysis of models
+          groups](#24226-analysis-of-models-groups)
+      - [2.4.2.3 Extracted data analysis - Micro F1
+        score](#2423-extracted-data-analysis---micro-f1-score)
+        - [2.4.2.3.1 Analysis of Normal
+          distribution.](#24231-analysis-of-normal-distribution)
+        - [2.4.2.3.2 Ranking of the
+          models](#24232-ranking-of-the-models)
+        - [2.4.2.3.3 Analysis of trends](#24233-analysis-of-trends)
+        - [2.4.2.3.4 Analysis of models
+          groups](#24234-analysis-of-models-groups)
+  - [2.5 Summary and notice](#25-summary-and-notice)
+- [3 Conclusions](#3-conclusions)
+- [4 References](#4-references)
 
 # 1 Introduction
 
@@ -187,11 +156,9 @@ Figure <a href="#fig:sumUntil2020">1.1</a>.
 <div class="figure" style="text-align: center">
 
 <img src="../../tables/latex/table-data-to-review-2-1.png" alt="The count of articles collected until 2020." width="100%" />
-
 <p class="caption">
-
-Figure 1.1: The count of articles collected until 2020.
-
+<span id="fig:sumUntil2020"></span>Figure 1.1: The count of articles
+collected until 2020.
 </p>
 
 </div>
@@ -225,11 +192,9 @@ Figure <a href="#fig:sumFrom2020">1.2</a>.
 <div class="figure" style="text-align: center">
 
 <img src="../../tables/latex/table-data-to-review-2-2.png" alt="The count of articles collected from 2020." width="100%" />
-
 <p class="caption">
-
-Figure 1.2: The count of articles collected from 2020.
-
+<span id="fig:sumFrom2020"></span>Figure 1.2: The count of articles
+collected from 2020.
 </p>
 
 </div>
@@ -593,11 +558,12 @@ environment(rsqWeibull) <- new.env(parent = baseenv())
 sessionInfo()
 ```
 
-    ## R version 4.2.2 (2022-10-31 ucrt)
+    ## R version 4.3.2 (2023-10-31 ucrt)
     ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-    ## Running under: Windows 10 x64 (build 22621)
+    ## Running under: Windows 11 x64 (build 26100)
     ## 
     ## Matrix products: default
+    ## 
     ## 
     ## locale:
     ## [1] LC_COLLATE=English_United States.1252 
@@ -607,32 +573,35 @@ sessionInfo()
     ## [5] LC_TIME=English_United States.1252    
     ## system code page: 65001
     ## 
+    ## time zone: Europe/Warsaw
+    ## tzcode source: internal
+    ## 
     ## attached base packages:
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ##  [1] effectsize_0.8.3   bookdown_0.32      forcats_0.5.2      pastecs_1.3.21    
-    ##  [5] psych_2.2.9        bib2df_1.1.1       dplyr_1.0.10       gridExtra_2.3     
-    ##  [9] tm_0.7-11          NLP_0.2-1          ggplot2_3.4.0      fitdistrplus_1.1-8
-    ## [13] survival_3.4-0     MASS_7.3-58.1      json64_0.1.3       nortest_1.0-4     
-    ## [17] boot_1.3-28        openxlsx_4.2.5.2   stringr_1.5.0      readxl_1.4.1      
+    ##  [1] effectsize_1.0.0   bookdown_0.41      forcats_1.0.0      pastecs_1.4.2     
+    ##  [5] psych_2.4.6.26     bib2df_1.1.2.0     dplyr_1.1.4        gridExtra_2.3     
+    ##  [9] tm_0.7-15          NLP_0.3-2          ggplot2_3.5.1      fitdistrplus_1.2-1
+    ## [13] survival_3.5-7     MASS_7.3-60        json64_0.1.3       nortest_1.0-4     
+    ## [17] boot_1.3-28.1      openxlsx_4.2.7.1   stringr_1.5.1      readxl_1.4.3      
     ## 
     ## loaded via a namespace (and not attached):
-    ##  [1] Rcpp_1.0.9         mvtnorm_1.1-3      lattice_0.20-45    zoo_1.8-11        
-    ##  [5] digest_0.6.31      utf8_1.2.2         slam_0.1-50        R6_2.5.1          
-    ##  [9] cellranger_1.1.0   coda_0.19-4        evaluate_0.19      httr_1.4.4        
-    ## [13] highr_0.9          pillar_1.8.1       rlang_1.0.6        multcomp_1.4-22   
-    ## [17] rstudioapi_0.14    Matrix_1.5-1       rmarkdown_2.19     splines_4.2.2     
-    ## [21] munsell_0.5.0      compiler_4.2.2     xfun_0.35          pkgconfig_2.0.3   
-    ## [25] parameters_0.20.2  mnormt_2.1.1       htmltools_0.5.4    insight_0.19.0    
-    ## [29] tidyselect_1.2.0   tibble_3.1.8       codetools_0.2-18   fansi_1.0.3       
-    ## [33] withr_2.5.0        grid_4.2.2         humaniformat_0.6.0 xtable_1.8-4      
-    ## [37] nlme_3.1-160       gtable_0.3.1       lifecycle_1.0.3    magrittr_2.0.3    
-    ## [41] bayestestR_0.13.0  scales_1.2.1       datawizard_0.6.5   zip_2.2.2         
-    ## [45] estimability_1.4.1 cli_3.4.1          stringi_1.7.8      xml2_1.3.3        
-    ## [49] generics_0.1.3     vctrs_0.5.1        sandwich_3.0-2     TH.data_1.1-1     
-    ## [53] tools_4.2.2        glue_1.6.2         emmeans_1.8.4-1    parallel_4.2.2    
-    ## [57] fastmap_1.1.0      yaml_2.3.6         colorspace_2.0-3   knitr_1.41
+    ##  [1] gtable_0.3.6       xfun_0.49          bayestestR_0.15.0  insight_1.0.0     
+    ##  [5] lattice_0.21-9     vctrs_0.6.5        tools_4.3.2        generics_0.1.3    
+    ##  [9] sandwich_3.1-1     parallel_4.3.2     datawizard_0.13.0  tibble_3.2.1      
+    ## [13] fansi_1.0.6        pkgconfig_2.0.3    Matrix_1.6-1.1     lifecycle_1.0.4   
+    ## [17] compiler_4.3.2     munsell_0.5.1      mnormt_2.1.1       codetools_0.2-19  
+    ## [21] humaniformat_0.6.0 htmltools_0.5.8.1  yaml_2.3.10        pillar_1.9.0      
+    ## [25] multcomp_1.4-26    nlme_3.1-163       tidyselect_1.2.1   zip_2.3.1         
+    ## [29] digest_0.6.37      mvtnorm_1.3-2      stringi_1.8.4      slam_0.1-55       
+    ## [33] splines_4.3.2      fastmap_1.2.0      grid_4.3.2         colorspace_2.1-1  
+    ## [37] cli_3.6.3          magrittr_2.0.3     utf8_1.2.4         TH.data_1.1-2     
+    ## [41] withr_3.0.2        scales_1.3.0       estimability_1.5.1 rmarkdown_2.29    
+    ## [45] httr_1.4.7         emmeans_1.10.5     cellranger_1.1.0   zoo_1.8-12        
+    ## [49] coda_0.19-4.1      evaluate_1.0.1     knitr_1.49         parameters_0.24.0 
+    ## [53] rlang_1.1.4        Rcpp_1.0.13-1      xtable_1.8-4       glue_1.8.0        
+    ## [57] xml2_1.3.6         rstudioapi_0.17.1  R6_2.5.1
 
 ## 2.2 Checking a bibliography and generating basic statistics
 
@@ -726,11 +695,9 @@ ggplotCf(dataSetsCountDf %>% dplyr::mutate(label = paste0(.data$frequ, "\n(", sc
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bibliochecking5-1.png" alt="Distribution of the number of publications in years."  />
-
 <p class="caption">
-
-Figure 2.1: Distribution of the number of publications in years.
-
+<span id="fig:bibliochecking5"></span>Figure 2.1: Distribution of the
+number of publications in years.
 </p>
 
 </div>
@@ -775,12 +742,9 @@ ggplotCf(dataSetsCountDf %>% dplyr::mutate(label = paste0(.data$frequ,"\n(", sca
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bibliochecking7-1.png" alt="Distribution of the number of publications grouped by publication type."  />
-
 <p class="caption">
-
-Figure 2.2: Distribution of the number of publications grouped by
-publication type.
-
+<span id="fig:bibliochecking7"></span>Figure 2.2: Distribution of the
+number of publications grouped by publication type.
 </p>
 
 </div>
@@ -820,12 +784,9 @@ ggplotCfFlip(dataSetsCountDf[1:8, ] %>%
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bibliochecking8-1.png" alt="Distribution of the number of publications by publication type"  />
-
 <p class="caption">
-
-Figure 2.3: Distribution of the number of publications by publication
-type
-
+<span id="fig:bibliochecking8"></span>Figure 2.3: Distribution of the
+number of publications by publication type
 </p>
 
 </div>
@@ -845,81 +806,87 @@ knitr::kable(dataSetsCountDf %>%
              caption = "Ranking of publication resources.")
 ```
 
-|     | Journals/Resource names                                                                                                                                 | Frequency | Percent |
-|-----|:--------------------------------------------------------------------------------------------------------------------------------------------------------|----------:|:--------|
-| 19  | Expert Systems with Applications                                                                                                                        |        10 | 9.90%   |
-| 34  | Knowledge-Based Systems                                                                                                                                 |         7 | 6.93%   |
-| 26  | IEEE Transactions on Knowledge and Data Engineering                                                                                                     |         5 | 4.95%   |
-| 24  | IEEE Access                                                                                                                                             |         3 | 2.97%   |
-| 30  | Information Sciences                                                                                                                                    |         3 | 2.97%   |
-| 36  | Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)                    |         3 | 2.97%   |
-| 41  | Neurocomputing                                                                                                                                          |         3 | 2.97%   |
-| 44  | Pattern Recognition Letters                                                                                                                             |         3 | 2.97%   |
-| 61  | Proceedings of the AAAI Conference on Artificial Intelligence                                                                                           |         2 | 1.98%   |
-| 1   | 2016 4th International Symposium on Computational and Business Intelligence, ISCBI 2016                                                                 |         1 | 0.99%   |
-| 2   | 2020 IEEE 11th International Conference on Software Engineering and Service Science (ICSESS)                                                            |         1 | 0.99%   |
-| 3   | 2020 IEEE 17th India Council International Conference (INDICON)                                                                                         |         1 | 0.99%   |
-| 4   | 2021 IEEE 6th International Conference on Big Data Analytics (ICBDA)                                                                                    |         1 | 0.99%   |
-| 5   | 2022 14th International Conference on Machine Learning and Computing (ICMLC)                                                                            |         1 | 0.99%   |
-| 6   | 32nd International Conference on Machine Learning, ICML 2015                                                                                            |         1 | 0.99%   |
-| 7   | 6th International Conference on Fuzzy Systems and Knowledge Discovery, FSKD 2009                                                                        |         1 | 0.99%   |
-| 8   | ACM Transactions on Asian Language Information Processing                                                                                               |         1 | 0.99%   |
-| 9   | ACM Transactions on Intelligent Systems and Technology                                                                                                  |         1 | 0.99%   |
-| 10  | Advances in Neural Information Processing Systems                                                                                                       |         1 | 0.99%   |
-| 11  | Advances in Neural Information Processing Systems 22 - Proceedings of the 2009 Conference                                                               |         1 | 0.99%   |
-| 12  | Applied Intelligence                                                                                                                                    |         1 | 0.99%   |
-| 13  | Applied Sciences                                                                                                                                        |         1 | 0.99%   |
-| 14  | Concurrency Computation                                                                                                                                 |         1 | 0.99%   |
-| 15  | Data Mining and Knowledge Discovery                                                                                                                     |         1 | 0.99%   |
-| 16  | Decision Support Systems                                                                                                                                |         1 | 0.99%   |
-| 17  | Entropy                                                                                                                                                 |         1 | 0.99%   |
-| 18  | European Conference on Artificial Intelligence                                                                                                          |         1 | 0.99%   |
-| 20  | Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021                                                                              |         1 | 0.99%   |
-| 21  | Frontiers in Computational Neuroscience                                                                                                                 |         1 | 0.99%   |
-| 22  | HLT/EMNLP 2005 - Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing, Proceedings of the Conference |         1 | 0.99%   |
-| 23  | ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings                                                          |         1 | 0.99%   |
-| 25  | IEEE Transactions on Cybernetics                                                                                                                        |         1 | 0.99%   |
-| 27  | IEEE/ACM Transactions on Audio, Speech, and Language Processing                                                                                         |         1 | 0.99%   |
-| 28  | IJCAI International Joint Conference on Artificial Intelligence                                                                                         |         1 | 0.99%   |
-| 29  | Information Processing and Management                                                                                                                   |         1 | 0.99%   |
-| 31  | International Conference on Learning Representations                                                                                                    |         1 | 0.99%   |
-| 32  | International Journal of Data Science and Analytics                                                                                                     |         1 | 0.99%   |
-| 33  | International Journal of Production Economics                                                                                                           |         1 | 0.99%   |
-| 35  | Knowledge and Information Systems                                                                                                                       |         1 | 0.99%   |
-| 37  | Lecture Notes in Electrical Engineering                                                                                                                 |         1 | 0.99%   |
-| 38  | Mathematical Biosciences and Engineering                                                                                                                |         1 | 0.99%   |
-| 39  | Mathematics                                                                                                                                             |         1 | 0.99%   |
-| 40  | Neural Computing and Applications                                                                                                                       |         1 | 0.99%   |
-| 42  | Parallel Problem Solving from Nature PPSN XVI                                                                                                           |         1 | 0.99%   |
-| 43  | Pattern Recognition                                                                                                                                     |         1 | 0.99%   |
-| 45  | PLoS ONE                                                                                                                                                |         1 | 0.99%   |
-| 46  | Proceedings - 16th IEEE International Conference on Machine Learning and Applications, ICMLA 2017                                                       |         1 | 0.99%   |
-| 47  | Proceedings - 2014 Brazilian Conference on Intelligent Systems, BRACIS 2014                                                                             |         1 | 0.99%   |
-| 48  | Proceedings - IEEE International Conference on Data Mining, ICDM                                                                                        |         1 | 0.99%   |
-| 49  | Proceedings - International Conference on Machine Learning and Cybernetics                                                                              |         1 | 0.99%   |
-| 50  | Proceedings of 2015 International Conference on Asian Language Processing, IALP 2015                                                                    |         1 | 0.99%   |
-| 51  | Proceedings of IEEE/ACS International Conference on Computer Systems and Applications, AICCSA                                                           |         1 | 0.99%   |
-| 52  | Proceedings of the 11th Annual Conference of the International Speech Communication Association, INTERSPEECH 2010                                       |         1 | 0.99%   |
-| 53  | Proceedings of the 14th ACM International Conference on Web Search and Data Mining                                                                      |         1 | 0.99%   |
-| 54  | Proceedings of the 2006 ACM Symposium on Document Engineering, DocEng 2006                                                                              |         1 | 0.99%   |
-| 55  | Proceedings of the 2016 International Conference on Asian Language Processing, IALP 2016                                                                |         1 | 0.99%   |
-| 56  | Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)                                                          |         1 | 0.99%   |
-| 57  | Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies          |         1 | 0.99%   |
-| 58  | Proceedings of the 25th International Conference on Machine Learning                                                                                    |         1 | 0.99%   |
-| 59  | Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48                                            |         1 | 0.99%   |
-| 60  | Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval                                         |         1 | 0.99%   |
-| 62  | Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining                                                           |         1 | 0.99%   |
-| 63  | Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH                                                 |         1 | 0.99%   |
-| 64  | Proceedings of the International Joint Conference on Neural Networks                                                                                    |         1 | 0.99%   |
-| 65  | Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics                                                      |         1 | 0.99%   |
-| 66  | Proceedings of The Web Conference 2020                                                                                                                  |         1 | 0.99%   |
-| 67  | Proceedings of the Web Conference 2021                                                                                                                  |         1 | 0.99%   |
-| 68  | SIGIR 2005 - Proceedings of the 28th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval                     |         1 | 0.99%   |
-| 69  | Technometrics                                                                                                                                           |         1 | 0.99%   |
-| 70  | TENCON 2021 - 2021 IEEE Region 10 Conference (TENCON)                                                                                                   |         1 | 0.99%   |
-| 71  | World Wide Web                                                                                                                                          |         1 | 0.99%   |
+|  | Journals/Resource names | Frequency | Percent |
+|----|:---|---:|:---|
+| 19 | Expert Systems with Applications | 10 | 8.77% |
+| 37 | Knowledge-Based Systems | 7 | 6.14% |
+| 27 | IEEE Transactions on Knowledge and Data Engineering | 5 | 4.39% |
+| 25 | IEEE Access | 3 | 2.63% |
+| 31 | Information Sciences | 3 | 2.63% |
+| 39 | Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) | 3 | 2.63% |
+| 44 | Neurocomputing | 3 | 2.63% |
+| 48 | Pattern Recognition Letters | 3 | 2.63% |
+| 2 | 2020 IEEE 11th International Conference on Software Engineering and Service Science (ICSESS) | 2 | 1.75% |
+| 10 | Advances in Neural Information Processing Systems | 2 | 1.75% |
+| 33 | International Conference on Learning Representations | 2 | 1.75% |
+| 57 | Proceedings of the 14th ACM International Conference on Web Search and Data Mining | 2 | 1.75% |
+| 60 | Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP) | 2 | 1.75% |
+| 65 | Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval | 2 | 1.75% |
+| 66 | Proceedings of the AAAI Conference on Artificial Intelligence | 2 | 1.75% |
+| 71 | Proceedings of The Web Conference 2020 | 2 | 1.75% |
+| 72 | Proceedings of the Web Conference 2021 | 2 | 1.75% |
+| 1 | 2016 4th International Symposium on Computational and Business Intelligence, ISCBI 2016 | 1 | 0.88% |
+| 3 | 2020 IEEE 17th India Council International Conference (INDICON) | 1 | 0.88% |
+| 4 | 2021 IEEE 6th International Conference on Big Data Analytics (ICBDA) | 1 | 0.88% |
+| 5 | 2022 14th International Conference on Machine Learning and Computing (ICMLC) | 1 | 0.88% |
+| 6 | 32nd International Conference on Machine Learning, ICML 2015 | 1 | 0.88% |
+| 7 | 6th International Conference on Fuzzy Systems and Knowledge Discovery, FSKD 2009 | 1 | 0.88% |
+| 8 | ACM Transactions on Asian Language Information Processing | 1 | 0.88% |
+| 9 | ACM Transactions on Intelligent Systems and Technology | 1 | 0.88% |
+| 11 | Advances in Neural Information Processing Systems 22 - Proceedings of the 2009 Conference | 1 | 0.88% |
+| 12 | Applied Intelligence | 1 | 0.88% |
+| 13 | Applied Sciences | 1 | 0.88% |
+| 14 | Concurrency Computation | 1 | 0.88% |
+| 15 | Data Mining and Knowledge Discovery | 1 | 0.88% |
+| 16 | Decision Support Systems | 1 | 0.88% |
+| 17 | Entropy | 1 | 0.88% |
+| 18 | European Conference on Artificial Intelligence | 1 | 0.88% |
+| 20 | Findings | 1 | 0.88% |
+| 21 | Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021 | 1 | 0.88% |
+| 22 | Frontiers in Computational Neuroscience | 1 | 0.88% |
+| 23 | HLT/EMNLP 2005 - Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing, Proceedings of the Conference | 1 | 0.88% |
+| 24 | ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings | 1 | 0.88% |
+| 26 | IEEE Transactions on Cybernetics | 1 | 0.88% |
+| 28 | IEEE/ACM Transactions on Audio, Speech, and Language Processing | 1 | 0.88% |
+| 29 | IJCAI International Joint Conference on Artificial Intelligence | 1 | 0.88% |
+| 30 | Information Processing and Management | 1 | 0.88% |
+| 32 | International conference on artificial intelligence and statistics | 1 | 0.88% |
+| 34 | International Conference on Parallel Problem Solving from Nature | 1 | 0.88% |
+| 35 | International Journal of Data Science and Analytics | 1 | 0.88% |
+| 36 | International Journal of Production Economics | 1 | 0.88% |
+| 38 | Knowledge and Information Systems | 1 | 0.88% |
+| 40 | Lecture Notes in Electrical Engineering | 1 | 0.88% |
+| 41 | Mathematical Biosciences and Engineering | 1 | 0.88% |
+| 42 | Mathematics | 1 | 0.88% |
+| 43 | Neural Computing and Applications | 1 | 0.88% |
+| 45 | North American Chapter of the Association for Computational Linguistics | 1 | 0.88% |
+| 46 | Parallel Problem Solving from Nature PPSN XVI | 1 | 0.88% |
+| 47 | Pattern Recognition | 1 | 0.88% |
+| 49 | PLoS ONE | 1 | 0.88% |
+| 50 | Proceedings - 16th IEEE International Conference on Machine Learning and Applications, ICMLA 2017 | 1 | 0.88% |
+| 51 | Proceedings - 2014 Brazilian Conference on Intelligent Systems, BRACIS 2014 | 1 | 0.88% |
+| 52 | Proceedings - IEEE International Conference on Data Mining, ICDM | 1 | 0.88% |
+| 53 | Proceedings - International Conference on Machine Learning and Cybernetics | 1 | 0.88% |
+| 54 | Proceedings of 2015 International Conference on Asian Language Processing, IALP 2015 | 1 | 0.88% |
+| 55 | Proceedings of IEEE/ACS International Conference on Computer Systems and Applications, AICCSA | 1 | 0.88% |
+| 56 | Proceedings of the 11th Annual Conference of the International Speech Communication Association, INTERSPEECH 2010 | 1 | 0.88% |
+| 58 | Proceedings of the 2006 ACM Symposium on Document Engineering, DocEng 2006 | 1 | 0.88% |
+| 59 | Proceedings of the 2016 International Conference on Asian Language Processing, IALP 2016 | 1 | 0.88% |
+| 61 | Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies | 1 | 0.88% |
+| 62 | Proceedings of the 2022 14th International Conference on Machine Learning and Computing | 1 | 0.88% |
+| 63 | Proceedings of the 25th International Conference on Machine Learning | 1 | 0.88% |
+| 64 | Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48 | 1 | 0.88% |
+| 67 | Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining | 1 | 0.88% |
+| 68 | Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH | 1 | 0.88% |
+| 69 | Proceedings of the International Joint Conference on Neural Networks | 1 | 0.88% |
+| 70 | Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics | 1 | 0.88% |
+| 73 | SIGIR 2005 - Proceedings of the 28th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval | 1 | 0.88% |
+| 74 | Technometrics | 1 | 0.88% |
+| 75 | TENCON 2021 - 2021 IEEE Region 10 Conference (TENCON) | 1 | 0.88% |
+| 76 | World Wide Web | 1 | 0.88% |
 
-Table 2.1: Ranking of publication resources.
+<span id="tab:bibliochecking9"></span>Table 2.1: Ranking of publication
+resources.
 
 Note: the code above can be improved and simplified by using *bib2df*
 library.
@@ -1295,7 +1262,7 @@ modelResultsDf[which(modelResultsDf$workId %in% worksIndxs$grWeightingWorkIds),]
 ``` r
 worksIndxs$grFsWorkIds <- c("6 - Weighted Document Frequency for feature selection in text classification.xlsx",
                             "10 - Self-Tuned Descriptive Document Clustering Using a Predictive Network.xlsx",
-                            "14 - A Bayesian Classification Approach Using Class-Specific  Features for Text Categorization.xlsx", 
+                            "14 - A Bayesian Classification Approach Using Class-Specific Features for Text Categorization.xlsx", 
                             "18 - Toward Optimal Feature Selection in Naive bayes for text categorization.xlsx", 
                             "19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction.xlsx", 
                             "218 - Relative discrimination criterion - A novel feature ranking method.xlsx", 
@@ -1418,7 +1385,7 @@ modelResultsDf[which(modelResultsDf$workId %in% worksIndxs$grEvalWorkIds),]$work
 ``` r
 worksIndxs$grBenchmarkWorkIds <- c("50 - On strategies for imbalanced text classification using SVM A comparative study.xlsx",  
                                    "65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets.xlsx", 
-                                   "77 -  A Comparative Study on Term Weighting Schemes for Text Classification.xlsx",
+                                   "77 - A Comparative Study on Term Weighting Schemes for Text Classification.xlsx",
                                    "2020-Performance Analysis of Machine Learning and.xlsx",
                                    "2021-Comparative Study of Long Document.xlsx"
                                    )
@@ -1517,16 +1484,16 @@ knitr::kable(fullRefDf %>% dplyr::rename(`Category of articles` = 1,
                                          `No of articles` = 3 ))
 ```
 
-| Category of articles                                        | Reference                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | No of articles |
-|:------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
-| Learning methods in the manipulation of input training data | Shen et al. (2020), Kim et al. (2019), Pavlinek and Podgorelec (2017), Cai and He (2012)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | 4              |
-| Pre-processing methods                                      | Nagumothu et al. (2021)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 1              |
-| Feature weighting methods                                   | Attieh and Tekli (2023), Jia and Zhang (2022), Z. Tang, Li, and Li (2022), Shehzad et al. (2022), T. Wang et al. (2021), Z. Tang, Li, and Li (2020), K. Chen et al. (2016), Luo, Chen, and Xiong (2011)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 8              |
-| Feature selection methods                                   | Al-Salemi, Ayob, and Noah (2018), Brockmeier et al. (2018), Hassaine et al. (2017), Javed and Babri (2017), B. Tang et al. (2016), B. Li (2016), Al-Salemi, Mohd Noah, and Ab Aziz (2016), F. Wang et al. (2016), B. Tang, Kay, and He (2016), B. Li et al. (2015), Zong et al. (2015), G. Feng et al. (2015), Rehman et al. (2015), J. Yan et al. (2008), Tesar et al. (2006)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 15             |
-| Feature projection methods                                  | Guo and Yao (2021), P. Li et al. (2020), C. L. P. Chen and Feng (2020), Unnam and Reddy (2020), Białas, Mirończuk, and Mańdziuk (2020), L. Yang et al. (2020), Kesiraju et al. (2020), Jiang et al. (2020), Gupta et al. (2019), G. Yang et al. (2018), Y. Chen and Zaki (2017), Hu et al. (2017), Kesiraju et al. (2016), Zheng et al. (2016), J. Li et al. (2016), Rodrigues and Engel (2014), Cai and He (2012), Z. Li et al. (2011), Salakhutdinov and Hinton (2009), J. Yan et al. (2008)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 20             |
-| Classification methods                                      | Y. Wang et al. (2023), Dai et al. (2022), Prabhakar et al. (2022), F. Yang et al. (2022), Guidotti and Ferrara (2022), Khandve et al. (2022), Zhou et al. (2021), Xie et al. (2021b), Ragesh et al. (2021), C. Zhang and Yamana (2021), P. Yan et al. (2021), S. Wang et al. (2021), Lin et al. (2021), Zhu and Koniusz (2021), Xie et al. (2021a), Guo and Yao (2020), Zhou et al. (2020), Chiu et al. (2020), Wei et al. (2020), G. Chen and Srihari (2020), Aler, Valls, and Boström (2020), Liu et al. (2020), Z. Wang et al. (2020), Ding et al. (2020), Unnikrishnan, Govindan, and Madhu Kumar (2019), Berge et al. (2019), Tiwari and Melucci (2019), Yao, Mao, and Luo (2019), Pappagari, Villalba, and Dehak (2018), Al-Salemi, Ayob, and Noah (2018), Sharma, Dileep, and Thenkanidiyoor (2017), Benites and Sapozhnikova (2017), X. Feng et al. (2017), Sharma et al. (2016), P. Jin et al. (2016), Al-Salemi, Mohd Noah, and Ab Aziz (2016), Johnson and Zhang (2016), G. Feng et al. (2015), Kusner et al. (2015), Pang, Jin, and Jiang (2015), Gomez and Moens (2014), Lo and Ding (2012), Sainath et al. (2010), X. B. Jin, Liu, and Hou (2010), B. Li and Vogel (2010), Xia, Jicun, and Zhihui (2009), Larochelle and Bengio (2008), Qian et al. (2007), Genkin, Lewis, and Madigan (2007), Gliozzo, Strapparava, and Dagan (2005), D. Zhang, Chen, and Lee (2005), Baoli, Qin, and Shiwen (2004), Rennie (2003) | 53             |
-| Evaluation methods                                          | Arras et al. (2017)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | 1              |
-| Benchmark works                                             | Wagh et al. (2021), Suneera and Prakash (2020), Bramesh and Anil Kumar (2019), Mazyad, Teytaud, and Fonlupt (2017), Sun, Lim, and Liu (2009)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 5              |
+| Category of articles | Reference | No of articles |
+|:---|:---|:---|
+| Learning methods in the manipulation of input training data | Shen et al. (2020), Kim et al. (2019), Pavlinek and Podgorelec (2017), Cai and He (2012) | 4 |
+| Pre-processing methods | Nagumothu et al. (2021) | 1 |
+| Feature weighting methods | Attieh and Tekli (2023), Jia and Zhang (2022), Z. Tang, Li, and Li (2022), Shehzad et al. (2022), T. Wang et al. (2021), Z. Tang, Li, and Li (2020), K. Chen et al. (2016), Luo, Chen, and Xiong (2011) | 8 |
+| Feature selection methods | Al-Salemi, Ayob, and Noah (2018), Brockmeier et al. (2018), Hassaine et al. (2017), Javed and Babri (2017), B. Tang et al. (2016), B. Li (2016), Al-Salemi, Mohd Noah, and Ab Aziz (2016), F. Wang et al. (2016), B. Tang, Kay, and He (2016), B. Li et al. (2015), Zong et al. (2015), G. Feng et al. (2015), Rehman et al. (2015), J. Yan et al. (2008), Tesar et al. (2006) | 15 |
+| Feature projection methods | Guo and Yao (2021), P. Li et al. (2020), C. L. P. Chen and Feng (2020), Unnam and Reddy (2020), Białas, Mirończuk, and Mańdziuk (2020), L. Yang et al. (2020), Kesiraju et al. (2020), Jiang et al. (2020), Gupta et al. (2019), G. Yang et al. (2018), Y. Chen and Zaki (2017), Hu et al. (2017), Kesiraju et al. (2016), Zheng et al. (2016), J. Li et al. (2016), Rodrigues and Engel (2014), Cai and He (2012), Z. Li et al. (2011), Salakhutdinov and Hinton (2009), J. Yan et al. (2008) | 20 |
+| Classification methods | Y. Wang et al. (2023), Dai et al. (2022), Prabhakar et al. (2022), F. Yang et al. (2022), Guidotti and Ferrara (2022), Khandve et al. (2022), Zhou et al. (2021), Xie et al. (2021b), Ragesh et al. (2021), C. Zhang and Yamana (2021), P. Yan et al. (2021), S. Wang et al. (2021), Lin et al. (2021), Zhu and Koniusz (2021), Xie et al. (2021a), Guo and Yao (2020), Zhou et al. (2020), Chiu et al. (2020), Wei et al. (2020), G. Chen and Srihari (2020), Aler, Valls, and Boström (2020), Liu et al. (2020), Z. Wang et al. (2020), Ding et al. (2020), Unnikrishnan, Govindan, and Madhu Kumar (2019), Berge et al. (2019), Tiwari and Melucci (2019), Yao, Mao, and Luo (2019), Pappagari, Villalba, and Dehak (2018), Al-Salemi, Ayob, and Noah (2018), Sharma, Dileep, and Thenkanidiyoor (2017), Benites and Sapozhnikova (2017), X. Feng et al. (2017), Sharma et al. (2016), P. Jin et al. (2016), Al-Salemi, Mohd Noah, and Ab Aziz (2016), Johnson and Zhang (2016), G. Feng et al. (2015), Kusner et al. (2015), Pang, Jin, and Jiang (2015), Gomez and Moens (2014), Lo and Ding (2012), Sainath et al. (2010), X. B. Jin, Liu, and Hou (2010), B. Li and Vogel (2010), Xia, Jicun, and Zhihui (2009), Larochelle and Bengio (2008), Qian et al. (2007), Genkin, Lewis, and Madigan (2007), Gliozzo, Strapparava, and Dagan (2005), D. Zhang, Chen, and Lee (2005), Baoli, Qin, and Shiwen (2004), Rennie (2003) | 53 |
+| Evaluation methods | Arras et al. (2017) | 1 |
+| Benchmark works | Wagh et al. (2021), Suneera and Prakash (2020), Bramesh and Anil Kumar (2019), Mazyad, Teytaud, and Fonlupt (2017), Sun, Lim, and Liu (2009) | 5 |
 
 ``` r
 # Remove temporary year column.
@@ -1567,12 +1534,9 @@ ggplotQcFlip(generalAggDf, title, xlab, ylab, userPalette = c("#E41A1C", "#4DAF4
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/qaGenOve-1.png" alt="Distribution of answers to questions about general impresion of articles."  />
-
 <p class="caption">
-
-Figure 2.4: Distribution of answers to questions about general impresion
-of articles.
-
+<span id="fig:qaGenOve"></span>Figure 2.4: Distribution of answers to
+questions about general impresion of articles.
 </p>
 
 </div>
@@ -1592,13 +1556,13 @@ knitr::kable(generalAggDf %>% tidyr::spread(., .data$answer, .data$count) %>%
 )
 ```
 
-| Question                                                                                                                                                                           | Yes |  No | Percent of Yes |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----:|----:|:---------------|
-| Q1 Does the article present a clear statement of the aim of the research? If yes, what is it?                                                                                      | 102 |   0 | 100.0%         |
-| Q2 Does the article present a clear technical and algorithmic aspect of the article? If yes, what is it?                                                                           | 102 |   0 | 100.0%         |
-| Q3 Does the article contain a statement about the findings or recommendations of the research? If yes, what are they?                                                              | 102 |   0 | 100.0%         |
-| Q4 Does the article highlight new challenges? If yes, what are they?                                                                                                               |  93 |   9 | 91.2%          |
-| Q5 Does the article account for results from other studies/research/algorithms, and has it been compared with them? If yes, what baseline algorithms were selected for comparison? |  99 |   3 | 97.1%          |
+| Question | Yes | No | Percent of Yes |
+|:---|---:|---:|:---|
+| Q1 Does the article present a clear statement of the aim of the research? If yes, what is it? | 102 | 0 | 100.0% |
+| Q2 Does the article present a clear technical and algorithmic aspect of the article? If yes, what is it? | 102 | 0 | 100.0% |
+| Q3 Does the article contain a statement about the findings or recommendations of the research? If yes, what are they? | 102 | 0 | 100.0% |
+| Q4 Does the article highlight new challenges? If yes, what are they? | 93 | 9 | 91.2% |
+| Q5 Does the article account for results from other studies/research/algorithms, and has it been compared with them? If yes, what baseline algorithms were selected for comparison? | 99 | 3 | 97.1% |
 
 Computing, plotting and saving information about the baseline methods
 used for comparisons.
@@ -1891,12 +1855,10 @@ ggplotCf(methodsCountDf %>%
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/qaGenOve3-1.png" alt="Distribution of other classification methods taken into account in publications during evaluation."  />
-
 <p class="caption">
-
-Figure 2.5: Distribution of other classification methods taken into
-account in publications during evaluation.
-
+<span id="fig:qaGenOve3"></span>Figure 2.5: Distribution of other
+classification methods taken into account in publications during
+evaluation.
 </p>
 
 </div>
@@ -1947,7 +1909,8 @@ knitr::kable(methodsRankDf, caption = "Ranking of classification methods.")
 | Elastic Net                |         1 | 0.98%   |
 | Softmax                    |         1 | 0.98%   |
 
-Table 2.2: Ranking of classification methods.
+<span id="tab:qaGenOve4"></span>Table 2.2: Ranking of classification
+methods.
 
 #### 2.4.1.3 Questionnaires analysis - method reproducibility
 
@@ -1983,12 +1946,9 @@ ggplotQcFlip(methRepAggDf, title, xlab, ylab) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/qaMethRep-1.png" alt="Distribution of answers to questions about reproducibility of methods/algorithms."  />
-
 <p class="caption">
-
-Figure 2.6: Distribution of answers to questions about reproducibility
-of methods/algorithms.
-
+<span id="fig:qaMethRep"></span>Figure 2.6: Distribution of answers to
+questions about reproducibility of methods/algorithms.
 </p>
 
 </div>
@@ -2008,15 +1968,15 @@ knitr::kable(methRepAggDf %>% tidyr::spread(., .data$answer, .data$count) %>%
 )
 ```
 
-| Question                                                                                                                                                               | Yes |  No | Percent of Yes |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----:|----:|:---------------|
-| Q6.1 Has the source code been published?                                                                                                                               |  14 |  87 | 13.861%        |
-| Q6.2 Is the pseudo-code accessible?                                                                                                                                    |  34 |  67 | 33.663%        |
-| Q6.3 Is the method visualized by a figure and described?                                                                                                               |  49 |  45 | 52.128%        |
-| Q6.4 Is the method description mathematical?                                                                                                                           |  87 |   7 | 92.553%        |
-| Q6.5 Does the article contain a clear and well-described use case, and present step-by-step how the proposed method performs?                                          |  50 |  41 | 54.945%        |
-| Q6.6 Are the parameters and hyper-parameters justified and explained?                                                                                                  |  97 |   1 | 98.980%        |
-| Q6.7 Does the article show a clear statement, or we can deduce one from what is optimized, what we have and know, and what we are attempting to discover and optimize? |  95 |   1 | 98.958%        |
+| Question | Yes | No | Percent of Yes |
+|:---|---:|---:|:---|
+| Q6.1 Has the source code been published? | 14 | 87 | 13.861% |
+| Q6.2 Is the pseudo-code accessible? | 34 | 67 | 33.663% |
+| Q6.3 Is the method visualized by a figure and described? | 49 | 45 | 52.128% |
+| Q6.4 Is the method description mathematical? | 87 | 7 | 92.553% |
+| Q6.5 Does the article contain a clear and well-described use case, and present step-by-step how the proposed method performs? | 50 | 41 | 54.945% |
+| Q6.6 Are the parameters and hyper-parameters justified and explained? | 97 | 1 | 98.980% |
+| Q6.7 Does the article show a clear statement, or we can deduce one from what is optimized, what we have and know, and what we are attempting to discover and optimize? | 95 | 1 | 98.958% |
 
 #### 2.4.1.4 Questionnaires analysis - datasets reproducibility
 
@@ -2071,12 +2031,9 @@ ggplotQcFlip(datasetRepAggDf, title, xlab, ylab) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/qaDataRep-1.png" alt="Distribution of answers to questions about reproducibility of datasets."  />
-
 <p class="caption">
-
-Figure 2.7: Distribution of answers to questions about reproducibility
-of datasets.
-
+<span id="fig:qaDataRep"></span>Figure 2.7: Distribution of answers to
+questions about reproducibility of datasets.
 </p>
 
 </div>
@@ -2096,16 +2053,16 @@ knitr::kable(datasetRepAggDf %>%
                dplyr::arrange(.data$Question))
 ```
 
-| Question                                                                                                                             | Yes | Partly |  No | Percent of Yes |
-|:-------------------------------------------------------------------------------------------------------------------------------------|----:|-------:|----:|:---------------|
-| Q7.1.1 Does the article mention where the dataset is available                                                                       |  87 |      0 |  15 | 85.29%         |
-| Q7.1.2 Does the article contain information about the number of examples in the training, testing, or development sets?              |  85 |      5 |  12 | 83.33%         |
-| Q7.1.3 Does the article contain information about the number of examples in training, testing, or development sets per category?     |   6 |     23 |  73 | 5.88%          |
-| Q7.1.4 Does the article contain information about the dimension of examples in training, testing, or development sets?               |  27 |     32 |  43 | 26.47%         |
-| Q7.1.5 Does the article mention the version of the dataset explicitly, or can we guess it based on the description of the dataset?   |  49 |      0 |  53 | 48.04%         |
-| Q7.1.6 Does the article use and explain its pre-processing methods?                                                                  |  37 |     46 |  19 | 36.27%         |
-| Q7.1.7 Is the code for data pre-processing, or a pre-processed copy of the dataset is published in a publicly accessible repository? |  11 |      2 |  89 | 10.78%         |
-| Q7.1.8 Does the article use datasets other than 20Newsgroups? If yes, what types of dataset were used?                               |  88 |      0 |  14 | 86.27%         |
+| Question | Yes | Partly | No | Percent of Yes |
+|:---|---:|---:|---:|:---|
+| Q7.1.1 Does the article mention where the dataset is available | 87 | 0 | 15 | 85.29% |
+| Q7.1.2 Does the article contain information about the number of examples in the training, testing, or development sets? | 85 | 5 | 12 | 83.33% |
+| Q7.1.3 Does the article contain information about the number of examples in training, testing, or development sets per category? | 6 | 23 | 73 | 5.88% |
+| Q7.1.4 Does the article contain information about the dimension of examples in training, testing, or development sets? | 27 | 32 | 43 | 26.47% |
+| Q7.1.5 Does the article mention the version of the dataset explicitly, or can we guess it based on the description of the dataset? | 49 | 0 | 53 | 48.04% |
+| Q7.1.6 Does the article use and explain its pre-processing methods? | 37 | 46 | 19 | 36.27% |
+| Q7.1.7 Is the code for data pre-processing, or a pre-processed copy of the dataset is published in a publicly accessible repository? | 11 | 2 | 89 | 10.78% |
+| Q7.1.8 Does the article use datasets other than 20Newsgroups? If yes, what types of dataset were used? | 88 | 0 | 14 | 86.27% |
 
 Preparing data for two purposes:
 
@@ -2301,11 +2258,9 @@ ggplotCf(dataSetsCountDf %>%
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/qaDataDis2-1.png" alt="Distribution of the number of datasets in publications."  />
-
 <p class="caption">
-
-Figure 2.8: Distribution of the number of datasets in publications.
-
+<span id="fig:qaDataDis2"></span>Figure 2.8: Distribution of the number
+of datasets in publications.
 </p>
 
 </div>
@@ -2338,69 +2293,69 @@ datSetRankDf <- datSetRankDf %>%
 knitr::kable(datSetRankDf, caption = "Ranking of datasets.")
 ```
 
-| Dataset name                                                                  | Frequency | Percent |
-|:------------------------------------------------------------------------------|----------:|:--------|
-| Reuters-21578                                                                 |        65 | 31.10%  |
-| Ohsumed                                                                       |        25 | 11.96%  |
-| Movie review data (MRD) for regression task                                   |        16 | 7.66%   |
-| AGNews                                                                        |        12 | 5.74%   |
-| WebKB                                                                         |        11 | 5.26%   |
-| IMDb                                                                          |         8 | 3.83%   |
-| BBC                                                                           |         6 | 2.87%   |
-| Cade                                                                          |         3 | 1.44%   |
-| Tancorp                                                                       |         3 | 1.44%   |
-| BBC Sports                                                                    |         2 | 0.96%   |
-| CIFAR                                                                         |         2 | 0.96%   |
-| Classic                                                                       |         2 | 0.96%   |
-| Elec                                                                          |         2 | 0.96%   |
-| Fisher                                                                        |         2 | 0.96%   |
-| Recipe                                                                        |         2 | 0.96%   |
-| Reuters                                                                       |         2 | 0.96%   |
-| Sector                                                                        |         2 | 0.96%   |
-| TMC2007                                                                       |         2 | 0.96%   |
-| TREC                                                                          |         2 | 0.96%   |
-| A clinical dataset with authentic EHRs from a hospital                        |         1 | 0.48%   |
-| Amazon                                                                        |         1 | 0.48%   |
-| Biomed                                                                        |         1 | 0.48%   |
-| Cnae-9                                                                        |         1 | 0.48%   |
-| Dexter                                                                        |         1 | 0.48%   |
-| Energy Hub                                                                    |         1 | 0.48%   |
-| EUR-Lex-EUROVOC (Eur-Lex)                                                     |         1 | 0.48%   |
-| Farm Ads                                                                      |         1 | 0.48%   |
-| Google snippets                                                               |         1 | 0.48%   |
-| K1a                                                                           |         1 | 0.48%   |
-| K1b                                                                           |         1 | 0.48%   |
-| Mayor’s public hotline (MPH)                                                  |         1 | 0.48%   |
-| Medical                                                                       |         1 | 0.48%   |
-| Modified 20 newsgroups                                                        |         1 | 0.48%   |
-| News articles provided by Antonio Gulli                                       |         1 | 0.48%   |
-| NIPS proceedings papers                                                       |         1 | 0.48%   |
-| Nlpcc2014                                                                     |         1 | 0.48%   |
-| Nova                                                                          |         1 | 0.48%   |
-| NSF research award abstracts 1990-2003 data set                               |         1 | 0.48%   |
-| Ohscal                                                                        |         1 | 0.48%   |
-| Open Directory Project                                                        |         1 | 0.48%   |
-| PKU WEB Page Dataset                                                          |         1 | 0.48%   |
-| RCV1                                                                          |         1 | 0.48%   |
-| re0                                                                           |         1 | 0.48%   |
-| re1                                                                           |         1 | 0.48%   |
-| SemEval                                                                       |         1 | 0.48%   |
-| Snippets                                                                      |         1 | 0.48%   |
-| Spambase                                                                      |         1 | 0.48%   |
-| SUBJ                                                                          |         1 | 0.48%   |
-| The DMOZ dataset based on the ODP (Open Directory Project) web directory data |         1 | 0.48%   |
-| The Fudan University text classification corpus                               |         1 | 0.48%   |
-| The Sogou Lab Data                                                            |         1 | 0.48%   |
-| Topic detection                                                               |         1 | 0.48%   |
-| Tracking (TDT2)                                                               |         1 | 0.48%   |
-| Twitter                                                                       |         1 | 0.48%   |
-| WAP                                                                           |         1 | 0.48%   |
-| Wiki10+                                                                       |         1 | 0.48%   |
-| WIPO                                                                          |         1 | 0.48%   |
-| Yahoo! Answers Topic (Yahoo)                                                  |         1 | 0.48%   |
-| Yelp reviews                                                                  |         1 | 0.48%   |
+| Dataset name | Frequency | Percent |
+|:---|---:|:---|
+| Reuters-21578 | 65 | 31.10% |
+| Ohsumed | 25 | 11.96% |
+| Movie review data (MRD) for regression task | 16 | 7.66% |
+| AGNews | 12 | 5.74% |
+| WebKB | 11 | 5.26% |
+| IMDb | 8 | 3.83% |
+| BBC | 6 | 2.87% |
+| Cade | 3 | 1.44% |
+| Tancorp | 3 | 1.44% |
+| BBC Sports | 2 | 0.96% |
+| CIFAR | 2 | 0.96% |
+| Classic | 2 | 0.96% |
+| Elec | 2 | 0.96% |
+| Fisher | 2 | 0.96% |
+| Recipe | 2 | 0.96% |
+| Reuters | 2 | 0.96% |
+| Sector | 2 | 0.96% |
+| TMC2007 | 2 | 0.96% |
+| TREC | 2 | 0.96% |
+| A clinical dataset with authentic EHRs from a hospital | 1 | 0.48% |
+| Amazon | 1 | 0.48% |
+| Biomed | 1 | 0.48% |
+| Cnae-9 | 1 | 0.48% |
+| Dexter | 1 | 0.48% |
+| Energy Hub | 1 | 0.48% |
+| EUR-Lex-EUROVOC (Eur-Lex) | 1 | 0.48% |
+| Farm Ads | 1 | 0.48% |
+| Google snippets | 1 | 0.48% |
+| K1a | 1 | 0.48% |
+| K1b | 1 | 0.48% |
+| Mayor’s public hotline (MPH) | 1 | 0.48% |
+| Medical | 1 | 0.48% |
+| Modified 20 newsgroups | 1 | 0.48% |
+| News articles provided by Antonio Gulli | 1 | 0.48% |
+| NIPS proceedings papers | 1 | 0.48% |
+| Nlpcc2014 | 1 | 0.48% |
+| Nova | 1 | 0.48% |
+| NSF research award abstracts 1990-2003 data set | 1 | 0.48% |
+| Ohscal | 1 | 0.48% |
+| Open Directory Project | 1 | 0.48% |
+| PKU WEB Page Dataset | 1 | 0.48% |
+| RCV1 | 1 | 0.48% |
+| re0 | 1 | 0.48% |
+| re1 | 1 | 0.48% |
+| SemEval | 1 | 0.48% |
+| Snippets | 1 | 0.48% |
+| Spambase | 1 | 0.48% |
+| SUBJ | 1 | 0.48% |
+| The DMOZ dataset based on the ODP (Open Directory Project) web directory data | 1 | 0.48% |
+| The Fudan University text classification corpus | 1 | 0.48% |
+| The Sogou Lab Data | 1 | 0.48% |
+| Topic detection | 1 | 0.48% |
+| Tracking (TDT2) | 1 | 0.48% |
+| Twitter | 1 | 0.48% |
+| WAP | 1 | 0.48% |
+| Wiki10+ | 1 | 0.48% |
+| WIPO | 1 | 0.48% |
+| Yahoo! Answers Topic (Yahoo) | 1 | 0.48% |
+| Yelp reviews | 1 | 0.48% |
 
-Table 2.3: Ranking of datasets.
+<span id="tab:qaDataDis3"></span>Table 2.3: Ranking of datasets.
 
 #### 2.4.1.5 Questionnaires analysis - evaluation procedure reproducibility
 
@@ -2437,12 +2392,10 @@ ggplotQcFlip(evalRepAggDf, title, xlab, ylab) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/aqEvalProdRep-1.png" alt="Distribution of answers to questions about reproducibility of evaluation procedure/study design and results."  />
-
 <p class="caption">
-
-Figure 2.9: Distribution of answers to questions about reproducibility
-of evaluation procedure/study design and results.
-
+<span id="fig:aqEvalProdRep"></span>Figure 2.9: Distribution of answers
+to questions about reproducibility of evaluation procedure/study design
+and results.
 </p>
 
 </div>
@@ -2463,15 +2416,15 @@ knitr::kable(evalRepAggDf %>%
 )
 ```
 
-| Question                                                                                                                                                                                  | Yes | Partly |  No | Percent of Yes |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----:|-------:|----:|:---------------|
-| Q7.2.1 Does the article show and explain the performance metrics used? If yes, what are they?                                                                                             |  25 |     74 |   3 | 24.5%          |
-| Q7.2.2 How are the indicators estimated? Does the article implicate other dataset split and evaluation methods than the test set – for example, k-fold cross-validation or bootstrapping? |   7 |      9 |  86 | 6.9%           |
-| Q7.2.3 Does the article explain how the parameters or hyperparameters of the method or algorithm were set and tuned?                                                                      |  86 |     15 |   1 | 84.3%          |
-| Q7.2.4 Does the article explain how the parameters or hyper-parameters of the baseline(s) were set and tuned?                                                                             |  46 |     42 |  14 | 45.1%          |
-| Q7.2.5 Does the article save the input split data of the classification algorithm and output results to reproduce the values of the indicators in a publicly available repository?        |   3 |      2 |  97 | 2.9%           |
-| Q7.2.6 Have the authors published the code necessary to reproduce the values of the indicators?                                                                                           |  10 |      0 |  92 | 9.8%           |
-| Q7.2.7 Does the article highlight achieved results – in other words, are the results presented in the form of figures, tables, directly in the text, or a combination of the above?       |  92 |     10 |   0 | 90.2%          |
+| Question | Yes | Partly | No | Percent of Yes |
+|:---|---:|---:|---:|:---|
+| Q7.2.1 Does the article show and explain the performance metrics used? If yes, what are they? | 25 | 74 | 3 | 24.5% |
+| Q7.2.2 How are the indicators estimated? Does the article implicate other dataset split and evaluation methods than the test set – for example, k-fold cross-validation or bootstrapping? | 7 | 9 | 86 | 6.9% |
+| Q7.2.3 Does the article explain how the parameters or hyperparameters of the method or algorithm were set and tuned? | 86 | 15 | 1 | 84.3% |
+| Q7.2.4 Does the article explain how the parameters or hyper-parameters of the baseline(s) were set and tuned? | 46 | 42 | 14 | 45.1% |
+| Q7.2.5 Does the article save the input split data of the classification algorithm and output results to reproduce the values of the indicators in a publicly available repository? | 3 | 2 | 97 | 2.9% |
+| Q7.2.6 Have the authors published the code necessary to reproduce the values of the indicators? | 10 | 0 | 92 | 9.8% |
+| Q7.2.7 Does the article highlight achieved results – in other words, are the results presented in the form of figures, tables, directly in the text, or a combination of the above? | 92 | 10 | 0 | 90.2% |
 
 Preparing data for two purposes:
 
@@ -2584,12 +2537,9 @@ ggplotCf(indicatorsCountDf %>%
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/aqEvalInd-1.png" alt="Distribution of the number of different indicators in publications."  />
-
 <p class="caption">
-
-Figure 2.10: Distribution of the number of different indicators in
-publications.
-
+<span id="fig:aqEvalInd"></span>Figure 2.10: Distribution of the number
+of different indicators in publications.
 </p>
 
 </div>
@@ -2653,7 +2603,7 @@ knitr::kable(indicatorsRankDf, caption = "Ranking of indicators.")
 | Number of parameters                    |         1 | 0.98%   |
 | Precision-Recall curve (or PR-Curve)    |         1 | 0.98%   |
 
-Table 2.4: Ranking of indicators.
+<span id="tab:aqEvalInd2"></span>Table 2.4: Ranking of indicators.
 
 ### 2.4.2 Extracted data analysis
 
@@ -2888,11 +2838,9 @@ gridExtra::grid.arrange(p1, p2, nrow = 1, top = grid::textGrob(title))
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc1-1.png" alt="Histogram of Accuracy values."  />
-
 <p class="caption">
-
-Figure 2.11: Histogram of Accuracy values.
-
+<span id="fig:extrAnaAcc1"></span>Figure 2.11: Histogram of Accuracy
+values.
 </p>
 
 </div>
@@ -2931,11 +2879,8 @@ fitdistrplus::descdist(tIndiMaxDf$Accuracy)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/fitDistAcc-1.png" alt="Fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.12: Fitted distributions.
-
+<span id="fig:fitDistAcc"></span>Figure 2.12: Fitted distributions.
 </p>
 
 </div>
@@ -3001,11 +2946,8 @@ plot(bootResults)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAscc6-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.13: Bootstrap plot.
-
+<span id="fig:extrAnaAscc6"></span>Figure 2.13: Bootstrap plot.
 </p>
 
 </div>
@@ -3022,11 +2964,8 @@ ggplotBoot(bootInicResults, bootResults$t0)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc7-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.14: Bootstrap plot.
-
+<span id="fig:extrAnaAcc7"></span>Figure 2.14: Bootstrap plot.
 </p>
 
 </div>
@@ -3146,11 +3085,9 @@ plot(bootResults)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bootWeibullFa-1.png" alt="CI of fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.15: CI of fitted distributions.
-
+<span id="fig:bootWeibullFa"></span>Figure 2.15: CI of fitted
+distributions.
 </p>
 
 </div>
@@ -3167,11 +3104,8 @@ ggplotBoot(bootInicResults, bootResults$t0)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bootWeibullPlota-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.16: Bootstrap plot.
-
+<span id="fig:bootWeibullPlota"></span>Figure 2.16: Bootstrap plot.
 </p>
 
 </div>
@@ -3242,11 +3176,8 @@ gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/fitDistAll-1.png" alt="Fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.17: Fitted distributions.
-
+<span id="fig:fitDistAll"></span>Figure 2.17: Fitted distributions.
 </p>
 
 </div>
@@ -3345,11 +3276,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Accuracy, 100)), ggplot2
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc4-1.png" alt="Normal distribution density plot for accuracy values."  />
-
 <p class="caption">
-
-Figure 2.18: Normal distribution density plot for accuracy values.
-
+<span id="fig:extrAnaAcc4"></span>Figure 2.18: Normal distribution
+density plot for accuracy values.
 </p>
 
 </div>
@@ -3385,11 +3314,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Accuracy, 100)), ggplot2
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAccD4-1.png" alt="Weibull distribution density plot for accuracy values."  />
-
 <p class="caption">
-
-Figure 2.19: Weibull distribution density plot for accuracy values.
-
+<span id="fig:extrAnaAccD4"></span>Figure 2.19: Weibull distribution
+density plot for accuracy values.
 </p>
 
 </div>
@@ -3416,70 +3343,71 @@ knitr::kable(tworksReg %>% dplyr::select(.data$id,  .data$`Model name`, .data$Re
              caption = "Ranking of the classification solutions.", row.names = T)
 ```
 
-|     | id                                                                                                                                         | Model name                                                                                                                                                     | Reference                                      | Accuracy | Year |
-|-----|:-------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|---------:|:-----|
-| 1   | 2023-Text FCG Fusing Contextual Information via                                                                                            | Fusing Contextual information via Graph learning for inductive Text classification (Text-FCG) + Bidirectional Encoder Representations from Transformers (BERT) | (Y. Wang et al. 2023)                          |   90.380 | 2023 |
-| 2   | 2022-BertGCN Transductive Text Classification                                                                                              | A Robustly Optimized BERT Pretraining Approach + Graph Convolution Networks (RoBERTaGCN)                                                                       | (Lin et al. 2021)                              |   89.500 | 2021 |
-| 3   | 2021-Robust and label efficient bi-filtering graph convolutional networks for                                                              | Simple Bi-filtering Graph Convolution framework (SBGC)                                                                                                         | (S. Wang et al. 2021)                          |   88.800 | 2021 |
-| 4   | 2022-A Framework for Text Classification                                                                                                   | Evolutionary Contiguous Convolutional Neural Network (ECCNN)                                                                                                   | (Prabhakar et al. 2022)                        |   88.760 | 2022 |
-| 5   | 2021-SIMPLE SPECTRAL GRAPH CONVOLUTION                                                                                                     | Simple Spectral Graph Convolution (S$^2$GC).                                                                                                                   | (Zhu and Koniusz 2021)                         |   88.600 | 2021 |
-| 6   | 2020-Recurrent Graph Neural Networks for Text                                                                                              | Recurrent Graph Neural Network (RGNN)                                                                                                                          | (Wei et al. 2020)                              |   87.780 | 2020 |
-| 7   | 2020-Tensor Graph Convolutional Networks f                                                                                                 | Tensor graph convolutional networks (TensorGCN)                                                                                                                | (Liu et al. 2020)                              |   87.740 | 2020 |
-| 8   | 2022-Text Classification with Born’s Rule                                                                                                  | Born Classifier (BC) + Born Layer (BL) - 10 epochs                                                                                                             | (Guidotti and Ferrara 2022)                    |   87.400 | 2022 |
-| 9   | 2021-Improving Text Classification Using Knowledge in                                                                                      | Bidirectional Encoder Representations from Transformers (BERT) with the proposed modification                                                                  | (C. Zhang and Yamana 2021)                     |   87.240 | 2021 |
-| 10  | 22 - Learning distributed word representation with multi-contextual mixed embedding                                                        | Mixed Word Embedding (MWE) + Support Vector Machine (SVM with the linear kernel)                                                                               | (J. Li et al. 2016)                            |   87.190 | 2016 |
-| 11  | 2020-Learning Dynamic Hierarchical Topic G                                                                                                 | Dynamic hierarchical topic graph (DHTG)                                                                                                                        | (Z. Wang et al. 2020)                          |   87.130 | 2020 |
-| 12  | 2021-Graph Fusion Network for Text Classification                                                                                          | Graph Fusion Network (GFN)                                                                                                                                     | (Dai et al. 2022)                              |   87.010 | 2022 |
-| 13  | 2020-A Discriminative Convolutional Neural Network with                                                                                    | Discriminative Contex-aware Attention Convolutional Neural Networks (DCA-CNN)                                                                                  | (Zhou et al. 2020)                             |   87.000 | 2020 |
-| 14  | 2021-Extracting salient features from convolutional                                                                                        | DG Convolutional neural networks (DG-CNN)                                                                                                                      | (Zhou et al. 2021)                             |   87.000 | 2021 |
-| 15  | 2023-Supervised term-category feature weighting                                                                                            | Graph-Star                                                                                                                                                     | (Attieh and Tekli 2023)                        |   86.900 | 2023 |
-| 16  | 2016-Supervised and Semi-Supervised Text Ca                                                                                                | oh-2LSTMp                                                                                                                                                      | (Johnson and Zhang 2016)                       |   86.680 | 2016 |
-| 17  | 2020-Be More with Less Hypergraph Attentio                                                                                                 | Hypergraph attention networks (HyperGAT)                                                                                                                       | (Ding et al. 2020)                             |   86.620 | 2020 |
-| 18  | 2022-Hierarchical Neural Network Approaches for                                                                                            | Longformer                                                                                                                                                     | (Khandve et al. 2022)                          |   86.450 | 2022 |
-| 19  | 2019-Graph Convolutional Networks for Text Classification                                                                                  | Text Graph Convolutional Network (Text GCN)                                                                                                                    | (Yao, Mao, and Luo 2019)                       |   86.340 | 2019 |
-| 20  | 2021-Quantum probability-inspired graph neural                                                                                             | Text Graph Convolutional Network (Text GCN)                                                                                                                    | (P. Yan et al. 2021)                           |   86.340 | 2021 |
-| 21  | 2019-Improving Document Classification wit                                                                                                 | Sparse Composite Document Vector - Multi-sense word embeddings (SCDV-MS)                                                                                       | (Gupta et al. 2019)                            |   86.190 | 2019 |
-| 22  | 200 - Joint Verification-Identification in end-to-end Multi-Scale CNN Framework for Topic Identification                                   | End-to-end multi-scale Convolutional Neural Network (CNN)                                                                                                      | (Pappagari, Villalba, and Dehak 2018)          |   86.120 | 2018 |
-| 23  | 2020-Learning Document Embeddings Along With Their Uncertaintie                                                                            | Convolutional neural network                                                                                                                                   | (Kesiraju et al. 2020)                         |   86.120 | 2020 |
-| 24  | 5 - A Bidirectional Hierarchical Skip-Gram model for text topic embedding                                                                  | Bidirectional Hierarchical Skip-Gram model (BHSG) + Support Vector Machines (SVM)                                                                              | (Zheng et al. 2016)                            |   85.860 | 2016 |
-| 25  | 2021-Comparative Study of Long Document                                                                                                    | Bidirectional Encoder Representations from Transformers (BERT)                                                                                                 | (Wagh et al. 2021)                             |   85.780 | 2021 |
-| 26  | 2020-Understanding a bag of words by conceptual labeling                                                                                   | Bidirectional Encoder Representations from Transformers with Conceptualization (BERT Conceptualization)                                                        | (Jiang et al. 2020)                            |   85.100 | 2020 |
-| 27  | 2020-Attending to Inter-sentential Features in Neural Text                                                                                 | Bidirectional Encoder Representations from Transformers (BERT) + Edge-Conditioned Graph Convolutional Network (EC-GCN) + Attention                             | (Chiu et al. 2020)                             |   84.910 | 2020 |
-| 28  | 212 - On The Value of Leave-One-Out                                                                                                        | Regularized Least Squares Classification (RLSC)                                                                                                                | (Rennie 2003)                                  |   84.860 | 2003 |
-| 29  | 2005 - Text Classification with Kernels on the Multinom                                                                                    | Support Vector Machines (SVM, Negative Geodesic Distance kernel) + Term Frequency Inverse Document Frequency (TF-IDF) + L1 normalisation                       | (D. Zhang, Chen, and Lee 2005)                 |   84.610 | 2005 |
-| 30  | 2021-Linked Data Triples Enhance Document                                                                                                  | Text (BERT)+Topics                                                                                                                                             | (Nagumothu et al. 2021)                        |   84.300 | 2021 |
-| 31  | 229 - Text Classification using Hierarchical Sparse                                                                                        | Hierarchical Sparse Representation Classifier based on Maximum $l_2$ support with the weighted decomposition principal component analysis                      | (Sharma, Dileep, and Thenkanidiyoor 2017)      |   83.300 | 2017 |
-| 32  | 64 - Bag-of-Embeddings for Text Classification                                                                                             | Bag-of-embeddings (BoE)                                                                                                                                        | (P. Jin et al. 2016)                           |   83.100 | 2016 |
-| 33  | 2020-Performance Analysis of Machine Learning and                                                                                          | Logistic Regression tf-idf complete                                                                                                                            | (Suneera and Prakash 2020)                     |   82.740 | 2020 |
-| 34  | 56 - Minimizer of the Reconstruction Error for multi-class document                                                                        | Minimizer of the Reconstruction Error (mRE)                                                                                                                    | (Gomez and Moens 2014)                         |   82.590 | 2014 |
-| 35  | 61 - Feature subset selection using naive Bayes for text classification                                                                    | Latent Selection Augmented Naive (LSAN) Bayes classifier                                                                                                       | (G. Feng et al. 2015)                          |   82.530 | 2015 |
-| 36  | 140 - Overfitting Reduction of Text Classification Based on AdaBELM                                                                        | AdaBELM                                                                                                                                                        | (X. Feng et al. 2017)                          |   82.000 | 2017 |
-| 37  | 2019-Generating word and document matrix representations for document                                                                      | Doc2matrix v6                                                                                                                                                  | (Guo and Yao 2020)                             |   81.940 | 2020 |
-| 38  | 121 - Improving Multiclass Text Classification with Error-Correcting Output Coding and Sub-class Partitions                                | Proposed method - Mixed (optimal)                                                                                                                              | (B. Li and Vogel 2010)                         |   81.840 | 2010 |
-| 39  | 228 - Text Classification Using Combined Sparse Representation Classifiers and Support                                                     | Voting scheme                                                                                                                                                  | (Sharma et al. 2016)                           |   81.830 | 2016 |
-| 40  | 62 - Bag-of-Concepts representation for document classification based on automatic knowledge acquisition from probabilistic knowledge base | Bag-of-Concept-Clusters (BoCCl) + Vector representation a.k.a. bag-of-words (BoW) + Support Vector Machine (SVM, Linear) - attention strategy                  | (P. Li et al. 2020)                            |   81.780 | 2020 |
-| 41  | 100 - Enhanced sparse representation classifier for text classification                                                                    | Sparse Representation Classifier based on Minimum Reconstruction Error and class-wise Representation (SRC-4)                                                   | (Unnikrishnan, Govindan, and Madhu Kumar 2019) |   81.200 | 2019 |
-| 42  | 204 - Learning document representations using subspace multinomial model                                                                   | Naive Bayes (linear Gaussian classifier) + Max-margin Supervised STC (MedSTC)                                                                                  | (Kesiraju et al. 2016)                         |   81.000 | 2016 |
-| 43  | 2019-Document Vector Extension for Documents                                                                                               | Document vector extension model (DVEM-Random)                                                                                                                  | (Guo and Yao 2021)                             |   80.908 | 2021 |
-| 44  | 23 - Extending Embedding Representation by Incorporating Latent Relations                                                                  | Latent relation enhanced word embedding mode (LRWE) with Associated patterns + Skip-Gram + Linear classifier (Liblinear)                                       | (G. Yang et al. 2018)                          |   80.900 | 2018 |
-| 45  | 55 - Improving scalability of ART neural networks                                                                                          | Support Vector Machine (SVN, Linera, liblinear)                                                                                                                | (Benites and Sapozhnikova 2017)                |   80.400 | 2017 |
-| 46  | 152 - What is relevant in a text document                                                                                                  | Convolutional neural network (CNN)                                                                                                                             | (Arras et al. 2017)                            |   80.190 | 2017 |
-| 47  | 2020-Biologically Plausible Learning of Text                                                                                               | Spike Encoder for Text (SET)                                                                                                                                   | (Białas, Mirończuk, and Mańdziuk 2020)         |   80.190 | 2020 |
-| 48  | 44 - Probabilistic Clustering and Classification for Textual Data An Online and Incremental Approach                                       | Model based on Restricted Boltzmann Machines (RBM) with a multi-layer perceptron network called RBM-MLP                                                        | (Rodrigues and Engel 2014)                     |   79.500 | 2014 |
-| 49  | 224 - Sparse Representations for Text Categorization                                                                                       | Sparse Representation Classifier based on Maximum $l_2$ support                                                                                                | (Sainath et al. 2010)                          |   78.800 | 2010 |
-| 50  | 2020-Revisiting hierarchy Deep learning with                                                                                               | Deep neural network for classification with prior (DNN + prior, $\lambda$ = 0 . 1 )                                                                            | (G. Chen and Srihari 2020)                     |   76.800 | 2020 |
-| 51  | 58 - Regularized margin-based conditional log-likelihood loss for prototype learning                                                       | Support Vector Machine (SVM, one-versus-all and Gaussian (RBF) kernel)                                                                                         | (X. B. Jin, Liu, and Hou 2010)                 |   76.550 | 2010 |
-| 52  | 1 - Classification using discriminative restricted Boltzmann machines                                                                      | Hybrid Discriminative Restricted Boltzmann Machines (HDRBMs)                                                                                                   | (Larochelle and Bengio 2008)                   |   76.200 | 2008 |
-| 53  | 202 - KATE K-Competitive Autoencoder for Text                                                                                              | K-competitive Autoencoder for TExt (KATE) + neural network (NN) and simple softmax classifier with cross-entropy loss                                          | (Y. Chen and Zaki 2017)                        |   76.100 | 2017 |
-| 54  | 73 - A new regularized restricted Boltzmann machine based on class preserving                                                              | Class Preserving Restricted Boltzmann Machine (CPr-RBM) + Neural Network classifier                                                                            | (Hu et al. 2017)                               |   75.510 | 2017 |
-| 55  | 2018-Generative and Discriminative Fuzzy Restricted                                                                                        | Discriminative Fuzzy restricted Boltzmann machine with Softmax (DFRBM-softmax)                                                                                 | (C. L. P. Chen and Feng 2020)                  |   74.620 | 2020 |
-| 56  | 53 - Text classification method based on self-training and LDA topic models                                                                | Self-Training with Latent Dirichlet Allocation (ST LDA) + Naive Bayes Multinomial (NBMN)                                                                       | (Pavlinek and Podgorelec 2017)                 |   73.390 | 2017 |
-| 57  | 138 - From Word Embeddings To Document Distances                                                                                           | Word Mover’s Distance (WMD)                                                                                                                                    | (Kusner et al. 2015)                           |   73.000 | 2015 |
-| 58  | 2020-Online semi-supervised learning with learning vector quantization                                                                     | Online semi-supervised learning - learning vector quantization - Gaussian mixture model (OSS-LVQ-GMM)                                                          | (Shen et al. 2020)                             |   69.530 | 2020 |
-| 59  | 2019-A document representation framework with interpretable features                                                                       | Document representation with interpretable features (DIFW-fd)                                                                                                  | (Unnam and Reddy 2020)                         |   65.610 | 2020 |
-| 60  | 65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets                                           | Decision Tree (C5.0) + Term Frequency (TF)                                                                                                                     | (Bramesh and Anil Kumar 2019)                  |   58.980 | 2019 |
+|  | id | Model name | Reference | Accuracy | Year |
+|----|:---|:---|:---|---:|:---|
+| 1 | 2023-Text FCG Fusing Contextual Information via | Fusing Contextual information via Graph learning for inductive Text classification (Text-FCG) + Bidirectional Encoder Representations from Transformers (BERT) | (Y. Wang et al. 2023) | 90.380 | 2023 |
+| 2 | 2022-BertGCN Transductive Text Classification | A Robustly Optimized BERT Pretraining Approach + Graph Convolution Networks (RoBERTaGCN) | (Lin et al. 2021) | 89.500 | 2021 |
+| 3 | 2021-Robust and label efficient bi-filtering graph convolutional networks for | Simple Bi-filtering Graph Convolution framework (SBGC) | (S. Wang et al. 2021) | 88.800 | 2021 |
+| 4 | 2022-A Framework for Text Classification | Evolutionary Contiguous Convolutional Neural Network (ECCNN) | (Prabhakar et al. 2022) | 88.760 | 2022 |
+| 5 | 2021-SIMPLE SPECTRAL GRAPH CONVOLUTION | Simple Spectral Graph Convolution (S$^2$GC). | (Zhu and Koniusz 2021) | 88.600 | 2021 |
+| 6 | 2020-Recurrent Graph Neural Networks for Text | Recurrent Graph Neural Network (RGNN) | (Wei et al. 2020) | 87.780 | 2020 |
+| 7 | 2020-Tensor Graph Convolutional Networks f | Tensor graph convolutional networks (TensorGCN) | (Liu et al. 2020) | 87.740 | 2020 |
+| 8 | 2022-Text Classification with Born’s Rule | Born Classifier (BC) + Born Layer (BL) - 10 epochs | (Guidotti and Ferrara 2022) | 87.400 | 2022 |
+| 9 | 2021-Improving Text Classification Using Knowledge in | Bidirectional Encoder Representations from Transformers (BERT) with the proposed modification | (C. Zhang and Yamana 2021) | 87.240 | 2021 |
+| 10 | 22 - Learning distributed word representation with multi-contextual mixed embedding | Mixed Word Embedding (MWE) + Support Vector Machine (SVM with the linear kernel) | (J. Li et al. 2016) | 87.190 | 2016 |
+| 11 | 2020-Learning Dynamic Hierarchical Topic G | Dynamic hierarchical topic graph (DHTG) | (Z. Wang et al. 2020) | 87.130 | 2020 |
+| 12 | 2021-Graph Fusion Network for Text Classification | Graph Fusion Network (GFN) | (Dai et al. 2022) | 87.010 | 2022 |
+| 13 | 2020-A Discriminative Convolutional Neural Network with | Discriminative Contex-aware Attention Convolutional Neural Networks (DCA-CNN) | (Zhou et al. 2020) | 87.000 | 2020 |
+| 14 | 2021-Extracting salient features from convolutional | DG Convolutional neural networks (DG-CNN) | (Zhou et al. 2021) | 87.000 | 2021 |
+| 15 | 2023-Supervised term-category feature weighting | Graph-Star | (Attieh and Tekli 2023) | 86.900 | 2023 |
+| 16 | 2016-Supervised and Semi-Supervised Text Ca | oh-2LSTMp | (Johnson and Zhang 2016) | 86.680 | 2016 |
+| 17 | 2020-Be More with Less Hypergraph Attentio | Hypergraph attention networks (HyperGAT) | (Ding et al. 2020) | 86.620 | 2020 |
+| 18 | 2022-Hierarchical Neural Network Approaches for | Longformer | (Khandve et al. 2022) | 86.450 | 2022 |
+| 19 | 2019-Graph Convolutional Networks for Text Classification | Text Graph Convolutional Network (Text GCN) | (Yao, Mao, and Luo 2019) | 86.340 | 2019 |
+| 20 | 2021-Quantum probability-inspired graph neural | Text Graph Convolutional Network (Text GCN) | (P. Yan et al. 2021) | 86.340 | 2021 |
+| 21 | 2019-Improving Document Classification wit | Sparse Composite Document Vector - Multi-sense word embeddings (SCDV-MS) | (Gupta et al. 2019) | 86.190 | 2019 |
+| 22 | 200 - Joint Verification-Identification in end-to-end Multi-Scale CNN Framework for Topic Identification | End-to-end multi-scale Convolutional Neural Network (CNN) | (Pappagari, Villalba, and Dehak 2018) | 86.120 | 2018 |
+| 23 | 2020-Learning Document Embeddings Along With Their Uncertaintie | Convolutional neural network | (Kesiraju et al. 2020) | 86.120 | 2020 |
+| 24 | 5 - A Bidirectional Hierarchical Skip-Gram model for text topic embedding | Bidirectional Hierarchical Skip-Gram model (BHSG) + Support Vector Machines (SVM) | (Zheng et al. 2016) | 85.860 | 2016 |
+| 25 | 2021-Comparative Study of Long Document | Bidirectional Encoder Representations from Transformers (BERT) | (Wagh et al. 2021) | 85.780 | 2021 |
+| 26 | 2020-Understanding a bag of words by conceptual labeling | Bidirectional Encoder Representations from Transformers with Conceptualization (BERT Conceptualization) | (Jiang et al. 2020) | 85.100 | 2020 |
+| 27 | 2020-Attending to Inter-sentential Features in Neural Text | Bidirectional Encoder Representations from Transformers (BERT) + Edge-Conditioned Graph Convolutional Network (EC-GCN) + Attention | (Chiu et al. 2020) | 84.910 | 2020 |
+| 28 | 212 - On The Value of Leave-One-Out | Regularized Least Squares Classification (RLSC) | (Rennie 2003) | 84.860 | 2003 |
+| 29 | 2005 - Text Classification with Kernels on the Multinom | Support Vector Machines (SVM, Negative Geodesic Distance kernel) + Term Frequency Inverse Document Frequency (TF-IDF) + L1 normalisation | (D. Zhang, Chen, and Lee 2005) | 84.610 | 2005 |
+| 30 | 2021-Linked Data Triples Enhance Document | Text (BERT)+Topics | (Nagumothu et al. 2021) | 84.300 | 2021 |
+| 31 | 229 - Text Classification using Hierarchical Sparse | Hierarchical Sparse Representation Classifier based on Maximum $l_2$ support with the weighted decomposition principal component analysis | (Sharma, Dileep, and Thenkanidiyoor 2017) | 83.300 | 2017 |
+| 32 | 64 - Bag-of-Embeddings for Text Classification | Bag-of-embeddings (BoE) | (P. Jin et al. 2016) | 83.100 | 2016 |
+| 33 | 2020-Performance Analysis of Machine Learning and | Logistic Regression tf-idf complete | (Suneera and Prakash 2020) | 82.740 | 2020 |
+| 34 | 56 - Minimizer of the Reconstruction Error for multi-class document | Minimizer of the Reconstruction Error (mRE) | (Gomez and Moens 2014) | 82.590 | 2014 |
+| 35 | 61 - Feature subset selection using naive Bayes for text classification | Latent Selection Augmented Naive (LSAN) Bayes classifier | (G. Feng et al. 2015) | 82.530 | 2015 |
+| 36 | 140 - Overfitting Reduction of Text Classification Based on AdaBELM | AdaBELM | (X. Feng et al. 2017) | 82.000 | 2017 |
+| 37 | 2019-Generating word and document matrix representations for document | Doc2matrix v6 | (Guo and Yao 2020) | 81.940 | 2020 |
+| 38 | 121 - Improving Multiclass Text Classification with Error-Correcting Output Coding and Sub-class Partitions | Proposed method - Mixed (optimal) | (B. Li and Vogel 2010) | 81.840 | 2010 |
+| 39 | 228 - Text Classification Using Combined Sparse Representation Classifiers and Support | Voting scheme | (Sharma et al. 2016) | 81.830 | 2016 |
+| 40 | 62 - Bag-of-Concepts representation for document classification based on automatic knowledge acquisition from probabilistic knowledge base | Bag-of-Concept-Clusters (BoCCl) + Vector representation a.k.a. bag-of-words (BoW) + Support Vector Machine (SVM, Linear) - attention strategy | (P. Li et al. 2020) | 81.780 | 2020 |
+| 41 | 100 - Enhanced sparse representation classifier for text classification | Sparse Representation Classifier based on Minimum Reconstruction Error and class-wise Representation (SRC-4) | (Unnikrishnan, Govindan, and Madhu Kumar 2019) | 81.200 | 2019 |
+| 42 | 204 - Learning document representations using subspace multinomial model | Naive Bayes (linear Gaussian classifier) + Max-margin Supervised STC (MedSTC) | (Kesiraju et al. 2016) | 81.000 | 2016 |
+| 43 | 2019-Document Vector Extension for Documents | Document vector extension model (DVEM-Random) | (Guo and Yao 2021) | 80.908 | 2021 |
+| 44 | 23 - Extending Embedding Representation by Incorporating Latent Relations | Latent relation enhanced word embedding mode (LRWE) with Associated patterns + Skip-Gram + Linear classifier (Liblinear) | (G. Yang et al. 2018) | 80.900 | 2018 |
+| 45 | 55 - Improving scalability of ART neural networks | Support Vector Machine (SVN, Linera, liblinear) | (Benites and Sapozhnikova 2017) | 80.400 | 2017 |
+| 46 | 152 - What is relevant in a text document | Convolutional neural network (CNN) | (Arras et al. 2017) | 80.190 | 2017 |
+| 47 | 2020-Biologically Plausible Learning of Text | Spike Encoder for Text (SET) | (Białas, Mirończuk, and Mańdziuk 2020) | 80.190 | 2020 |
+| 48 | 44 - Probabilistic Clustering and Classification for Textual Data An Online and Incremental Approach | Model based on Restricted Boltzmann Machines (RBM) with a multi-layer perceptron network called RBM-MLP | (Rodrigues and Engel 2014) | 79.500 | 2014 |
+| 49 | 224 - Sparse Representations for Text Categorization | Sparse Representation Classifier based on Maximum $l_2$ support | (Sainath et al. 2010) | 78.800 | 2010 |
+| 50 | 2020-Revisiting hierarchy Deep learning with | Deep neural network for classification with prior (DNN + prior, $\lambda$ = 0 . 1 ) | (G. Chen and Srihari 2020) | 76.800 | 2020 |
+| 51 | 58 - Regularized margin-based conditional log-likelihood loss for prototype learning | Support Vector Machine (SVM, one-versus-all and Gaussian (RBF) kernel) | (X. B. Jin, Liu, and Hou 2010) | 76.550 | 2010 |
+| 52 | 1 - Classification using discriminative restricted Boltzmann machines | Hybrid Discriminative Restricted Boltzmann Machines (HDRBMs) | (Larochelle and Bengio 2008) | 76.200 | 2008 |
+| 53 | 202 - KATE K-Competitive Autoencoder for Text | K-competitive Autoencoder for TExt (KATE) + neural network (NN) and simple softmax classifier with cross-entropy loss | (Y. Chen and Zaki 2017) | 76.100 | 2017 |
+| 54 | 73 - A new regularized restricted Boltzmann machine based on class preserving | Class Preserving Restricted Boltzmann Machine (CPr-RBM) + Neural Network classifier | (Hu et al. 2017) | 75.510 | 2017 |
+| 55 | 2018-Generative and Discriminative Fuzzy Restricted | Discriminative Fuzzy restricted Boltzmann machine with Softmax (DFRBM-softmax) | (C. L. P. Chen and Feng 2020) | 74.620 | 2020 |
+| 56 | 53 - Text classification method based on self-training and LDA topic models | Self-Training with Latent Dirichlet Allocation (ST LDA) + Naive Bayes Multinomial (NBMN) | (Pavlinek and Podgorelec 2017) | 73.390 | 2017 |
+| 57 | 138 - From Word Embeddings To Document Distances | Word Mover’s Distance (WMD) | (Kusner et al. 2015) | 73.000 | 2015 |
+| 58 | 2020-Online semi-supervised learning with learning vector quantization | Online semi-supervised learning - learning vector quantization - Gaussian mixture model (OSS-LVQ-GMM) | (Shen et al. 2020) | 69.530 | 2020 |
+| 59 | 2019-A document representation framework with interpretable features | Document representation with interpretable features (DIFW-fd) | (Unnam and Reddy 2020) | 65.610 | 2020 |
+| 60 | 65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets | Decision Tree (C5.0) + Term Frequency (TF) | (Bramesh and Anil Kumar 2019) | 58.980 | 2019 |
 
-Table 2.5: Ranking of the classification solutions.
+<span id="tab:extrAnaAcc5"></span>Table 2.5: Ranking of the
+classification solutions.
 
 ##### 2.4.2.1.5 Analysis of trends
 
@@ -3527,12 +3455,9 @@ ggplot2::ggplot(Acc_vs_Year_max) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc9-1.png" alt="Distribution of the highest values of the Accuracy indicator in individual years."  />
-
 <p class="caption">
-
-Figure 2.20: Distribution of the highest values of the Accuracy
-indicator in individual years.
-
+<span id="fig:extrAnaAcc9"></span>Figure 2.20: Distribution of the
+highest values of the Accuracy indicator in individual years.
 </p>
 
 </div>
@@ -3647,11 +3572,8 @@ plot(Acc_vs_Year_max$indicator - pred)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc13-1.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.21: Plots of error.
-
+<span id="fig:extrAnaAcc13-1"></span>Figure 2.21: Plots of error.
 </p>
 
 </div>
@@ -3664,11 +3586,8 @@ qqline(Acc_vs_Year_max$indicator - pred, col = "steelblue", lwd = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc13-2.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.22: Plots of error.
-
+<span id="fig:extrAnaAcc13-2"></span>Figure 2.22: Plots of error.
 </p>
 
 </div>
@@ -3737,12 +3656,13 @@ knitr::kable(df %>% dplyr::group_by(.data$`Group name`) %>%
        caption = "Mean accuracy in article groups")
 ```
 
-| Group name                 |   N | Mean of accuracy | Standard deviation of accuracy | Standard error |
-|:---------------------------|----:|-----------------:|-------------------------------:|---------------:|
-| Classification methods     |  37 |         84.30676 |                       4.146770 |      0.6817248 |
-| Feature projection methods |  15 |         80.43853 |                       5.747093 |      1.4838930 |
+| Group name | N | Mean of accuracy | Standard deviation of accuracy | Standard error |
+|:---|---:|---:|---:|---:|
+| Classification methods | 37 | 84.30676 | 4.146770 | 0.6817248 |
+| Feature projection methods | 15 | 80.43853 | 5.747093 | 1.4838930 |
 
-Table 2.6: Mean accuracy in article groups
+<span id="tab:extrAnaAcc15"></span>Table 2.6: Mean accuracy in article
+groups
 
 ``` r
 groupStat <- by(df$Accuracy, df$group, pastecs::stat.desc, basic = FALSE, norm = TRUE)
@@ -3847,11 +3767,9 @@ gridExtra::grid.arrange(p1, p2, nrow = 1, top = grid::textGrob(title))
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF1-1.png" alt="Histogram of Macro F1 values."  />
-
 <p class="caption">
-
-Figure 2.23: Histogram of Macro F1 values.
-
+<span id="fig:extrAnaMaF1"></span>Figure 2.23: Histogram of Macro F1
+values.
 </p>
 
 </div>
@@ -3890,11 +3808,9 @@ descdist(tIndiMaxDf$Macro.F1.score)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/fitDistMacFscore-1.png" alt="Fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.24: Fitted distributions.
-
+<span id="fig:fitDistMacFscore"></span>Figure 2.24: Fitted
+distributions.
 </p>
 
 </div>
@@ -3960,11 +3876,8 @@ plot(bootResults)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaAcc6-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.25: Bootstrap plot.
-
+<span id="fig:extrAnaAcc6"></span>Figure 2.25: Bootstrap plot.
 </p>
 
 </div>
@@ -3981,11 +3894,8 @@ ggplotBoot(bootInicResults, bootResults$t0)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF7-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.26: Bootstrap plot.
-
+<span id="fig:extrAnaMaF7"></span>Figure 2.26: Bootstrap plot.
 </p>
 
 </div>
@@ -4053,11 +3963,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Macro.F1.score, 100)), g
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF4-1.png" alt="Macro F1 values density plot."  />
-
 <p class="caption">
-
-Figure 2.27: Macro F1 values density plot.
-
+<span id="fig:extrAnaMaF4"></span>Figure 2.27: Macro F1 values density
+plot.
 </p>
 
 </div>
@@ -4146,11 +4054,9 @@ plot(bootResults)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bootWeibulla-1.png" alt="CI of fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.28: CI of fitted distributions.
-
+<span id="fig:bootWeibulla"></span>Figure 2.28: CI of fitted
+distributions.
 </p>
 
 </div>
@@ -4167,11 +4073,8 @@ ggplotBoot(bootInicResults, bootResults$t0)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/bootWeibullPlotFMadc-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.29: Bootstrap plot.
-
+<span id="fig:bootWeibullPlotFMadc"></span>Figure 2.29: Bootstrap plot.
 </p>
 
 </div>
@@ -4229,11 +4132,8 @@ gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/fitDistormFw-1.png" alt="Fitted distributions."  />
-
 <p class="caption">
-
-Figure 2.30: Fitted distributions.
-
+<span id="fig:fitDistormFw"></span>Figure 2.30: Fitted distributions.
 </p>
 
 </div>
@@ -4316,11 +4216,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Macro.F1.score, 100)), g
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaFMac4-1.png" alt="Normal distribution density plot for Macro F1 values."  />
-
 <p class="caption">
-
-Figure 2.31: Normal distribution density plot for Macro F1 values.
-
+<span id="fig:extrAnaFMac4"></span>Figure 2.31: Normal distribution
+density plot for Macro F1 values.
 </p>
 
 </div>
@@ -4356,11 +4254,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Macro.F1.score, 100)), g
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMacFD4-1.png" alt="Weibull distribution density plot for Macro F1 values."  />
-
 <p class="caption">
-
-Figure 2.32: Weibull distribution density plot for Macro F1 values.
-
+<span id="fig:extrAnaMacFD4"></span>Figure 2.32: Weibull distribution
+density plot for Macro F1 values.
 </p>
 
 </div>
@@ -4387,47 +4283,48 @@ knitr::kable(tworksReg %>% dplyr::select(id,    .data$`Model name`, .data$Refere
              caption = "Ranking of the classification solutions.", row.names = T)
 ```
 
-|     | id                                                                                                   | Model name                                                                                                               | Reference                                      | Macro F1 score | Year |
-|-----|:-----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|---------------:|:-----|
-| 1   | 88 - Feature ranking for enhancing boosting-based multi-label text categorization                    | RFBoost + Mutual Information (MI)                                                                                        | (Al-Salemi, Ayob, and Noah 2018)               |          88.28 | 2018 |
-| 2   | 2021-Graph Topic Neural Network for Document Representation                                          | Graph Topic Neural Network (GTNN)                                                                                        | (Xie et al. 2021b)                             |          88.10 | 2021 |
-| 3   | 2021-Graph Fusion Network for Text Classification                                                    | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X))                                                               | (Dai et al. 2022)                              |          86.59 | 2022 |
-| 4   | 2021-HeteGCN Heterogeneous Graph Convolutional Networks for                                          | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X))                                                               | (Ragesh et al. 2021)                           |          86.59 | 2021 |
-| 5   | 2019-Improving Document Classification wit                                                           | Sparse Composite Document Vector - Multi-sense word embeddings (SCDV-MS)                                                 | (Gupta et al. 2019)                            |          86.16 | 2019 |
-| 6   | 2020-Graph Attention Topic Modeling Network                                                          | Graph Attention Topic Network (GATON-S)                                                                                  | (L. Yang et al. 2020)                          |          85.00 | 2020 |
-| 7   | 63 - Turning from TF-IDF to TF-IGM for term weighting in text                                        | Support Vector Machine (SVM, Linear) + root of term frequency & inverse gravity moment (RTF-IGM)                         | (K. Chen et al. 2016)                          |          84.67 | 2016 |
-| 8   | 2021-On entropy-based term weighting schemes for text                                                | Support Vector Machines + IQFxQFxICF                                                                                     | (T. Wang et al. 2021)                          |          84.36 | 2021 |
-| 9   | 17 - Probabilistic reasoning on background net An application to text categorization                 | Background net and macro view categorisation strategy                                                                    | (Lo and Ding 2012)                             |          84.00 | 2012 |
-| 10  | 2021-Linked Data Triples Enhance Document                                                            | Text (BERT)+Topics                                                                                                       | (Nagumothu et al. 2021)                        |          83.60 | 2021 |
-| 11  | 2022-Binned Term Count An Alternative to Term Frequency for                                          | Knn + BTC-RF                                                                                                             | (Shehzad et al. 2022)                          |          83.60 | 2022 |
-| 12  | 49 - Fast text categorization using concise semantic analysis                                        | Support Vector Machine (SVM, linear kernel functions) + Concise Semantic Analysis                                        | (Z. Li et al. 2011)                            |          83.35 | 2011 |
-| 13  | 10 - Self-Tuned Descriptive Document Clustering Using a Predictive Network                           | L-l{\_1} 1 R-l{\_2}                                                                                                      | (Brockmeier et al. 2018)                       |          82.80 | 2018 |
-| 14  | 64 - Bag-of-Embeddings for Text Classification                                                       | Bag-of-embeddings (BoE)                                                                                                  | (P. Jin et al. 2016)                           |          82.70 | 2016 |
-| 15  | 50 - On strategies for imbalanced text classification using SVM A comparative study                  | Support Vector Machines (SVM Linear kernel) SVM with Optimal Threshold                                                   | (Sun, Lim, and Liu 2009)                       |          82.40 | 2009 |
-| 16  | 32 - A Text Categorization Method Based on Local Document Frequency                                  | Text Categorization Method Based on Local Document Frequency                                                             | (Xia, Jicun, and Zhihui 2009)                  |          82.30 | 2009 |
-| 17  | 13 - Using the Tsetlin Machine to Learn Human-Interpretables                                         | Support Vector Machine (SVM) with the linear kernel                                                                      | (Berge et al. 2019)                            |          82.20 | 2019 |
-| 18  | 56 - Minimizer of the Reconstruction Error for multi-class document                                  | Minimizer of the Reconstruction Error (mRE)                                                                              | (Gomez and Moens 2014)                         |          82.12 | 2014 |
-| 19  | 29 - Manifold Adaptive Experimental Design for Text Categorization                                   | Support Vector Machine (SVM) with the linear kernel                                                                      | (Cai and He 2012)                              |          82.10 | 2012 |
-| 20  | 19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction                         | Formal Concept Analysis (FCA) decomposition approach called the Hyper Rectangular decomposition                          | (Hassaine et al. 2017)                         |          81.72 | 2017 |
-| 21  | 239 - Large-Scale Bayesian Logistic Regression for Text Categorization                               | Support Vector Machine (SVM)                                                                                             | (Genkin, Lewis, and Madigan 2007)              |          81.19 | 2007 |
-| 22  | 2019-Generating word and document matrix representations for document                                | Doc2matrix v6                                                                                                            | (Guo and Yao 2020)                             |          81.12 | 2020 |
-| 23  | 100 - Enhanced sparse representation classifier for text classification                              | Sparse Representation Classifier based on Minimum Reconstruction Error and class-wise Representation (SRC-4)             | (Unnikrishnan, Govindan, and Madhu Kumar 2019) |          80.63 | 2019 |
-| 24  | 80 - CenKNN a scalable and effective text classifier                                                 | Support Vector Machine (SVM) with the linear kernel                                                                      | (Pang, Jin, and Jiang 2015)                    |          80.10 | 2015 |
-| 25  | 23 - Extending Embedding Representation by Incorporating Latent Relations                            | Latent relation enhanced word embedding mode (LRWE) with Associated patterns + Skip-Gram + Linear classifier (Liblinear) | (G. Yang et al. 2018)                          |          80.00 | 2018 |
-| 26  | 235 - An Adaptive k-Nearest Neighbor Text Categorization Strategy                                    | Adaptive k nearest neighbour (k-nn) version no. 2 $ADPT_1$                                                               | (Baoli, Qin, and Shiwen 2004)                  |          79.53 | 2004 |
-| 27  | 238 - Extending the Single Words-Based Document Model                                                | Itemsets + Naive Bayes (multinomial) + $\chi^2$ Statistic (CHI)                                                          | (Tesar et al. 2006)                            |          79.02 | 2006 |
-| 28  | 2022-A new document representation based on global policy for supervis                               | DRGP and Wmax and SVM                                                                                                    | (Jia and Zhang 2022)                           |          78.37 | 2022 |
-| 29  | 48 - A discriminative and semantic feature selection method                                          | Support Vector Machines (Linear) + “DFS+Similarity”                                                                      | (Zong et al. 2015)                             |          77.17 | 2015 |
-| 30  | 54 - On the strength of hyperclique patterns for text categorization                                 | Associative Text Categorization with hyperclique patterns (ATC-HPs)                                                      | (Qian et al. 2007)                             |          74.97 | 2007 |
-| 31  | 218 - Relative discrimination criterion - A novel feature ranking method                             | Relative Discrimination Criterion (RDC) + Support Vector Machines (SVM with Liner kernel)                                | (Rehman et al. 2015)                           |          74.38 | 2015 |
-| 32  | 63 - RFBoost An improve d multi-lab el boosting algorithm and its application to text categorisation | RFBoost + Labeled Latent Dirichlet Allocation (LLDA)                                                                     | (Al-Salemi, Mohd Noah, and Ab Aziz 2016)       |          73.86 | 2016 |
-| 33  | 93 - Feature selection based on a normalized difference measure for text classification              | Support Vector Machines (SVM, Linear) + Information Gain (IG)                                                            | (Javed and Babri 2017)                         |          73.80 | 2017 |
-| 34  | 109 - A semantic term weighting scheme for text categorization                                       | Support Vector Machine (SVM, Linear) + Term Frequency-Inverse Document Frequency (TF-IDF)                                | (Luo, Chen, and Xiong 2011)                    |          73.49 | 2011 |
-| 35  | 2020-Study of Hellinger Distance as a splitting metric                                               | Random Forests + Gini                                                                                                    | (Aler, Valls, and Boström 2020)                |          72.60 | 2020 |
-| 36  | 77 - A Comparative Study on Term Weighting Schemes for Text Classification                           | Stochastic Gradient Descent (SGD) + Term Frequency (TF) and Information Gain (IG)                                        | (Mazyad, Teytaud, and Fonlupt 2017)            |          68.93 | 2017 |
-| 37  | 65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets     | Decision Tree (C5.0) + Term Frequency (TF)                                                                               | (Bramesh and Anil Kumar 2019)                  |          58.24 | 2019 |
+|  | id | Model name | Reference | Macro F1 score | Year |
+|----|:---|:---|:---|---:|:---|
+| 1 | 88 - Feature ranking for enhancing boosting-based multi-label text categorization | RFBoost + Mutual Information (MI) | (Al-Salemi, Ayob, and Noah 2018) | 88.28 | 2018 |
+| 2 | 2021-Graph Topic Neural Network for Document Representation | Graph Topic Neural Network (GTNN) | (Xie et al. 2021b) | 88.10 | 2021 |
+| 3 | 2021-Graph Fusion Network for Text Classification | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X)) | (Dai et al. 2022) | 86.59 | 2022 |
+| 4 | 2021-HeteGCN Heterogeneous Graph Convolutional Networks for | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X)) | (Ragesh et al. 2021) | 86.59 | 2021 |
+| 5 | 2019-Improving Document Classification wit | Sparse Composite Document Vector - Multi-sense word embeddings (SCDV-MS) | (Gupta et al. 2019) | 86.16 | 2019 |
+| 6 | 2020-Graph Attention Topic Modeling Network | Graph Attention Topic Network (GATON-S) | (L. Yang et al. 2020) | 85.00 | 2020 |
+| 7 | 63 - Turning from TF-IDF to TF-IGM for term weighting in text | Support Vector Machine (SVM, Linear) + root of term frequency & inverse gravity moment (RTF-IGM) | (K. Chen et al. 2016) | 84.67 | 2016 |
+| 8 | 2021-On entropy-based term weighting schemes for text | Support Vector Machines + IQFxQFxICF | (T. Wang et al. 2021) | 84.36 | 2021 |
+| 9 | 17 - Probabilistic reasoning on background net An application to text categorization | Background net and macro view categorisation strategy | (Lo and Ding 2012) | 84.00 | 2012 |
+| 10 | 2021-Linked Data Triples Enhance Document | Text (BERT)+Topics | (Nagumothu et al. 2021) | 83.60 | 2021 |
+| 11 | 2022-Binned Term Count An Alternative to Term Frequency for | Knn + BTC-RF | (Shehzad et al. 2022) | 83.60 | 2022 |
+| 12 | 49 - Fast text categorization using concise semantic analysis | Support Vector Machine (SVM, linear kernel functions) + Concise Semantic Analysis | (Z. Li et al. 2011) | 83.35 | 2011 |
+| 13 | 10 - Self-Tuned Descriptive Document Clustering Using a Predictive Network | L-l{\_1} 1 R-l{\_2} | (Brockmeier et al. 2018) | 82.80 | 2018 |
+| 14 | 64 - Bag-of-Embeddings for Text Classification | Bag-of-embeddings (BoE) | (P. Jin et al. 2016) | 82.70 | 2016 |
+| 15 | 50 - On strategies for imbalanced text classification using SVM A comparative study | Support Vector Machines (SVM Linear kernel) SVM with Optimal Threshold | (Sun, Lim, and Liu 2009) | 82.40 | 2009 |
+| 16 | 32 - A Text Categorization Method Based on Local Document Frequency | Text Categorization Method Based on Local Document Frequency | (Xia, Jicun, and Zhihui 2009) | 82.30 | 2009 |
+| 17 | 13 - Using the Tsetlin Machine to Learn Human-Interpretables | Support Vector Machine (SVM) with the linear kernel | (Berge et al. 2019) | 82.20 | 2019 |
+| 18 | 56 - Minimizer of the Reconstruction Error for multi-class document | Minimizer of the Reconstruction Error (mRE) | (Gomez and Moens 2014) | 82.12 | 2014 |
+| 19 | 29 - Manifold Adaptive Experimental Design for Text Categorization | Support Vector Machine (SVM) with the linear kernel | (Cai and He 2012) | 82.10 | 2012 |
+| 20 | 19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction | Formal Concept Analysis (FCA) decomposition approach called the Hyper Rectangular decomposition | (Hassaine et al. 2017) | 81.72 | 2017 |
+| 21 | 239 - Large-Scale Bayesian Logistic Regression for Text Categorization | Support Vector Machine (SVM) | (Genkin, Lewis, and Madigan 2007) | 81.19 | 2007 |
+| 22 | 2019-Generating word and document matrix representations for document | Doc2matrix v6 | (Guo and Yao 2020) | 81.12 | 2020 |
+| 23 | 100 - Enhanced sparse representation classifier for text classification | Sparse Representation Classifier based on Minimum Reconstruction Error and class-wise Representation (SRC-4) | (Unnikrishnan, Govindan, and Madhu Kumar 2019) | 80.63 | 2019 |
+| 24 | 80 - CenKNN a scalable and effective text classifier | Support Vector Machine (SVM) with the linear kernel | (Pang, Jin, and Jiang 2015) | 80.10 | 2015 |
+| 25 | 23 - Extending Embedding Representation by Incorporating Latent Relations | Latent relation enhanced word embedding mode (LRWE) with Associated patterns + Skip-Gram + Linear classifier (Liblinear) | (G. Yang et al. 2018) | 80.00 | 2018 |
+| 26 | 235 - An Adaptive k-Nearest Neighbor Text Categorization Strategy | Adaptive k nearest neighbour (k-nn) version no. 2 $ADPT_1$ | (Baoli, Qin, and Shiwen 2004) | 79.53 | 2004 |
+| 27 | 238 - Extending the Single Words-Based Document Model | Itemsets + Naive Bayes (multinomial) + $\chi^2$ Statistic (CHI) | (Tesar et al. 2006) | 79.02 | 2006 |
+| 28 | 2022-A new document representation based on global policy for supervis | DRGP and Wmax and SVM | (Jia and Zhang 2022) | 78.37 | 2022 |
+| 29 | 48 - A discriminative and semantic feature selection method | Support Vector Machines (Linear) + “DFS+Similarity” | (Zong et al. 2015) | 77.17 | 2015 |
+| 30 | 54 - On the strength of hyperclique patterns for text categorization | Associative Text Categorization with hyperclique patterns (ATC-HPs) | (Qian et al. 2007) | 74.97 | 2007 |
+| 31 | 218 - Relative discrimination criterion - A novel feature ranking method | Relative Discrimination Criterion (RDC) + Support Vector Machines (SVM with Liner kernel) | (Rehman et al. 2015) | 74.38 | 2015 |
+| 32 | 63 - RFBoost An improve d multi-lab el boosting algorithm and its application to text categorisation | RFBoost + Labeled Latent Dirichlet Allocation (LLDA) | (Al-Salemi, Mohd Noah, and Ab Aziz 2016) | 73.86 | 2016 |
+| 33 | 93 - Feature selection based on a normalized difference measure for text classification | Support Vector Machines (SVM, Linear) + Information Gain (IG) | (Javed and Babri 2017) | 73.80 | 2017 |
+| 34 | 109 - A semantic term weighting scheme for text categorization | Support Vector Machine (SVM, Linear) + Term Frequency-Inverse Document Frequency (TF-IDF) | (Luo, Chen, and Xiong 2011) | 73.49 | 2011 |
+| 35 | 2020-Study of Hellinger Distance as a splitting metric | Random Forests + Gini | (Aler, Valls, and Boström 2020) | 72.60 | 2020 |
+| 36 | 77 - A Comparative Study on Term Weighting Schemes for Text Classification | Stochastic Gradient Descent (SGD) + Term Frequency (TF) and Information Gain (IG) | (Mazyad, Teytaud, and Fonlupt 2017) | 68.93 | 2017 |
+| 37 | 65 - Empirical Study to Evaluate the Performance of Classification Algorithms on Public Datasets | Decision Tree (C5.0) + Term Frequency (TF) | (Bramesh and Anil Kumar 2019) | 58.24 | 2019 |
 
-Table 2.7: Ranking of the classification solutions.
+<span id="tab:extrAnaMaF5"></span>Table 2.7: Ranking of the
+classification solutions.
 
 ##### 2.4.2.2.5 Analysis of trends
 
@@ -4477,12 +4374,9 @@ ggplot2::ggplot(Fmac_vs_Year_max) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF9-1.png" alt="Distribution of the highest values of the Macro F1 indicator in individual years."  />
-
 <p class="caption">
-
-Figure 2.33: Distribution of the highest values of the Macro F1
-indicator in individual years.
-
+<span id="fig:extrAnaMaF9"></span>Figure 2.33: Distribution of the
+highest values of the Macro F1 indicator in individual years.
 </p>
 
 </div>
@@ -4596,11 +4490,8 @@ plot(Fmac_vs_Year_max$indicator - pred)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF13-1.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.34: Plots of error.
-
+<span id="fig:extrAnaMaF13-1"></span>Figure 2.34: Plots of error.
 </p>
 
 </div>
@@ -4613,11 +4504,8 @@ qqline(Fmac_vs_Year_max$indicator - pred, col = "steelblue", lwd = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMaF13-2.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.35: Plots of error.
-
+<span id="fig:extrAnaMaF13-2"></span>Figure 2.35: Plots of error.
 </p>
 
 </div>
@@ -4684,13 +4572,14 @@ knitr::kable(df %>% dplyr::group_by(.data$`Group name`) %>%
              caption = "Mean macro F1 score in article groups")
 ```
 
-| Group name                 |   N | Mean macro F1 score | Standard deviation of macro F1 score | Standard error |
-|:---------------------------|----:|---------------------|-------------------------------------:|---------------:|
-| Classification methods     |  17 | 81.58118            |                             4.592765 |       1.113909 |
-| Feature projection methods |   5 | 83.32200            |                             2.418661 |       1.081658 |
-| Feature selection methods  |   8 | 78.87875            |                             5.154644 |       1.822442 |
+| Group name | N | Mean macro F1 score | Standard deviation of macro F1 score | Standard error |
+|:---|---:|----|---:|---:|
+| Classification methods | 17 | 81.58118 | 4.592765 | 1.113909 |
+| Feature projection methods | 5 | 83.32200 | 2.418661 | 1.081658 |
+| Feature selection methods | 8 | 78.87875 | 5.154644 | 1.822442 |
 
-Table 2.8: Mean macro F1 score in article groups
+<span id="tab:extrAnaMaF15"></span>Table 2.8: Mean macro F1 score in
+article groups
 
 ``` r
 groupStat <- by(df$Macro.F1.score, df$group, pastecs::stat.desc, basic = FALSE, norm = TRUE)
@@ -4876,11 +4765,9 @@ gridExtra::grid.arrange(p1, p2, nrow = 1, top = grid::textGrob(title))
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF1-1.png" alt="Histogram of Micro F1 values."  />
-
 <p class="caption">
-
-Figure 2.36: Histogram of Micro F1 values.
-
+<span id="fig:extrAnaMiF1"></span>Figure 2.36: Histogram of Micro F1
+values.
 </p>
 
 </div>
@@ -4943,11 +4830,9 @@ gridExtra::grid.arrange(p1, p2, p3, p4, nrow = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF2-1.png" alt="Micro F1 values different plots."  />
-
 <p class="caption">
-
-Figure 2.37: Micro F1 values different plots.
-
+<span id="fig:extrAnaMiF2"></span>Figure 2.37: Micro F1 values different
+plots.
 </p>
 
 </div>
@@ -4986,11 +4871,8 @@ plot(bootResults)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF5-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.38: Bootstrap plot.
-
+<span id="fig:extrAnaMiF5"></span>Figure 2.38: Bootstrap plot.
 </p>
 
 </div>
@@ -5007,11 +4889,8 @@ ggplotBoot(bootInicResults, bootResults$t0)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF6-1.png" alt="Bootstrap plot."  />
-
 <p class="caption">
-
-Figure 2.39: Bootstrap plot.
-
+<span id="fig:extrAnaMiF6"></span>Figure 2.39: Bootstrap plot.
 </p>
 
 </div>
@@ -5087,11 +4966,9 @@ ggplot2::ggplot(data = data.frame(x = append(tIndiMaxDf$Micro.F1.score, 100)), g
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF3-1.png" alt="Micro F1 values density plot."  />
-
 <p class="caption">
-
-Figure 2.40: Micro F1 values density plot.
-
+<span id="fig:extrAnaMiF3"></span>Figure 2.40: Micro F1 values density
+plot.
 </p>
 
 </div>
@@ -5119,36 +4996,37 @@ knitr::kable(tworksReg %>% dplyr::select(id,    .data$`Model name`, .data$Refere
              caption = "Ranking of the classification solutions.", row.names = T)
 ```
 
-|     | id                                                                                                   | Model name                                                                                       | Reference                                | Micro F1 score | Year |
-|-----|:-----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|:-----------------------------------------|---------------:|:-----|
-| 1   | 88 - Feature ranking for enhancing boosting-based multi-label text categorization                    | RFBoost + Mutual Information (MI)                                                                | (Al-Salemi, Ayob, and Noah 2018)         |          89.38 | 2018 |
-| 2   | 2021-Inductive Topic Variational Graph Aut                                                           | Topic Variational Graph Auto-Encoder (T-VGAE)                                                    | (Xie et al. 2021a)                       |          88.02 | 2021 |
-| 3   | 2021-Graph Fusion Network for Text Classification                                                    | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X))                                       | (Dai et al. 2022)                        |          87.15 | 2022 |
-| 4   | 2021-HeteGCN Heterogeneous Graph Convolutional Networks for                                          | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X))                                       | (Ragesh et al. 2021)                     |          87.15 | 2021 |
-| 5   | 63 - Turning from TF-IDF to TF-IGM for term weighting in text                                        | Support Vector Machine (SVM, Linear) + root of term frequency & inverse gravity moment (RTF-IGM) | (K. Chen et al. 2016)                    |          85.05 | 2016 |
-| 6   | 2021-On entropy-based term weighting schemes for text                                                | Support Vector Machines + IQFxQFxICF                                                             | (T. Wang et al. 2021)                    |          85.01 | 2021 |
-| 7   | 2021-Linked Data Triples Enhance Document                                                            | Text (BERT)+Topics                                                                               | (Nagumothu et al. 2021)                  |          84.40 | 2021 |
-| 8   | 17 - Probabilistic reasoning on background net An application to text categorization                 | Background net and macro view categorisation strategy                                            | (Lo and Ding 2012)                       |          84.30 | 2012 |
-| 9   | 49 - Fast text categorization using concise semantic analysis                                        | Support Vector Machine (SVM, linear kernel functions) + Concise Semantic Analysis                | (Z. Li et al. 2011)                      |          83.90 | 2011 |
-| 10  | 2022-An improved supervised term weighting scheme for text representation and classification         | Support Vector Machine + RTF-IDF-DCRE                                                            | (Z. Tang, Li, and Li 2022)               |          83.30 | 2022 |
-| 11  | 29 - Manifold Adaptive Experimental Design for Text Categorization                                   | Simple Marging + Support Vector Machine (SVM) with the linear kernel                             | (Cai and He 2012)                        |          83.00 | 2012 |
-| 12  | 32 - A Text Categorization Method Based on Local Document Frequency                                  | Text Categorization Method Based on Local Document Frequency                                     | (Xia, Jicun, and Zhihui 2009)            |          82.60 | 2009 |
-| 13  | 19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction                         | Formal Concept Analysis (FCA) decomposition approach called the Hyper Rectangular decomposition  | (Hassaine et al. 2017)                   |          82.29 | 2017 |
-| 14  | 238 - Extending the Single Words-Based Document Model                                                | Bigrams + Naive Bayes (multinomial) + Mutual Information (MI)                                    | (Tesar et al. 2006)                      |          80.63 | 2006 |
-| 15  | 80 - CenKNN a scalable and effective text classifier                                                 | Support Vector Machine (SVM) with the linear kernel                                              | (Pang, Jin, and Jiang 2015)              |          80.40 | 2015 |
-| 16  | 235 - An Adaptive k-Nearest Neighbor Text Categorization Strategy                                    | Adaptive k nearest neighbour (k-nn) version no. 2 $ADPT_1$                                       | (Baoli, Qin, and Shiwen 2004)            |          80.32 | 2004 |
-| 17  | 2022-A new document representation based on global policy for supervis                               | DRGP and Wmax and SVM                                                                            | (Jia and Zhang 2022)                     |          78.84 | 2022 |
-| 18  | 48 - A discriminative and semantic feature selection method                                          | Support Vector Machines (Linear) + “DFS+Similarity”                                              | (Zong et al. 2015)                       |          78.22 | 2015 |
-| 19  | 54 - On the strength of hyperclique patterns for text categorization                                 | Support Vector Machines with a complex feature selection method called OCFS\~                    | (Qian et al. 2007)                       |          76.00 | 2007 |
-| 20  | 218 - Relative discrimination criterion - A novel feature ranking method                             | Relative Discrimination Criterion (RDC) + Support Vector Machines (SVM with Liner kernel)        | (Rehman et al. 2015)                     |          75.54 | 2015 |
-| 21  | 93 - Feature selection based on a normalized difference measure for text classification              | Support Vector Machines (SVM, Linear) + Information Gain (IG)                                    | (Javed and Babri 2017)                   |          75.10 | 2017 |
-| 22  | 28 - TOFA Trace Oriented Feature Analysis in Text Categorization                                     | Trace Oriented Feature Analysis best optimised combination of methods                            | (J. Yan et al. 2008)                     |          75.00 | 2008 |
-| 23  | 63 - RFBoost An improve d multi-lab el boosting algorithm and its application to text categorisation | RFBoost + Labeled Latent Dirichlet Allocation (LLDA)                                             | (Al-Salemi, Mohd Noah, and Ab Aziz 2016) |          74.09 | 2016 |
-| 24  | 2020-Study of Hellinger Distance as a splitting metric                                               | Random Forests + Gini                                                                            | (Aler, Valls, and Boström 2020)          |          73.60 | 2020 |
-| 25  | 109 - A semantic term weighting scheme for text categorization                                       | Support Vector Machine (SVM, Linear) + Term Frequency (TF)                                       | (Luo, Chen, and Xiong 2011)              |          72.91 | 2011 |
-| 26  | 77 - A Comparative Study on Term Weighting Schemes for Text Classification                           | Stochastic Gradient Descent (SGD) + Term Frequency (TF) and Information Gain (IG)                | (Mazyad, Teytaud, and Fonlupt 2017)      |          70.26 | 2017 |
+|  | id | Model name | Reference | Micro F1 score | Year |
+|----|:---|:---|:---|---:|:---|
+| 1 | 88 - Feature ranking for enhancing boosting-based multi-label text categorization | RFBoost + Mutual Information (MI) | (Al-Salemi, Ayob, and Noah 2018) | 89.38 | 2018 |
+| 2 | 2021-Inductive Topic Variational Graph Aut | Topic Variational Graph Auto-Encoder (T-VGAE) | (Xie et al. 2021a) | 88.02 | 2021 |
+| 3 | 2021-Graph Fusion Network for Text Classification | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X)) | (Dai et al. 2022) | 87.15 | 2022 |
+| 4 | 2021-HeteGCN Heterogeneous Graph Convolutional Networks for | Heterogeneous Graph Convolutional Networks (HETEGCN (F-X)) | (Ragesh et al. 2021) | 87.15 | 2021 |
+| 5 | 63 - Turning from TF-IDF to TF-IGM for term weighting in text | Support Vector Machine (SVM, Linear) + root of term frequency & inverse gravity moment (RTF-IGM) | (K. Chen et al. 2016) | 85.05 | 2016 |
+| 6 | 2021-On entropy-based term weighting schemes for text | Support Vector Machines + IQFxQFxICF | (T. Wang et al. 2021) | 85.01 | 2021 |
+| 7 | 2021-Linked Data Triples Enhance Document | Text (BERT)+Topics | (Nagumothu et al. 2021) | 84.40 | 2021 |
+| 8 | 17 - Probabilistic reasoning on background net An application to text categorization | Background net and macro view categorisation strategy | (Lo and Ding 2012) | 84.30 | 2012 |
+| 9 | 49 - Fast text categorization using concise semantic analysis | Support Vector Machine (SVM, linear kernel functions) + Concise Semantic Analysis | (Z. Li et al. 2011) | 83.90 | 2011 |
+| 10 | 2022-An improved supervised term weighting scheme for text representation and classification | Support Vector Machine + RTF-IDF-DCRE | (Z. Tang, Li, and Li 2022) | 83.30 | 2022 |
+| 11 | 29 - Manifold Adaptive Experimental Design for Text Categorization | Simple Marging + Support Vector Machine (SVM) with the linear kernel | (Cai and He 2012) | 83.00 | 2012 |
+| 12 | 32 - A Text Categorization Method Based on Local Document Frequency | Text Categorization Method Based on Local Document Frequency | (Xia, Jicun, and Zhihui 2009) | 82.60 | 2009 |
+| 13 | 19 - Text Categorization Using Weighted Hyper Rectangular Keyword Extraction | Formal Concept Analysis (FCA) decomposition approach called the Hyper Rectangular decomposition | (Hassaine et al. 2017) | 82.29 | 2017 |
+| 14 | 238 - Extending the Single Words-Based Document Model | Bigrams + Naive Bayes (multinomial) + Mutual Information (MI) | (Tesar et al. 2006) | 80.63 | 2006 |
+| 15 | 80 - CenKNN a scalable and effective text classifier | Support Vector Machine (SVM) with the linear kernel | (Pang, Jin, and Jiang 2015) | 80.40 | 2015 |
+| 16 | 235 - An Adaptive k-Nearest Neighbor Text Categorization Strategy | Adaptive k nearest neighbour (k-nn) version no. 2 $ADPT_1$ | (Baoli, Qin, and Shiwen 2004) | 80.32 | 2004 |
+| 17 | 2022-A new document representation based on global policy for supervis | DRGP and Wmax and SVM | (Jia and Zhang 2022) | 78.84 | 2022 |
+| 18 | 48 - A discriminative and semantic feature selection method | Support Vector Machines (Linear) + “DFS+Similarity” | (Zong et al. 2015) | 78.22 | 2015 |
+| 19 | 54 - On the strength of hyperclique patterns for text categorization | Support Vector Machines with a complex feature selection method called OCFS~ | (Qian et al. 2007) | 76.00 | 2007 |
+| 20 | 218 - Relative discrimination criterion - A novel feature ranking method | Relative Discrimination Criterion (RDC) + Support Vector Machines (SVM with Liner kernel) | (Rehman et al. 2015) | 75.54 | 2015 |
+| 21 | 93 - Feature selection based on a normalized difference measure for text classification | Support Vector Machines (SVM, Linear) + Information Gain (IG) | (Javed and Babri 2017) | 75.10 | 2017 |
+| 22 | 28 - TOFA Trace Oriented Feature Analysis in Text Categorization | Trace Oriented Feature Analysis best optimised combination of methods | (J. Yan et al. 2008) | 75.00 | 2008 |
+| 23 | 63 - RFBoost An improve d multi-lab el boosting algorithm and its application to text categorisation | RFBoost + Labeled Latent Dirichlet Allocation (LLDA) | (Al-Salemi, Mohd Noah, and Ab Aziz 2016) | 74.09 | 2016 |
+| 24 | 2020-Study of Hellinger Distance as a splitting metric | Random Forests + Gini | (Aler, Valls, and Boström 2020) | 73.60 | 2020 |
+| 25 | 109 - A semantic term weighting scheme for text categorization | Support Vector Machine (SVM, Linear) + Term Frequency (TF) | (Luo, Chen, and Xiong 2011) | 72.91 | 2011 |
+| 26 | 77 - A Comparative Study on Term Weighting Schemes for Text Classification | Stochastic Gradient Descent (SGD) + Term Frequency (TF) and Information Gain (IG) | (Mazyad, Teytaud, and Fonlupt 2017) | 70.26 | 2017 |
 
-Table 2.9: Ranking of the classification solutions.
+<span id="tab:extrAnaMiF4"></span>Table 2.9: Ranking of the
+classification solutions.
 
 ##### 2.4.2.3.3 Analysis of trends
 
@@ -5202,12 +5080,9 @@ ggplot2::ggplot(Fmic_vs_Year_max) +
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF8-1.png" alt="Distribution of the highest values of the Micro F1 indicator in individual years."  />
-
 <p class="caption">
-
-Figure 2.41: Distribution of the highest values of the Micro F1
-indicator in individual years.
-
+<span id="fig:extrAnaMiF8"></span>Figure 2.41: Distribution of the
+highest values of the Micro F1 indicator in individual years.
 </p>
 
 </div>
@@ -5319,11 +5194,8 @@ plot(Fmic_vs_Year_max$indicator - pred)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF13-1.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.42: Plots of error.
-
+<span id="fig:extrAnaMiF13-1"></span>Figure 2.42: Plots of error.
 </p>
 
 </div>
@@ -5336,11 +5208,8 @@ qqline(Fmic_vs_Year_max$indicator - pred, col = "steelblue", lwd = 2)
 <div class="figure" style="text-align: center">
 
 <img src="QuestionsAnalysis_files/figure-gfm/extrAnaMiF13-2.png" alt="Plots of error."  />
-
 <p class="caption">
-
-Figure 2.43: Plots of error.
-
+<span id="fig:extrAnaMiF13-2"></span>Figure 2.43: Plots of error.
 </p>
 
 </div>
@@ -5401,13 +5270,14 @@ knitr::kable(df %>%
              caption = "Mean micro F1 score in article groups")
 ```
 
-| Group name                 |   N | Mean micro F1 score | Standard deviation of micro F1 score | Standard error |
-|:---------------------------|----:|---------------------|-------------------------------------:|---------------:|
-| Classification methods     |  11 | 82.09182            |                             5.690497 |       1.715749 |
-| Feature projection methods |   3 | 80.63333            |                             4.899320 |       2.828623 |
-| Feature selection methods  |   8 | 78.78125            |                             5.192587 |       1.835857 |
+| Group name | N | Mean micro F1 score | Standard deviation of micro F1 score | Standard error |
+|:---|---:|----|---:|---:|
+| Classification methods | 11 | 82.09182 | 5.690497 | 1.715749 |
+| Feature projection methods | 3 | 80.63333 | 4.899320 | 2.828623 |
+| Feature selection methods | 8 | 78.78125 | 5.192587 | 1.835857 |
 
-Table 2.10: Mean micro F1 score in article groups
+<span id="tab:extrAnaMiF15"></span>Table 2.10: Mean micro F1 score in
+article groups
 
 ``` r
 groupStat <- by(df$Micro.F1.score, df$group, pastecs::stat.desc, basic = FALSE, norm = TRUE)
@@ -5923,7 +5793,8 @@ observations during the review.
 
 # 4 References
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
 
 <div id="ref-Aler2020" class="csl-entry">
 
@@ -5937,10 +5808,10 @@ Applications* 149 (July): 113264.
 
 <div id="ref-AlSalemi2018" class="csl-entry">
 
-Al-Salemi, Bassam, Masri Ayob, and Shahrul Azman Mohd Noah. 2018. “<span
-class="nocase">Feature ranking for enhancing boosting-based multi-label
-text categorization</span>.” *Expert Systems with Applications* 113:
-531–43. <https://doi.org/10.1016/j.eswa.2018.07.024>.
+Al-Salemi, Bassam, Masri Ayob, and Shahrul Azman Mohd Noah. 2018.
+“<span class="nocase">Feature ranking for enhancing boosting-based
+multi-label text categorization</span>.” *Expert Systems with
+Applications* 113: 531–43. <https://doi.org/10.1016/j.eswa.2018.07.024>.
 
 </div>
 
@@ -5982,9 +5853,9 @@ Transactions on Asian Language Information Processing* 3 (4): 215–26.
 
 <div id="ref-Benites2017" class="csl-entry">
 
-Benites, Fernando, and Elena Sapozhnikova. 2017. “<span
-class="nocase">Improving scalability of ART neural networks</span>.”
-*Neurocomputing* 230: 219–29.
+Benites, Fernando, and Elena Sapozhnikova. 2017.
+“<span class="nocase">Improving scalability of ART neural
+networks</span>.” *Neurocomputing* 230: 219–29.
 <https://doi.org/10.1016/j.neucom.2016.12.022>.
 
 </div>
@@ -5992,10 +5863,10 @@ class="nocase">Improving scalability of ART neural networks</span>.”
 <div id="ref-Berge2019" class="csl-entry">
 
 Berge, Geir Thore, Ole-Christoffer Granmo, Tor Oddbjorn Tveit, Morten
-Goodwin, Lei Jiao, and Bernt Viggo Matheussen. 2019. “<span
-class="nocase">Using the Tsetlin Machine to Learn Human-Interpretable
-Rules for High-Accuracy Text Categorization With Medical
-Applications</span>.” *IEEE Access* 7: 115134–46.
+Goodwin, Lei Jiao, and Bernt Viggo Matheussen. 2019.
+“<span class="nocase">Using the Tsetlin Machine to Learn
+Human-Interpretable Rules for High-Accuracy Text Categorization With
+Medical Applications</span>.” *IEEE Access* 7: 115134–46.
 <https://doi.org/10.1109/access.2019.2935416>.
 
 </div>
@@ -6004,16 +5875,16 @@ Applications</span>.” *IEEE Access* 7: 115134–46.
 
 Białas, Marcin, Marcin Michał Mirończuk, and Jacek Mańdziuk. 2020.
 “Biologically Plausible Learning of Text Representation with Spiking
-Neural Networks.” In *Parallel Problem Solving from Nature PPSN XVI*,
-433–47. Springer International Publishing.
+Neural Networks.” In *International Conference on Parallel Problem
+Solving from Nature*, 433–47. Springer International Publishing.
 <https://doi.org/10.1007/978-3-030-58112-1_30>.
 
 </div>
 
 <div id="ref-Bramesh2019" class="csl-entry">
 
-Bramesh, S. M., and K. M. Anil Kumar. 2019. “<span
-class="nocase">Empirical Study to Evaluate the Performance of
+Bramesh, S. M., and K. M. Anil Kumar. 2019.
+“<span class="nocase">Empirical Study to Evaluate the Performance of
 Classification Algorithms on Public Datasets</span>.” In *Lecture Notes
 in Electrical Engineering*, 545:447–55. Springer.
 <https://doi.org/10.1007/978-981-13-5802-9_41>.
@@ -6059,10 +5930,10 @@ Learning with Orthogonally Constrained Prior for Classification.”
 
 <div id="ref-Chen2016" class="csl-entry">
 
-Chen, Kewen, Zuping Zhang, Jun Long, and Hao Zhang. 2016. “<span
-class="nocase">Turning from TF-IDF to TF-IGM for term weighting in text
-classification</span>.” *Expert Systems with Applications* 66: 1339–51.
-<https://doi.org/10.1016/j.eswa.2016.09.009>.
+Chen, Kewen, Zuping Zhang, Jun Long, and Hao Zhang. 2016.
+“<span class="nocase">Turning from TF-IDF to TF-IGM for term weighting
+in text classification</span>.” *Expert Systems with Applications* 66:
+1339–51. <https://doi.org/10.1016/j.eswa.2016.09.009>.
 
 </div>
 
@@ -6107,9 +5978,9 @@ Association for Computational Linguistics.
 
 <div id="ref-Feng2015" class="csl-entry">
 
-Feng, Guozhong, Jianhua Guo, Bing Yi Jing, and Tieli Sun. 2015. “<span
-class="nocase">Feature subset selection using naive Bayes for text
-classification</span>.” *Pattern Recognition Letters* 65: 109–15.
+Feng, Guozhong, Jianhua Guo, Bing Yi Jing, and Tieli Sun. 2015.
+“<span class="nocase">Feature subset selection using naive Bayes for
+text classification</span>.” *Pattern Recognition Letters* 65: 109–15.
 <https://doi.org/10.1016/j.patrec.2015.07.028>.
 
 </div>
@@ -6125,8 +5996,8 @@ classification based on AdaBELM</span>.” *Entropy* 19 (7): 330.
 
 <div id="ref-Genkin2007" class="csl-entry">
 
-Genkin, Alexander, David D. Lewis, and David Madigan. 2007. “<span
-class="nocase">Large-scale bayesian logistic regression for text
+Genkin, Alexander, David D. Lewis, and David Madigan. 2007.
+“<span class="nocase">Large-scale bayesian logistic regression for text
 categorization</span>.” *Technometrics* 49 (3): 291–304.
 <https://doi.org/10.1198/004017007000000245>.
 
@@ -6134,8 +6005,8 @@ categorization</span>.” *Technometrics* 49 (3): 291–304.
 
 <div id="ref-Gliozzo2005" class="csl-entry">
 
-Gliozzo, Alfio, Carlo Strapparava, and Ido Dagan. 2005. “<span
-class="nocase">Investigating unsupervised learning for text
+Gliozzo, Alfio, Carlo Strapparava, and Ido Dagan. 2005.
+“<span class="nocase">Investigating unsupervised learning for text
 categorization bootstrapping</span>.” In *HLT/EMNLP 2005 - Human
 Language Technology Conference and Conference on Empirical Methods in
 Natural Language Processing, Proceedings of the Conference*, 129–36. The
@@ -6146,10 +6017,11 @@ Association for Computational Linguistics.
 
 <div id="ref-Gomez2014" class="csl-entry">
 
-Gomez, Juan Carlos, and Marie Francine Moens. 2014. “<span
-class="nocase">Minimizer of the Reconstruction Error for multi-class
-document categorization</span>.” *Expert Systems with Applications* 41
-(3): 861–68. <https://doi.org/10.1016/j.eswa.2013.08.016>.
+Gomez, Juan Carlos, and Marie Francine Moens. 2014.
+“<span class="nocase">Minimizer of the Reconstruction Error for
+multi-class document categorization</span>.” *Expert Systems with
+Applications* 41 (3): 861–68.
+<https://doi.org/10.1016/j.eswa.2013.08.016>.
 
 </div>
 
@@ -6201,9 +6073,9 @@ International Conference on Computer Systems and Applications, AICCSA*,
 
 <div id="ref-Hu2017" class="csl-entry">
 
-Hu, Junying, Jiangshe Zhang, Nannan Ji, and Chunxia Zhang. 2017. “<span
-class="nocase">A new regularized restricted Boltzmann machine based on
-class preserving</span>.” *Knowledge-Based Systems* 123: 1–12.
+Hu, Junying, Jiangshe Zhang, Nannan Ji, and Chunxia Zhang. 2017.
+“<span class="nocase">A new regularized restricted Boltzmann machine
+based on class preserving</span>.” *Knowledge-Based Systems* 123: 1–12.
 <https://doi.org/10.1016/j.knosys.2017.02.012>.
 
 </div>
@@ -6237,9 +6109,9 @@ Weights.” *World Wide Web* 23 (July): 2429–47.
 
 <div id="ref-Jin2016" class="csl-entry">
 
-Jin, Peng, Zhang Yue, Xingyuan Chen, and Yunqing Xia. 2016. “<span
-class="nocase">Bag-of-embeddings for text classification</span>.” In
-*IJCAI International Joint Conference on Artificial Intelligence*,
+Jin, Peng, Zhang Yue, Xingyuan Chen, and Yunqing Xia. 2016.
+“<span class="nocase">Bag-of-embeddings for text classification</span>.”
+In *IJCAI International Joint Conference on Artificial Intelligence*,
 edited by Subbarao Kambhampati, 2016-Janua:2824–30. {IJCAI/AAAI} Press.
 <http://www.ijcai.org/Abstract/16/401>.
 
@@ -6247,9 +6119,10 @@ edited by Subbarao Kambhampati, 2016-Janua:2824–30. {IJCAI/AAAI} Press.
 
 <div id="ref-Jin2010" class="csl-entry">
 
-Jin, Xiao Bo, Cheng Lin Liu, and Xinwen Hou. 2010. “<span
-class="nocase">Regularized margin-based conditional log-likelihood loss
-for prototype learning</span>.” *Pattern Recognition* 43 (7): 2428–38.
+Jin, Xiao Bo, Cheng Lin Liu, and Xinwen Hou. 2010.
+“<span class="nocase">Regularized margin-based conditional
+log-likelihood loss for prototype learning</span>.” *Pattern
+Recognition* 43 (7): 2428–38.
 <https://doi.org/10.1016/j.patcog.2010.01.013>.
 
 </div>
@@ -6287,18 +6160,18 @@ Processing* 28: 2319–32. <https://doi.org/10.1109/TASLP.2020.3012062>.
 
 Khandve, Snehal Ishwar, Vedangi Kishor Wagh, Apurva Dinesh Wani, Isha
 Mandar Joshi, and Raviraj Bhuminand Joshi. 2022. “Hierarchical Neural
-Network Approaches for Long Document Classification.” In *2022 14th
-International Conference on Machine Learning and Computing (ICMLC)*,
-115–19. ACM. <https://doi.org/10.1145/3529836.3529935>.
+Network Approaches for Long Document Classification.” In *Proceedings of
+the 2022 14th International Conference on Machine Learning and
+Computing*, 115–19. ACM. <https://doi.org/10.1145/3529836.3529935>.
 
 </div>
 
 <div id="ref-Kim2019" class="csl-entry">
 
-Kim, Donghwa, Deokseong Seo, Suhyoun Cho, and Pilsung Kang. 2019. “<span
-class="nocase">Multi-co-training for document classification using
-various document representations: TF–IDF, LDA, and Doc2Vec</span>.”
-*Information Sciences* 477: 15–29.
+Kim, Donghwa, Deokseong Seo, Suhyoun Cho, and Pilsung Kang. 2019.
+“<span class="nocase">Multi-co-training for document classification
+using various document representations: TF–IDF, LDA, and
+Doc2Vec</span>.” *Information Sciences* 477: 15–29.
 <https://doi.org/10.1016/j.ins.2018.10.006>.
 
 </div>
@@ -6316,12 +6189,12 @@ Learning, ICML 2015*, edited by Francis R Bach and David M Blei,
 
 <div id="ref-Larochelle2008" class="csl-entry">
 
-Larochelle, Hugo, and Yoshua Bengio. 2008. “<span
-class="nocase">Classification using discriminative restricted boltzmann
-machines</span>.” In *Proceedings of the 25th International Conference
-on Machine Learning*, edited by William W Cohen, Andrew McCallum, and
-Sam T Roweis, 307:536–43. {ACM} International Conference Proceeding
-Series. ACM. <https://doi.org/10.1145/1390156.1390224>.
+Larochelle, Hugo, and Yoshua Bengio. 2008.
+“<span class="nocase">Classification using discriminative restricted
+boltzmann machines</span>.” In *Proceedings of the 25th International
+Conference on Machine Learning*, edited by William W Cohen, Andrew
+McCallum, and Sam T Roweis, 307:536–43. {ACM} International Conference
+Proceeding Series. ACM. <https://doi.org/10.1145/1390156.1390224>.
 
 </div>
 
@@ -6350,10 +6223,10 @@ Keselj, 6085 LNAI:4–15. Lecture Notes in Computer Science. Springer.
 
 <div id="ref-Li2015" class="csl-entry">
 
-Li, Baoli, Qiuling Yan, Zhenqiang Xu, and Guicai Wang. 2015. “<span
-class="nocase">Weighted Document Frequency for feature selection in text
-classification</span>.” In *Proceedings of 2015 International Conference
-on Asian Language Processing, IALP 2015*, 132–35. IEEE.
+Li, Baoli, Qiuling Yan, Zhenqiang Xu, and Guicai Wang. 2015.
+“<span class="nocase">Weighted Document Frequency for feature selection
+in text classification</span>.” In *Proceedings of 2015 International
+Conference on Asian Language Processing, IALP 2015*, 132–35. IEEE.
 <https://doi.org/10.1109/IALP.2015.7451549>.
 
 </div>
@@ -6391,8 +6264,7 @@ semantic analysis</span>.” *Pattern Recognition Letters* 32 (3): 441–48.
 
 Lin, Yuxiao, Yuxian Meng, Xiaofei Sun, Qinghong Han, Kun Kuang, Jiwei
 Li, and Fei Wu. 2021. “BertGCN: Transductive Text Classification by
-Combining GNN and BERT.” In *Findings of the Association for
-Computational Linguistics: ACL-IJCNLP 2021*, 1456–62. Association for
+Combining GNN and BERT.” In *Findings*, 1456–62. Association for
 Computational Linguistics.
 <https://doi.org/10.18653/v1/2021.findings-acl.126>.
 
@@ -6428,13 +6300,13 @@ Systems with Applications* 38 (10): 12708–16.
 
 <div id="ref-Mazyad2017" class="csl-entry">
 
-Mazyad, Ahmad, Fabien Teytaud, and Cyril Fonlupt. 2017. “<span
-class="nocase">A comparative study on term weighting schemes for text
-classification</span>.” In *Lecture Notes in Computer Science (Including
-Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in
-Bioinformatics)*, edited by Giuseppe Nicosia, Panos M Pardalos, Giovanni
-Giuffrida, and Renato Umeton, 10710 LNCS:100–108. Lecture Notes in
-Computer Science. Springer.
+Mazyad, Ahmad, Fabien Teytaud, and Cyril Fonlupt. 2017.
+“<span class="nocase">A comparative study on term weighting schemes for
+text classification</span>.” In *Lecture Notes in Computer Science
+(Including Subseries Lecture Notes in Artificial Intelligence and
+Lecture Notes in Bioinformatics)*, edited by Giuseppe Nicosia, Panos M
+Pardalos, Giovanni Giuffrida, and Renato Umeton, 10710 LNCS:100–108.
+Lecture Notes in Computer Science. Springer.
 <https://doi.org/10.1007/978-3-319-72926-8_9>.
 
 </div>
@@ -6450,17 +6322,17 @@ Classification.” *Applied Sciences* 11 (July): 6636.
 
 <div id="ref-Pang2015" class="csl-entry">
 
-Pang, Guansong, Huidong Jin, and Shengyi Jiang. 2015. “<span
-class="nocase">CenKNN: a scalable and effective text classifier</span>.”
-*Data Mining and Knowledge Discovery* 29 (3): 593–625.
-<https://doi.org/10.1007/s10618-014-0358-x>.
+Pang, Guansong, Huidong Jin, and Shengyi Jiang. 2015.
+“<span class="nocase">CenKNN: a scalable and effective text
+classifier</span>.” *Data Mining and Knowledge Discovery* 29 (3):
+593–625. <https://doi.org/10.1007/s10618-014-0358-x>.
 
 </div>
 
 <div id="ref-Pappagari2018" class="csl-entry">
 
-Pappagari, Raghavendra, Jesus Villalba, and Najim Dehak. 2018. “<span
-class="nocase">Joint Verification-Identification in end-to-end
+Pappagari, Raghavendra, Jesus Villalba, and Najim Dehak. 2018.
+“<span class="nocase">Joint Verification-Identification in end-to-end
 Multi-Scale CNN Framework for Topic Identification</span>.” In *ICASSP,
 IEEE International Conference on Acoustics, Speech and Signal
 Processing - Proceedings*, 2018-April:6199–6203. IEEE.
@@ -6489,8 +6361,8 @@ Network.” *Frontiers in Computational Neuroscience* 16 (June).
 
 <div id="ref-Qian2007" class="csl-entry">
 
-Qian, Tieyun, Hui Xiong, Yuanzhen Wang, and Enhong Chen. 2007. “<span
-class="nocase">On the strength of hyperclique patterns for text
+Qian, Tieyun, Hui Xiong, Yuanzhen Wang, and Enhong Chen. 2007.
+“<span class="nocase">On the strength of hyperclique patterns for text
 categorization</span>.” *Information Sciences* 177 (19): 4040–58.
 <https://doi.org/10.1016/j.ins.2007.04.005>.
 
@@ -6519,18 +6391,19 @@ Applications* 42 (7): 3670–81.
 <div id="ref-Rennie2003" class="csl-entry">
 
 Rennie, Jason D M. 2003. “<span class="nocase">On the value of
-leave-one-out cross-validation bounds</span>.”
+leave-one-out cross-validation bounds</span>.” MIT.
 <https://pdfs.semanticscholar.org/4f8e/c2f5b9d6dc1bbccf6d8c03730c3cec4e35f7.pdf>.
 
 </div>
 
 <div id="ref-Rodrigues2014" class="csl-entry">
 
-Rodrigues, Thiago Fredes, and Paulo Martins Engel. 2014. “<span
-class="nocase">Probabilistic clustering and classification for textual
-data: An online and incremental approach</span>.” In *Proceedings - 2014
-Brazilian Conference on Intelligent Systems, BRACIS 2014*, 288–93.
-{IEEE} Computer Society. <https://doi.org/10.1109/BRACIS.2014.59>.
+Rodrigues, Thiago Fredes, and Paulo Martins Engel. 2014.
+“<span class="nocase">Probabilistic clustering and classification for
+textual data: An online and incremental approach</span>.” In
+*Proceedings - 2014 Brazilian Conference on Intelligent Systems, BRACIS
+2014*, 288–93. {IEEE} Computer Society.
+<https://doi.org/10.1109/BRACIS.2014.59>.
 
 </div>
 
@@ -6547,20 +6420,20 @@ Hirose, and Satoshi Nakamura, 2266–69. ISCA. <https://doi.org/i10>.
 
 <div id="ref-Salakhutdinov2009" class="csl-entry">
 
-Salakhutdinov, Ruslan, and Geoffrey Hinton. 2009. “<span
-class="nocase">Replicated softmax: An undirected topic model</span>.” In
-*Advances in Neural Information Processing Systems 22 - Proceedings of
-the 2009 Conference*, edited by Yoshua Bengio, Dale Schuurmans, John D
-Lafferty, Christopher K I Williams, and Aron Culotta, 1607–14. Curran
-Associates, Inc.
+Salakhutdinov, Ruslan, and Geoffrey Hinton. 2009.
+“<span class="nocase">Replicated softmax: An undirected topic
+model</span>.” In *Advances in Neural Information Processing Systems
+22 - Proceedings of the 2009 Conference*, edited by Yoshua Bengio, Dale
+Schuurmans, John D Lafferty, Christopher K I Williams, and Aron Culotta,
+1607–14. Curran Associates, Inc.
 <http://papers.nips.cc/paper/3856-replicated-softmax-an-undirected-topic-model>.
 
 </div>
 
 <div id="ref-Sharma2017a" class="csl-entry">
 
-Sharma, Neeraj, A. D. Dileep, and Veena Thenkanidiyoor. 2017. “<span
-class="nocase">Text classification using hierarchical sparse
+Sharma, Neeraj, A. D. Dileep, and Veena Thenkanidiyoor. 2017.
+“<span class="nocase">Text classification using hierarchical sparse
 representation classifiers</span>.” In *Proceedings - 16th IEEE
 International Conference on Machine Learning and Applications, ICMLA
 2017*, 2017-Decem:1015–19. IEEE.
@@ -6616,10 +6489,10 @@ IEEE 17th India Council International Conference (INDICON)*, 1–6. IEEE.
 
 <div id="ref-Tang2016" class="csl-entry">
 
-Tang, Bo, Haibo He, Paul M. Baggenstoss, and Steven Kay. 2016. “<span
-class="nocase">A Bayesian Classification Approach Using Class-Specific
-Features for Text Categorization</span>.” *IEEE Transactions on
-Knowledge and Data Engineering* 28 (6): 1602–6.
+Tang, Bo, Haibo He, Paul M. Baggenstoss, and Steven Kay. 2016.
+“<span class="nocase">A Bayesian Classification Approach Using
+Class-Specific Features for Text Categorization</span>.” *IEEE
+Transactions on Knowledge and Data Engineering* 28 (6): 1602–6.
 <https://doi.org/10.1109/TKDE.2016.2522427>.
 
 </div>
@@ -6680,8 +6553,8 @@ Word Embeddings.” *International Journal of Data Science and Analytics*
 
 <div id="ref-Unnikrishnan2019" class="csl-entry">
 
-Unnikrishnan, P., V. K. Govindan, and S. D. Madhu Kumar. 2019. “<span
-class="nocase">Enhanced sparse representation classifier for text
+Unnikrishnan, P., V. K. Govindan, and S. D. Madhu Kumar. 2019.
+“<span class="nocase">Enhanced sparse representation classifier for text
 classification</span>.” *Expert Systems with Applications* 129: 260–72.
 <https://doi.org/10.1016/j.eswa.2019.04.003>.
 
@@ -6699,13 +6572,13 @@ Classification.” In *TENCON 2021 - 2021 IEEE Region 10 Conference
 
 <div id="ref-Wang2016" class="csl-entry">
 
-Wang, Fen, Xiaoxuan Li, Xiaotao Huang, and Ling Kang. 2016. “<span
-class="nocase">Improved document feature selection with categorical
-parameter for text classification</span>.” In *Lecture Notes in Computer
-Science (Including Subseries Lecture Notes in Artificial Intelligence
-and Lecture Notes in Bioinformatics)*, edited by Selma Boumerdassi, Éric
-Renault, and Samia Bouzefrane, 10026 LNCS:86–98. Lecture Notes in
-Computer Science. Springer.
+Wang, Fen, Xiaoxuan Li, Xiaotao Huang, and Ling Kang. 2016.
+“<span class="nocase">Improved document feature selection with
+categorical parameter for text classification</span>.” In *Lecture Notes
+in Computer Science (Including Subseries Lecture Notes in Artificial
+Intelligence and Lecture Notes in Bioinformatics)*, edited by Selma
+Boumerdassi, Éric Renault, and Samia Bouzefrane, 10026 LNCS:86–98.
+Lecture Notes in Computer Science. Springer.
 <https://doi.org/10.1007/978-3-319-50463-6_8>.
 
 </div>
@@ -6742,10 +6615,10 @@ Text Classification.” *Expert Systems with Applications* 219 (June):
 
 Wang, Zhengjue, Chaojie Wang, Hao Zhang, Zhibin Duan, Mingyuan Zhou, and
 Bo Chen. 2020. “Learning Dynamic Hierarchical Topic Graph with Graph
-Convolutional Network for Document Classification.” In *Proceedings of
-the Twenty Third International Conference on Artificial Intelligence and
-Statistics*, edited by Silvia Chiappa and Roberto Calandra, 108:3959–69.
-PMLR. <https://proceedings.mlr.press/v108/wang20l.html>.
+Convolutional Network for Document Classification.” In *International
+Conference on Artificial Intelligence and Statistics*, edited by Silvia
+Chiappa and Roberto Calandra, 108:3959–69. PMLR.
+<https://proceedings.mlr.press/v108/wang20l.html>.
 
 </div>
 
@@ -6773,9 +6646,8 @@ FSKD 2009*, 7:468–71. FSKD’09. IEEE Press.
 
 Xie, Qianqian, Jimin Huang, Pan Du, Min Peng, and Jian-Yun Nie. 2021a.
 “Inductive Topic Variational Graph Auto-Encoder for Text
-Classification.” In *Proceedings of the 2021 Conference of the North
-American Chapter of the Association for Computational Linguistics: Human
-Language Technologies*, 4218–27. Association for Computational
+Classification.” In *North American Chapter of the Association for
+Computational Linguistics*, 4218–27. Association for Computational
 Linguistics. <https://doi.org/10.18653/v1/2021.naacl-main.333>.
 
 </div>
@@ -6790,8 +6662,8 @@ Linguistics. <https://doi.org/10.18653/v1/2021.naacl-main.333>.
 
 <div id="ref-Yan2008" class="csl-entry">
 
-Yan, Jun, Ning Liu, Qiang Yang, Weiguo Fan, and Zheng Chen. 2008. “<span
-class="nocase">TOFA: Trace oriented feature analysis in text
+Yan, Jun, Ning Liu, Qiang Yang, Weiguo Fan, and Zheng Chen. 2008.
+“<span class="nocase">TOFA: Trace oriented feature analysis in text
 categorization</span>.” In *Proceedings - IEEE International Conference
 on Data Mining, ICDM*, 668–77. {IEEE} Computer Society.
 <https://doi.org/10.1109/ICDM.2008.67>.
@@ -6829,7 +6701,7 @@ Incorporating Latent Relations</span>.” *IEEE Access* 6: 52682–90.
 
 Yang, Liang, Fan Wu, Junhua Gu, Chuan Wang, Xiaochun Cao, Di Jin, and
 Yuanfang Guo. 2020. “Graph Attention Topic Modeling Network.” In
-*Proceedings of The Web Conference 2020*, 144–54. ACM.
+*Proceedings of the Web Conference 2020*, 144–54. ACM.
 <https://doi.org/10.1145/3366423.3380102>.
 
 </div>
@@ -6902,10 +6774,11 @@ In *International Conference on Learning Representations*.
 
 <div id="ref-Zong2015" class="csl-entry">
 
-Zong, Wei, Feng Wu, Lap Keung Chu, and Domenic Sculli. 2015. “<span
-class="nocase">A discriminative and semantic feature selection method
-for text categorization</span>.” *International Journal of Production
-Economics* 165: 215–22. <https://doi.org/10.1016/j.ijpe.2014.12.035>.
+Zong, Wei, Feng Wu, Lap Keung Chu, and Domenic Sculli. 2015.
+“<span class="nocase">A discriminative and semantic feature selection
+method for text categorization</span>.” *International Journal of
+Production Economics* 165: 215–22.
+<https://doi.org/10.1016/j.ijpe.2014.12.035>.
 
 </div>
 

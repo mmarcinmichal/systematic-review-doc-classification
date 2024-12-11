@@ -1,6 +1,6 @@
 % Encoding: UTF-8
 
-@inproceedings{Kusner2015,
+@InProceedings{Kusner2015,
 abstract = {We present the Word Mover's Distance (WMD), a novel distance function between text documents. Our work is based on recent results in word embeddings that learn semantically meaningful representations for words from local cooccurrences in sentences. The WMD distance measures the dissimilarity between two text documents as the minimum amount of distance that the embedded words of one document need to "travel" to reach the embedded words of another document. We show that this distance metric can be cast as an instance of the Earth Mover's Distance, a well studied transportation problem for which several highly efficient solvers have been developed. Our metric has no hyperparameters and is straight-forward to implement. Further, we demonstrate on eight real world document classification data sets, in comparison with seven state-of-the-art baselines, that the WMD metric leads to unprecedented low k-nearest neighbor document classification error rates.},
 author = {Kusner, Matt J. and Sun, Yu and Kolkin, Nicholas I. and Weinberger, Kilian Q.},
 booktitle = {32nd International Conference on Machine Learning, ICML 2015},
@@ -306,7 +306,7 @@ year = {2015}
   url           = {https://doi.org/10.1371/journal.pone.0181142},
 }
 
-@article{Berge2019,
+@Article{Berge2019,
 abstract = {Medical applications challenge today's text categorization techniques by demanding both high accuracy and ease-of-interpretation. Although deep learning has provided a leap ahead in accuracy, this leap comes at the sacrifice of interpretability. To address this accuracy-interpretability challenge, we here introduce, for the first time, a text categorization approach that leverages the recently introduced Tsetlin Machine. In all brevity, we represent the terms of a text as propositional variables. From these, we capture categories using simple propositional formulae, such as: if "rash" and "reaction" and "penicillin" then Allergy. The Tsetlin Machine learns these formulae from a labelled text, utilizing conjunctive clauses to represent the particular facets of each category. Indeed, even the absence of terms (negated features) can be used for categorization purposes. Our empirical results are quite conclusive. The Tsetlin Machine either performs on par with or outperforms all of the evaluated methods on both the 20 Newsgroups and IMDb datasets, as well as on a non-public clinical dataset. On average, the Tsetlin Machine delivers the best recall and precision scores across the datasets. The GPU implementation of the Tsetlin Machine is further 8 times faster than the GPU implementation of the neural network. We thus believe that our novel approach can have a significant impact on a wide range of text analysis applications, forming a promising starting point for deeper natural language understanding with the Tsetlin Machine.},
 archivePrefix = {arXiv},
 arxivId = {1809.04547},
@@ -455,7 +455,7 @@ year = {2019}
   keywords  = {Bigrams, Comparison, Document model, Feature selection, Itemsets, Machine learning, N-grams, Text categorization},
 }
 
-@inproceedings{Yan2008,
+@InProceedings{Yan2008,
 abstract = {Dimension reduction for large-scale text data is attracting much attention lately due to the rapid growth of World Wide Web. We can consider cdimension reduction algorithms in two categories: feature extraction and feature selection. An important problem remains: it has been difficult to integrate these two algorithm categories into a single framework, making it difficult to reap the benefit of both. In this paper, we formulate the two algorithm categories through a unified optimization framework. Under this framework, we develop a novel feature selection algorithm called Trace Oriented Feature Analysis (TOFA). The novel objective function of TOFA is a unified framework that integrates many prominent feature extraction algorithms such as unsupervised Principal Component Analysis and supervised Maximum Margin Criterion are special cases of it. Thus TOFA can process not only supervised problem but also unsupervised and semi-supervised problems. Experimental results on real text datasets demonstrate the ef ectiveness and efficiency of TOFA. {\textcopyright} 2008 IEEE.},
 author = {Yan, Jun and Liu, Ning and Yang, Qiang and Fan, Weiguo and Chen, Zheng},
 booktitle = {Proceedings - IEEE International Conference on Data Mining, ICDM},
@@ -570,7 +570,7 @@ year = {2008}
   keywords     = {Hierarchical Sparse Representation Classifiers, Sparse Representation Classifiers, Text Classification, Weighted decomposition principal component analysi},
 }
 
-@inproceedings{Jin2016,
+@InProceedings{Jin2016,
 abstract = {Words are central to text classification. It has been shown that simple Naive Bayes models with word and bigram features can give highly competitive accuracies when compared to more sophisticated models with part-of-speech, syntax and semantic features. Embeddings offer distributional features about words. We study a conceptually simple classification model by exploiting multiprototype word embeddings based on text classes. The key assumption is that words exhibit different distributional characteristics under different text classes. Based on this assumption, we train multiprototype distributional word representations for different text classes. Given a new document, its text class is predicted by maximizing the probabilities of embedding vectors of its words under the class. In two standard classification benchmark datasets, one is balance and the other is imbalance, our model outperforms state-of-the-art systems, on both accuracy and macro-average F-1 score.},
 author = {Jin, Peng and Yue, Zhang and Chen, Xingyuan and Xia, Yunqing},
 booktitle = {IJCAI International Joint Conference on Artificial Intelligence},
@@ -598,7 +598,7 @@ year = {2016}
   keywords = {Feature selection, PDF projection and estimation, class-specific features, dimension reduction, naive Bayes, text categorization},
 }
 
-@inproceedings{Zheng2016,
+@InProceedings{Zheng2016,
 abstract = {Taking advantage of the large scale corpus on the web to effectively and efficiently mine the topics within texts is an essential problem in the era of big data. We focus on the problem of learning text topic embedding in an unsupervised manner, which enjoys the properties of efficiency and scalability. Text topic embedding represents words and documents in a semantic topic space, in which the words and documents with similar topic will be embedded close to each other. When compared with conventional topic models, which implicitly capture the document-level word co-occurrence patterns, text topic embedding alleviates the data sparsity problem and captures the semantic relevance between different words and documents. To model text topic embedding, we propose a Bidirectional Hierarchical Skip-Gram model (BHSG) based on skip-gram model. BHSG includes two components: semantic generation module to learn semantic relevance between texts and topic enhance module to produce the text topic embedding based on text embedding learned in the former module. We evaluated our method on two kinds of topic-related tasks: text classification and information retrieval. The experimental results on four public datasets and one dataset we provide all demonstrate that our proposed method can achieve a better performance.},
 author = {Zheng, Suncong and Bao, Hongyun and Xu, Jiaming and Hao, Yuexing and Qi, Zhenyu and Hao, Hongwei},
 booktitle = {Proceedings of the International Joint Conference on Neural Networks},
@@ -660,7 +660,7 @@ year = {2016}
   url         = {https://pdfs.semanticscholar.org/4f8e/c2f5b9d6dc1bbccf6d8c03730c3cec4e35f7.pdf},
 }
 
-@inproceedings{Salakhutdinov2009,
+@InProceedings{Salakhutdinov2009,
 abstract = {We introduce a two-layer undirected graphical model, called a "Replicated Soft-max", that can be used to model and automatically extract low-dimensional latent semantic representations from a large unstructured collection of documents. We present efficient learning and inference algorithms for this model, and show how a Monte-Carlo based method, Annealed Importance Sampling, can be used to produce an accurate estimate of the log-probability the model assigns to test data. This allows us to demonstrate that the proposed model is able to generalize much better compared to Latent Dirichlet Allocation in terms of both the log-probability of held-out documents and the retrieval accuracy.},
 author = {Salakhutdinov, Ruslan and Hinton, Geoffrey},
 booktitle = {Advances in Neural Information Processing Systems 22 - Proceedings of the 2009 Conference},
@@ -686,7 +686,7 @@ year = {2009}
   keywords  = {Document Classification, Document Clustering, Incremental Learning, Online Learning, Topic Modeling},
 }
 
-@inproceedings{Gliozzo2005,
+@InProceedings{Gliozzo2005,
 abstract = {We propose a generalized bootstrapping algorithm in which categories are described by relevant seed features. Our method introduces two unsupervised steps that improve the initial categorization step of the bootstrapping scheme: (i) using Latent Semantic space to obtain a generalized similarity measure between instances and features, and (ii) the Gaussian Mixture algorithm, to obtain uniform classification probabilities for unlabeled examples. The algorithm was evaluated on two Text Categorization tasks and obtained state-of-theart performance using only the category names as initial seeds. {\textcopyright} 2005 Association for Computational Linguistics.},
 author = {Gliozzo, Alfio and Strapparava, Carlo and Dagan, Ido},
 booktitle = {HLT/EMNLP 2005 - Human Language Technology Conference and Conference on Empirical Methods in Natural Language Processing, Proceedings of the Conference},
@@ -726,7 +726,7 @@ year = {2005}
   keywords = {Class distinguishing power, Classifier, Inverse gravity moment (IGM), Term weighting, Text classification},
 }
 
-@inproceedings{Sainath2010,
+@InProceedings{Sainath2010,
 abstract = {Sparse representations (SRs) are often used to characterize a test signal using few support training examples, and allow the number of supports to be adapted to the specific signal being categorized. Given the good performance of SRs compared to other classifiers for both image classification and phonetic classification, in this paper, we extended the use of SRs for text classification, a method which has thus far not been explored for this domain. Specifically, we demonstrate how sparse representations can be used for text classification and how their performance varies with the vocabulary size of the documents. In addition, we also show that this method offers promising results over the Naive Bayes (NB) classifier, a standard baseline classifier used for text categorization, thus introducing an alternative class of methods for text categorization. {\textcopyright} 2010 ISCA.},
 author = {Sainath, Tara N. and Maskey, Sameer and Kanevsky, Dimitri and Ramabhadran, Bhuvana and Nahamoo, David and Hirschberg, Julia},
 booktitle = {Proceedings of the 11th Annual Conference of the International Speech Communication Association, INTERSPEECH 2010},
@@ -769,7 +769,7 @@ year = {2010}
   keywords = {Dimensionality reduction, Semantic analysis, Text categorization, Text representation},
 }
 
-@inproceedings{Larochelle2008,
+@InProceedings{Larochelle2008,
 abstract = {Recently, many applications for Restricted Boltzmann Machines (RBMs) have been developed for a large variety of learning problems. However, RBMs are usually used as feature extractors for another learning algorithm or to provide a good initialization for deep feed-forward neural network classifiers, and are not considered as a stand-alone solution to classification problems. In this paper, we argue that RBMs provide a self-contained framework for deriving competitive non-linear classifiers. We present an evaluation of different learning algorithms for RBMs which aim at introducing a discriminative component to RBM training and improve their performance as classifiers. This approach is simple in that RBMs are used directly to build a classifier, rather than as a stepping stone. Finally, we demonstrate how discriminative RBMs can also be successfully employed in a semi-supervised setting. Copyright 2008 by the author(s)/owner(s).},
 author = {Larochelle, Hugo and Bengio, Yoshua},
 booktitle = {Proceedings of the 25th International Conference on Machine Learning},
@@ -826,7 +826,7 @@ year = {2008}
   keywords = {Bayesian model averaging, Global selection index, Latent selection augmented naive Bayes, Local selection index, Text classification},
 }
 
-@article{Unnam2020,
+@Article{Unnam2020,
    author = {Narendra Babu Unnam and P. Krishna Reddy},
    doi = {10.1007/s41060-019-00200-5},
    issn = {2364-415X},
@@ -841,7 +841,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Chen2020,
+@Article{Chen2020,
    author = {C. L. Philip Chen and Shuang Feng},
    doi = {10.1109/TCYB.2018.2869902},
    issn = {2168-2267},
@@ -856,7 +856,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Guo2021,
+@Article{Guo2021,
    author = {Shun Guo and Nianmin Yao},
    doi = {10.1109/TKDE.2019.2961343},
    issn = {1041-4347},
@@ -871,7 +871,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Guo2020,
+@Article{Guo2020,
    author = {Shun Guo and Nianmin Yao},
    doi = {10.1007/s00521-019-04541-x},
    issn = {0941-0643},
@@ -886,7 +886,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Zhou2020,
+@Article{Zhou2020,
    abstract = {<p> Feature representation and feature extraction are two crucial procedures in text mining. Convolutional Neural Networks (CNN) have shown overwhelming success for text-mining tasks, since they are capable of efficiently extracting <italic>n</italic> -gram features from source data. However, vanilla CNN has its own weaknesses on feature representation and feature extraction. A certain amount of filters in CNN are inevitably duplicate and thus hinder to discriminatively represent a given text. In addition, most existing CNN models extract features in a fixed way (i.e., max pooling) that either limit the CNN to local optimum nor without considering the relation between all features, thereby unable to learn a contextual <italic>n</italic> -gram features adaptively. In this article, we propose a discriminative CNN with context-aware attention to solve the challenges of vanilla CNN. Specifically, our model mainly encourages discrimination across different filters via maximizing their earth mover distances and estimates the salience of feature candidates by considering the relation between context features. We validate carefully our findings against baselines on five benchmark datasets of classification and two datasets of summarization. The results of the experiments verify the competitive performance of our proposed model. </p>},
    author = {Yuxiang Zhou and Lejian Liao and Yang Gao and Heyan Huang and Xiaochi Wei},
    doi = {10.1145/3397464},
@@ -944,7 +944,7 @@ year = {2008}
   url       = {https://dl.acm.org/doi/10.1145/3366423.3380102},
 }
 
-@article{Kesiraju2020,
+@Article{Kesiraju2020,
    author = {Santosh Kesiraju and Oldrich Plchot and Lukas Burget and Suryakanth V. Gangashetty},
    doi = {10.1109/TASLP.2020.3012062},
    issn = {2329-9290},
@@ -957,7 +957,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Shen2020,
+@Article{Shen2020,
    author = {Yuan-Yuan Shen and Yan-Ming Zhang and Xu-Yao Zhang and Cheng-Lin Liu},
    doi = {10.1016/j.neucom.2020.03.025},
    issn = {09252312},
@@ -971,7 +971,7 @@ year = {2008}
    year = {2020},
 }
 
-@inproceedings{Suneera2020,
+@InProceedings{Suneera2020,
    author = {C M Suneera and Jay Prakash},
    doi = {10.1109/INDICON49873.2020.9342208},
    isbn = {978-1-7281-6916-3},
@@ -998,7 +998,7 @@ year = {2008}
   url       = {https://ieeexplore.ieee.org/document/9237709/},
 }
 
-@article{Chen2020c,
+@Article{Chen2020c,
    author = {Gang Chen and Sargur N. Srihari},
    doi = {10.1016/j.patrec.2020.10.006},
    issn = {01678655},
@@ -1012,7 +1012,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Aler2020,
+@Article{Aler2020,
    author = {Ricardo Aler and José M. Valls and Henrik Boström},
    doi = {10.1016/j.eswa.2020.113264},
    issn = {09574174},
@@ -1026,7 +1026,7 @@ year = {2008}
    year = {2020},
 }
 
-@article{Jiang2020,
+@Article{Jiang2020,
    author = {Haiyun Jiang and Deqing Yang and Yanghua Xiao and Wei Wang},
    doi = {10.1007/s11280-020-00806-x},
    issn = {1386-145X},
@@ -1041,7 +1041,7 @@ year = {2008}
    year = {2020},
 }
 
-@Article{Wagh2021,
+@InProceedings{Wagh2021,
   author    = {Vedangi Wagh and Snehal Khandve and Isha Joshi and Apurva Wani and Geetanjali Kale and Raviraj Joshi},
   journal   = {TENCON 2021 - 2021 IEEE Region 10 Conference (TENCON)},
   title     = {Comparative Study of Long Document Classification},
@@ -1054,7 +1054,7 @@ year = {2008}
   url       = {https://ieeexplore.ieee.org/document/9707465/},
 }
 
-@article{Zhou2021,
+@Article{Zhou2021,
    author = {Yuxiang Zhou and Lejian Liao and Yang Gao and Heyan Huang},
    doi = {10.1016/j.ins.2020.12.084},
    issn = {00200255},
@@ -1068,7 +1068,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Dai2022,
+@Article{Dai2022,
    author = {Yong Dai and Linjun Shou and Ming Gong and Xiaolin Xia and Zhao Kang and Zenglin Xu and Daxin Jiang},
    doi = {10.1016/j.knosys.2021.107659},
    issn = {09507051},
@@ -1112,7 +1112,7 @@ year = {2008}
   url       = {https://dl.acm.org/doi/10.1145/3437963.3441746},
 }
 
-@inproceedings{Zhang2021,
+@InProceedings{Zhang2021,
    author = {Cheng Zhang and Hayato Yamana},
    doi = {10.1109/ICBDA51983.2021.9403092},
    isbn = {978-1-6654-1513-2},
@@ -1125,7 +1125,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Nagumothu2021,
+@Article{Nagumothu2021,
    abstract = {<p>Standardized approaches to relevance classification in information retrieval use generative statistical models to identify the presence or absence of certain topics that might make a document relevant to the searcher. These approaches have been used to better predict relevance on the basis of what the document is “about”, rather than a simple-minded analysis of the bag of words contained within the document. In more recent times, this idea has been extended by using pre-trained deep learning models and text representations, such as GloVe or BERT. These use an external corpus as a knowledge-base that conditions the model to help predict what a document is about. This paper adopts a hybrid approach that leverages the structure of knowledge embedded in a corpus. In particular, the paper reports on experiments where linked data triples (subject-predicate-object), constructed from natural language elements are derived from deep learning. These are evaluated as additional latent semantic features for a relevant document classifier in a customized news-feed website. The research is a synthesis of current thinking in deep learning models in NLP and information retrieval and the predicate structure used in semantic web research. Our experiments indicate that linked data triples increased the F-score of the baseline GloVe representations by 6% and show significant improvement over state-of-the art models, like BERT. The findings are tested and empirically validated on an experimental dataset and on two standardized pre-classified news sources, namely the Reuters and 20 News groups datasets.</p>},
    author = {Dinesh Nagumothu and Peter W. Eklund and Bahadorreza Ofoghi and Mohamed Reda Bouadjenek},
    doi = {10.3390/app11146636},
@@ -1141,7 +1141,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Wang2021a,
+@Article{Wang2021a,
    author = {Tao Wang and Yi Cai and Ho-fung Leung and Raymond Y. K. Lau and Haoran Xie and Qing Li},
    doi = {10.1007/s10115-021-01581-5},
    issn = {0219-1377},
@@ -1156,7 +1156,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Yan2021a,
+@Article{Yan2021a,
    author = {Peng Yan and Linjing Li and Miaotianzi Jin and Daniel Zeng},
    doi = {10.1016/j.neucom.2021.02.060},
    issn = {09252312},
@@ -1170,7 +1170,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Wang2021b,
+@Article{Wang2021b,
    author = {Shuaihui Wang and Yu Pan and Jin Zhang and Xingyu Zhou and Zhen Cui and Guyu Hu and Zhisong Pan},
    doi = {10.1016/j.knosys.2021.106891},
    issn = {09507051},
@@ -1184,7 +1184,7 @@ year = {2008}
    year = {2021},
 }
 
-@article{Prabhakar2022,
+@Article{Prabhakar2022,
    abstract = {<p>To classify the texts accurately, many machine learning techniques have been utilized in the field of Natural Language Processing (NLP). For many pattern classification applications, great success has been obtained when implemented with deep learning models rather than using ordinary machine learning techniques. Understanding the complex models and their respective relationships within the data determines the success of such deep learning techniques. But analyzing the suitable deep learning methods, techniques, and architectures for text classification is a huge challenge for researchers. In this work, a Contiguous Convolutional Neural Network (CCNN) based on Differential Evolution (DE) is initially proposed and named as Evolutionary Contiguous Convolutional Neural Network (ECCNN) where the data instances of the input point are considered along with the contiguous data points in the dataset so that a deeper understanding is provided for the classification of the respective input, thereby boosting the performance of the deep learning model. Secondly, a swarm-based Deep Neural Network (DNN) utilizing Particle Swarm Optimization (PSO) with DNN is proposed for the classification of text, and it is named Swarm DNN. This model is validated on two datasets and the best results are obtained when implemented with the Swarm DNN model as it produced a high classification accuracy of 97.32% when tested on the BBC newsgroup text dataset and 87.99% when tested on 20 newsgroup text datasets. Similarly, when implemented with the ECCNN model, it produced a high classification accuracy of 97.11% when tested on the BBC newsgroup text dataset and 88.76% when tested on 20 newsgroup text datasets.</p>},
    author = {Sunil Kumar Prabhakar and Harikumar Rajaguru and Kwangsub So and Dong-Ok Won},
    doi = {10.3389/fncom.2022.900885},
@@ -1198,7 +1198,7 @@ year = {2008}
    year = {2022},
 }
 
-@article{Jia2022,
+@Article{Jia2022,
    abstract = {<p lang="fr"><![CDATA[<abstract> <p>There are two main factors involved in documents classification, document representation method and classification algorithm. In this study, we focus on document representation method and demonstrate that the choice of representation methods has impacts on quality of classification results. We propose a document representation strategy for supervised text classification named document representation based on global policy (<italic>DRGP</italic>), which can obtain an appropriate document representation according to the distribution of terms. The main idea of <italic>DRGP</italic> is to construct the optimization function through the importance of terms to different categories. In the experiments, we investigate the effects of <italic>DRGP</italic> on the 20 Newsgroups, Reuters21578 datasets, and using the <italic>SVM</italic> as classifier. The results show that the <italic>DRGP</italic> outperforms other text representation strategy schemes, such as Document Max, Document Two Max and global policy.</p> </abstract>]]></p>},
    author = {Longjia Jia and Bangzuo Zhang},
    doi = {10.3934/mbe.2022245},
@@ -1213,7 +1213,7 @@ year = {2008}
    year = {2022},
 }
 
-@article{Tang2022,
+@Article{Tang2022,
    author = {Zhong Tang and Wenqiang Li and Yan Li},
    doi = {10.1016/j.eswa.2021.115985},
    issn = {09574174},
@@ -1240,7 +1240,7 @@ year = {2008}
   url       = {https://aclanthology.org/2021.findings-acl.126},
 }
 
-@article{Shehzad2022,
+@Article{Shehzad2022,
    abstract = {<p>In text categorization, a well-known problem related to document length is that larger term counts in longer documents cause classification algorithms to become biased. The effect of document length can be eliminated by normalizing term counts, thus reducing the bias towards longer documents. This gives us term frequency (TF), which in conjunction with inverse document frequency (IDF) became the most commonly used term weighting scheme to capture the importance of a term in a document and corpus. However, normalization may cause term frequency of a term in a related document to become equal or smaller than its term frequency in an unrelated document, thus perturbing a term’s strength from its true worth. In this paper, we solve this problem by introducing a non-linear mapping of term frequency. This alternative to TF is called binned term count (BTC). The newly proposed term frequency factor trims large term counts before normalization, thus moderating the normalization effect on large documents. To investigate the effectiveness of BTC, we compare it against the original TF and its more recently proposed alternative named modified term frequency (MTF). In our experiments, each of these term frequency factors (BTC, TF, and MTF) is combined with four well-known collection frequency factors (IDF), RF, IGM, and MONO and the performance of each of the resulting term weighting schemes is evaluated on three standard datasets (Reuters (R8-21578), 20-Newsgroups, and WebKB) using support vector machines and K-nearest neighbor classifiers. To determine whether BTC is statistically better than TF and MTF, we have applied the paired two-sided t-test on the macro F1 results. Overall, BTC is found to be 52% statistically significant than TF and MTF. Furthermore, the highest macro F1 value on the three datasets was achieved by BTC-based term weighting schemes.</p>},
    author = {Farhan Shehzad and Abdur Rehman and Kashif Javed and Khalid A. Alnowibet and Haroon A. Babri and Hafiz Tayyab Rauf},
    doi = {10.3390/math10214124},
@@ -1256,7 +1256,7 @@ year = {2008}
    year = {2022},
 }
 
-@article{Yang2022,
+@Article{Yang2022,
    author = {Fei Yang and Huyin Zhang and Shiming Tao and Sheng Hao},
    doi = {10.1007/s10489-021-02889-z},
    issn = {0924-669X},
@@ -1271,7 +1271,7 @@ year = {2008}
    year = {2022},
 }
 
-@article{Attieh2023,
+@Article{Attieh2023,
    author = {Joseph Attieh and Joe Tekli},
    doi = {10.1016/j.knosys.2022.110215},
    issn = {09507051},
@@ -1285,7 +1285,7 @@ year = {2008}
    year = {2023},
 }
 
-@article{Wang2023,
+@Article{Wang2023,
    author = {Yizhao Wang and Chenxi Wang and Jieyu Zhan and Wenjun Ma and Yuncheng Jiang},
    doi = {10.1016/j.eswa.2023.119658},
    issn = {09574174},
@@ -1321,7 +1321,7 @@ year = {2008}
   url       = {https://aclanthology.org/2021.naacl-main.333},
 }
 
-@article{Liu2020,
+@Article{Liu2020,
    abstract = {<p>Compared to sequential learning models, graph-based neural networks exhibit some excellent properties, such as ability capturing global information. In this paper, we investigate graph-based neural networks for text classification problem. A new framework TensorGCN (tensor graph convolutional networks), is presented for this task. A text graph tensor is firstly constructed to describe semantic, syntactic, and sequential contextual information. Then, two kinds of propagation learning perform on the text graph tensor. The first is intra-graph propagation used for aggregating information from neighborhood nodes in a single graph. The second is inter-graph propagation used for harmonizing heterogeneous information between graphs. Extensive experiments are conducted on benchmark datasets, and the results illustrate the effectiveness of our proposed framework. Our proposed TensorGCN presents an effective way to harmonize and integrate heterogeneous information from different kinds of graphs.</p>},
    author = {Xien Liu and Xinxin You and Xiao Zhang and Ji Wu and Ping Lv},
    doi = {10.1609/aaai.v34i05.6359},
@@ -1337,7 +1337,7 @@ year = {2008}
    year = {2020},
 }
 
-@inproceedings{Gupta2019,
+@InProceedings{Gupta2019,
    author = {Vivek Gupta and Ankit Kumar Saw and Pegah Nokhiz and Harshit Gupta and Partha Pratim Talukdar},
    journal = {European Conference on Artificial Intelligence},
    title = {Improving Document Classification with Multi-Sense Embeddings},
@@ -1359,7 +1359,7 @@ year = {2008}
   url       = {https://proceedings.mlr.press/v108/wang20l.html},
 }
 
-@inproceedings{Johnson2016,
+@InProceedings{Johnson2016,
    abstract = {One-hot CNN (convolutional neural network) has been shown to be effective for text categorization (Johnson &amp; Zhang, 2015a;b). We view it as a special case of a general framework which jointly trains a linear model with a non-linear feature generator consisting of 'text region embedding + pooling'. Under this framework, we explore a more sophisticated region embedding method using Long Short-Term Memory (LSTM). LSTM can embed text regions of variable (and possibly large) sizes, whereas the region size needs to be fixed in a CNN. We seek effective and efficient use of LSTM for this purpose in the supervised and semi-supervised settings. The best results were obtained by combining region embeddings in the form of LSTM and convolution layers trained on unlabeled data. The results indicate that on this task, embeddings of text regions, which can convey complex concepts, are more useful than embeddings of single words in isolation. We report performances exceeding the previous best results on four benchmark datasets.},
    author = {Rie Johnson and Tong Zhang},
    journal = {Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48},
@@ -1407,7 +1407,7 @@ year = {2008}
   url       = {https://dl.acm.org/doi/10.1145/3529836.3529935},
 }
 
-@article{Yao2019,
+@Article{Yao2019,
    abstract = {<p>Text classification is an important and classical problem in natural language processing. There have been a number of studies that applied convolutional neural networks (convolution on regular grid, e.g., sequence) to classification. However, only a limited number of studies have explored the more flexible graph convolutional neural networks (convolution on non-grid, e.g., arbitrary graph) for the task. In this work, we propose to use graph convolutional networks for text classification. We build a single text graph for a corpus based on word co-occurrence and document word relations, then learn a Text Graph Convolutional Network (Text GCN) for the corpus. Our Text GCN is initialized with one-hot representation for word and document, it then jointly learns the embeddings for both words and documents, as supervised by the known class labels for documents. Our experimental results on multiple benchmark datasets demonstrate that a vanilla Text GCN without any external word embeddings or knowledge outperforms state-of-the-art methods for text classification. On the other hand, Text GCN also learns predictive word and document embeddings. In addition, experimental results show that the improvement of Text GCN over state-of-the-art comparison methods become more prominent as we lower the percentage of training data, suggesting the robustness of Text GCN to less training data in text classification.</p>},
    author = {Liang Yao and Chengsheng Mao and Yuan Luo},
    doi = {10.1609/aaai.v33i01.33017370},
