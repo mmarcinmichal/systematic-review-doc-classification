@@ -57,7 +57,15 @@ jobs:
             libcurl4-openssl-dev \
             libssl-dev \
             libxml2-dev \
-            pandoc
+            pandoc \
+            pandoc-citeproc \
+            texlive-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-xetex \
+            lmodern
 
       - name: Install R packages
         run: |
